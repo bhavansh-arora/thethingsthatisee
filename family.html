@@ -20,7 +20,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..600;1,6..96,400..500&family=Jost:wght@300;400;500;600&display=swap">
 <script>
-(function(d){var r=d.documentElement;if(!window.matchMedia||matchMedia('(prefers-reduced-motion: reduce)').matches)return;r.classList.add('motion');try{var k='ttis-intro',n=Date.now(),v=+localStorage.getItem(k)||0;if(n-v>18e5){r.classList.add('show-intro')}localStorage.setItem(k,n)}catch(e){}setTimeout(function(){if(!window.__motion){r.classList.remove('motion','show-intro')}},4000)})(document);
+(function(d){var r=d.documentElement;r.classList.add('js');if(!window.matchMedia||matchMedia('(prefers-reduced-motion: reduce)').matches)return;r.classList.add('motion');try{var k='ttis-intro',n=Date.now(),v=+localStorage.getItem(k)||0;if(n-v>18e5){r.classList.add('show-intro')}localStorage.setItem(k,n)}catch(e){}setTimeout(function(){if(!window.__motion){r.classList.remove('motion','show-intro')}},4000)})(document);
 </script>
 <link rel="stylesheet" href="assets/css/site.css">
 <script type="application/ld+json">
@@ -45,7 +45,7 @@
 </script>
 
 </head>
-<body class="">
+<body class="has-dark-hero">
 <a class="skip-link" href="#main">Skip to content</a>
 <div class="intro" aria-hidden="true"><div class="intro-inner"><p class="intro-word">The Things That <em>I</em> See</p><p class="intro-sub">Photography &amp; Film &middot; Colorado</p><div class="intro-bar"><span></span></div></div></div>
 <header class="site-header" data-header>
@@ -100,20 +100,20 @@
 </div>
 
 <main id="main">
-<section class="page-hero">
-  <div class="container">
-    <div class="page-hero-head">
-      <div class="stack">
-        <p class="eyebrow">Family</p>
-        <h1 class="h1">Where life is <em>truly</em> lived.</h1>
-      </div>
+<section class="cover-hero" data-dark-hero>
+  <div class="cover-media"><img class="img" src="assets/img/autumn-family-960.webp" srcset="assets/img/autumn-family-480.webp 480w, assets/img/autumn-family-960.webp 960w, assets/img/autumn-family-1500.webp 1500w" sizes="(orientation: portrait) 160vh, 100vw" width="1500" height="1000" alt="A family under bright autumn trees" loading="eager" fetchpriority="high" decoding="async" style="--tone:#704d22;--ratio:1500/1000"></div>
+  <div class="cover-shade"></div>
+  <div class="container cover-content">
+    <p class="eyebrow">Family</p>
+    <h1 class="cover-title">Where life is <em>truly</em> lived.</h1>
+    <div class="cover-foot">
       <p class="lede">I believe the family is the cornerstone of our humanity. Each photograph is more than an image: it&rsquo;s a testament to the bonds that make you who you are, kept for generations to come.</p>
+      <a class="cover-scroll" href="#intro">Scroll</a>
     </div>
-    <div class="frame viewfinder"><img class="img" src="assets/img/autumn-family-960.webp" srcset="assets/img/autumn-family-480.webp 480w, assets/img/autumn-family-960.webp 960w, assets/img/autumn-family-1500.webp 1500w" sizes="100vw" width="1500" height="1000" alt="A family under bright autumn trees" loading="eager" fetchpriority="high" decoding="async" style="--tone:#704d22;--ratio:1500/1000"></div>
   </div>
 </section>
 
-<section class="section">
+<section class="section" id="intro">
   <div class="container split split--media-right">
     <div class="split-media">
       <div class="frame r-square"><img class="img" src="assets/img/golden-sisters-960.webp" srcset="assets/img/golden-sisters-480.webp 480w, assets/img/golden-sisters-960.webp 960w, assets/img/golden-sisters-1500.webp 1500w" sizes="(min-width: 900px) 46vw, 100vw" width="1500" height="1500" alt="A mother and two daughters hugging in golden light" loading="lazy" decoding="async" style="--tone:#9c6837;--ratio:1500/1500"></div>
@@ -249,6 +249,7 @@
       <p>Site by Code Bunny</p>
     </div>
   </div>
+  <p class="footer-giant" aria-hidden="true">The Things That <em>I</em> See</p>
 </footer>
 
 <div class="mobile-cta" data-mobile-cta>

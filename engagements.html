@@ -20,7 +20,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..600;1,6..96,400..500&family=Jost:wght@300;400;500;600&display=swap">
 <script>
-(function(d){var r=d.documentElement;if(!window.matchMedia||matchMedia('(prefers-reduced-motion: reduce)').matches)return;r.classList.add('motion');try{var k='ttis-intro',n=Date.now(),v=+localStorage.getItem(k)||0;if(n-v>18e5){r.classList.add('show-intro')}localStorage.setItem(k,n)}catch(e){}setTimeout(function(){if(!window.__motion){r.classList.remove('motion','show-intro')}},4000)})(document);
+(function(d){var r=d.documentElement;r.classList.add('js');if(!window.matchMedia||matchMedia('(prefers-reduced-motion: reduce)').matches)return;r.classList.add('motion');try{var k='ttis-intro',n=Date.now(),v=+localStorage.getItem(k)||0;if(n-v>18e5){r.classList.add('show-intro')}localStorage.setItem(k,n)}catch(e){}setTimeout(function(){if(!window.__motion){r.classList.remove('motion','show-intro')}},4000)})(document);
 </script>
 <link rel="stylesheet" href="assets/css/site.css">
 <script type="application/ld+json">
@@ -45,7 +45,7 @@
 </script>
 
 </head>
-<body class="">
+<body class="has-dark-hero">
 <a class="skip-link" href="#main">Skip to content</a>
 <div class="intro" aria-hidden="true"><div class="intro-inner"><p class="intro-word">The Things That <em>I</em> See</p><p class="intro-sub">Photography &amp; Film &middot; Colorado</p><div class="intro-bar"><span></span></div></div></div>
 <header class="site-header" data-header>
@@ -100,20 +100,20 @@
 </div>
 
 <main id="main">
-<section class="page-hero">
-  <div class="container">
-    <div class="page-hero-head">
-      <div class="stack">
-        <p class="eyebrow">Engagements</p>
-        <h1 class="h1">The <em>beginning</em> of a journey.</h1>
-      </div>
+<section class="cover-hero" data-dark-hero>
+  <div class="cover-media"><img class="img" src="assets/img/flatirons-sunset-960.webp" srcset="assets/img/flatirons-sunset-480.webp 480w, assets/img/flatirons-sunset-960.webp 960w, assets/img/flatirons-sunset-1500.webp 1500w" sizes="(orientation: portrait) 160vh, 100vw" width="1500" height="1001" alt="An engaged couple touching foreheads at sunset in front of the Flatirons" loading="eager" fetchpriority="high" decoding="async" style="--tone:#87766b;--ratio:1500/1001"></div>
+  <div class="cover-shade"></div>
+  <div class="container cover-content">
+    <p class="eyebrow">Engagements</p>
+    <h1 class="cover-title">The <em>beginning</em> of a journey.</h1>
+    <div class="cover-foot">
       <p class="lede">An engagement shoot isn&rsquo;t about posing and smiling for the camera. It&rsquo;s about the unique, inspiring moments you share as a couple, and the reality of your love.</p>
+      <a class="cover-scroll" href="#intro">Scroll</a>
     </div>
-    <div class="frame viewfinder"><img class="img" src="assets/img/flatirons-sunset-960.webp" srcset="assets/img/flatirons-sunset-480.webp 480w, assets/img/flatirons-sunset-960.webp 960w, assets/img/flatirons-sunset-1500.webp 1500w" sizes="100vw" width="1500" height="1001" alt="An engaged couple touching foreheads at sunset in front of the Flatirons" loading="eager" fetchpriority="high" decoding="async" style="--tone:#87766b;--ratio:1500/1001"></div>
   </div>
 </section>
 
-<section class="section">
+<section class="section" id="intro">
   <div class="container split">
     <div class="stack stack-lg">
       <p class="eyebrow">The session</p>
@@ -273,6 +273,7 @@
       <p>Site by Code Bunny</p>
     </div>
   </div>
+  <p class="footer-giant" aria-hidden="true">The Things That <em>I</em> See</p>
 </footer>
 
 <div class="mobile-cta" data-mobile-cta>

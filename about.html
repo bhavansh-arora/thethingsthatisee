@@ -20,7 +20,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..600;1,6..96,400..500&family=Jost:wght@300;400;500;600&display=swap">
 <script>
-(function(d){var r=d.documentElement;if(!window.matchMedia||matchMedia('(prefers-reduced-motion: reduce)').matches)return;r.classList.add('motion');try{var k='ttis-intro',n=Date.now(),v=+localStorage.getItem(k)||0;if(n-v>18e5){r.classList.add('show-intro')}localStorage.setItem(k,n)}catch(e){}setTimeout(function(){if(!window.__motion){r.classList.remove('motion','show-intro')}},4000)})(document);
+(function(d){var r=d.documentElement;r.classList.add('js');if(!window.matchMedia||matchMedia('(prefers-reduced-motion: reduce)').matches)return;r.classList.add('motion');try{var k='ttis-intro',n=Date.now(),v=+localStorage.getItem(k)||0;if(n-v>18e5){r.classList.add('show-intro')}localStorage.setItem(k,n)}catch(e){}setTimeout(function(){if(!window.__motion){r.classList.remove('motion','show-intro')}},4000)})(document);
 </script>
 <link rel="stylesheet" href="assets/css/site.css">
 <script type="application/ld+json">
@@ -45,7 +45,7 @@
 </script>
 
 </head>
-<body class="">
+<body class="has-dark-hero">
 <a class="skip-link" href="#main">Skip to content</a>
 <div class="intro" aria-hidden="true"><div class="intro-inner"><p class="intro-word">The Things That <em>I</em> See</p><p class="intro-sub">Photography &amp; Film &middot; Colorado</p><div class="intro-bar"><span></span></div></div></div>
 <header class="site-header" data-header>
@@ -100,20 +100,20 @@
 </div>
 
 <main id="main">
-<section class="page-hero">
-  <div class="container split">
-    <div class="stack stack-lg">
-      <p class="eyebrow">About</p>
-      <h1 class="h1">Hi, I&rsquo;m <em>Jason.</em></h1>
+<section class="cover-hero" data-dark-hero>
+  <div class="cover-media"><img class="img" src="assets/img/jason-portrait-960.webp" srcset="assets/img/jason-portrait-480.webp 480w, assets/img/jason-portrait-960.webp 960w, assets/img/jason-portrait-1500.webp 1500w" sizes="(orientation: portrait) 160vh, 100vw" width="1500" height="1000" alt="Jason Smith, photographer" loading="eager" fetchpriority="high" decoding="async" style="--tone:#9c9c9c;--ratio:1500/1000"></div>
+  <div class="cover-shade"></div>
+  <div class="container cover-content">
+    <p class="eyebrow">About</p>
+    <h1 class="cover-title">Hi, I&rsquo;m <em>Jason.</em></h1>
+    <div class="cover-foot">
       <p class="lede">A happily married father of six and a jack-of-all-trades based in Centennial, Colorado. Designer, photographer, videographer, but my true passion is capturing life&rsquo;s most precious moments.</p>
-    </div>
-    <div class="split-media">
-      <div class="frame r-land viewfinder"><img class="img" src="assets/img/jason-portrait-960.webp" srcset="assets/img/jason-portrait-480.webp 480w, assets/img/jason-portrait-960.webp 960w, assets/img/jason-portrait-1500.webp 1500w" sizes="(min-width: 900px) 46vw, 100vw" width="1500" height="1000" alt="Jason Smith, photographer" loading="eager" fetchpriority="high" decoding="async" style="--tone:#9c9c9c;--ratio:1500/1000"></div>
+      <a class="cover-scroll" href="#intro">Scroll</a>
     </div>
   </div>
 </section>
 
-<section class="section">
+<section class="section" id="intro">
   <div class="container container--narrow stack stack-lg">
     <p class="eyebrow">My story</p>
     <h2 class="h2">Whether I like it or not <em>(spoiler: I do),</em> Christ enters all aspects of my work.</h2>
@@ -275,6 +275,7 @@
       <p>Site by Code Bunny</p>
     </div>
   </div>
+  <p class="footer-giant" aria-hidden="true">The Things That <em>I</em> See</p>
 </footer>
 
 <div class="mobile-cta" data-mobile-cta>

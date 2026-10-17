@@ -44,7 +44,9 @@ The build writes responsive `srcset`, width and height (no layout shift), lazy l
 
 ### Motion
 
-`assets/js/motion.js` adds the intro curtain (once per 30 minutes), word-by-word headline reveals, curtain-wipe photo reveals, parallax, the pinned horizontal gallery, the scroll-speed marquee, count-up stats, the hide-on-scroll header, and the desktop cursor and magnetic buttons. Smooth scrolling (Lenis) runs on mouse and trackpad only; touch devices keep native scrolling. Page-to-page fades use the browser's View Transitions.
+Signature moments: the home hero's scroll-driven zoom (the photo grows from a window between the giant title words to full screen), the manifesto whose words light up as you read, the services list with a cursor-following photo, the stacking "How it works" chapters, full-screen cover heroes on inner pages with a transparent header, and the full-width footer wordmark.
+
+`assets/js/motion.js` also adds the intro curtain (once per 30 minutes), word-by-word headline reveals, curtain-wipe photo reveals, parallax, the pinned horizontal gallery, the scroll-speed marquee, count-up stats, the hide-on-scroll header, and the desktop cursor and magnetic buttons. Smooth scrolling (Lenis) runs on mouse and trackpad only; touch devices keep native scrolling. Page-to-page fades use the browser's View Transitions.
 
 Motion is progressive: content is only hidden for animation once `<html class="motion">` is set in the page head. Visitors with "reduce motion" turned on, or browsers where the scripts fail to load within 4 seconds, get the full static site.
 

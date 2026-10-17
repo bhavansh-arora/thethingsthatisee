@@ -37,9 +37,11 @@
   // ---------- header ----------
   var header = $("[data-header]");
   var mobileCta = $("[data-mobile-cta]");
+  var darkHero = $("[data-dark-hero]");
   function onScroll() {
     var y = window.scrollY || 0;
     if (header) header.classList.toggle("is-scrolled", y > 8);
+    if (header && darkHero) header.classList.toggle("past-hero", y > darkHero.offsetHeight - 90);
     if (mobileCta) mobileCta.classList.toggle("is-visible", y > Math.min(480, window.innerHeight * 0.6));
   }
   window.addEventListener("scroll", onScroll, { passive: true });

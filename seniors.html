@@ -20,7 +20,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..600;1,6..96,400..500&family=Jost:wght@300;400;500;600&display=swap">
 <script>
-(function(d){var r=d.documentElement;if(!window.matchMedia||matchMedia('(prefers-reduced-motion: reduce)').matches)return;r.classList.add('motion');try{var k='ttis-intro',n=Date.now(),v=+localStorage.getItem(k)||0;if(n-v>18e5){r.classList.add('show-intro')}localStorage.setItem(k,n)}catch(e){}setTimeout(function(){if(!window.__motion){r.classList.remove('motion','show-intro')}},4000)})(document);
+(function(d){var r=d.documentElement;r.classList.add('js');if(!window.matchMedia||matchMedia('(prefers-reduced-motion: reduce)').matches)return;r.classList.add('motion');try{var k='ttis-intro',n=Date.now(),v=+localStorage.getItem(k)||0;if(n-v>18e5){r.classList.add('show-intro')}localStorage.setItem(k,n)}catch(e){}setTimeout(function(){if(!window.__motion){r.classList.remove('motion','show-intro')}},4000)})(document);
 </script>
 <link rel="stylesheet" href="assets/css/site.css">
 <script type="application/ld+json">
@@ -45,7 +45,7 @@
 </script>
 
 </head>
-<body class="">
+<body class="has-dark-hero">
 <a class="skip-link" href="#main">Skip to content</a>
 <div class="intro" aria-hidden="true"><div class="intro-inner"><p class="intro-word">The Things That <em>I</em> See</p><p class="intro-sub">Photography &amp; Film &middot; Colorado</p><div class="intro-bar"><span></span></div></div></div>
 <header class="site-header" data-header>
@@ -100,20 +100,20 @@
 </div>
 
 <main id="main">
-<section class="page-hero">
-  <div class="container">
-    <div class="page-hero-head">
-      <div class="stack">
-        <p class="eyebrow">Senior portraits</p>
-        <h1 class="h1">Your year. Your style. <em>Your story.</em></h1>
-      </div>
+<section class="cover-hero" data-dark-hero>
+  <div class="cover-media"><img class="img" src="assets/img/garden-path-960.webp" srcset="assets/img/garden-path-480.webp 480w, assets/img/garden-path-960.webp 960w, assets/img/garden-path-1500.webp 1500w" sizes="(orientation: portrait) 160vh, 100vw" width="1500" height="1000" alt="A senior walking a brick path at the Denver Botanic Gardens" loading="eager" fetchpriority="high" decoding="async" style="--tone:#828781;--ratio:1500/1000"></div>
+  <div class="cover-shade"></div>
+  <div class="container cover-content">
+    <p class="eyebrow">Senior portraits</p>
+    <h1 class="cover-title">Your year. Your style. <em>Your story.</em></h1>
+    <div class="cover-foot">
       <p class="lede">Senior portraits in Denver, Littleton, Highlands Ranch and Centennial that feel real, look amazing, and capture exactly who you are. Your fully edited gallery is ready in just one week.</p>
+      <a class="cover-scroll" href="#intro">Scroll</a>
     </div>
-    <div class="frame viewfinder"><img class="img" src="assets/img/garden-path-960.webp" srcset="assets/img/garden-path-480.webp 480w, assets/img/garden-path-960.webp 960w, assets/img/garden-path-1500.webp 1500w" sizes="100vw" width="1500" height="1000" alt="A senior walking a brick path at the Denver Botanic Gardens" loading="eager" fetchpriority="high" decoding="async" style="--tone:#828781;--ratio:1500/1000"></div>
   </div>
 </section>
 
-<section class="section">
+<section class="section" id="intro">
   <div class="container split">
     <div class="stack stack-lg">
       <p class="eyebrow">Why it matters</p>
@@ -283,6 +283,7 @@
       <p>Site by Code Bunny</p>
     </div>
   </div>
+  <p class="footer-giant" aria-hidden="true">The Things That <em>I</em> See</p>
 </footer>
 
 <div class="mobile-cta" data-mobile-cta>

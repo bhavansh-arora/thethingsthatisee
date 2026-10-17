@@ -20,7 +20,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..600;1,6..96,400..500&family=Jost:wght@300;400;500;600&display=swap">
 <script>
-(function(d){var r=d.documentElement;if(!window.matchMedia||matchMedia('(prefers-reduced-motion: reduce)').matches)return;r.classList.add('motion');try{var k='ttis-intro',n=Date.now(),v=+localStorage.getItem(k)||0;if(n-v>18e5){r.classList.add('show-intro')}localStorage.setItem(k,n)}catch(e){}setTimeout(function(){if(!window.__motion){r.classList.remove('motion','show-intro')}},4000)})(document);
+(function(d){var r=d.documentElement;r.classList.add('js');if(!window.matchMedia||matchMedia('(prefers-reduced-motion: reduce)').matches)return;r.classList.add('motion');try{var k='ttis-intro',n=Date.now(),v=+localStorage.getItem(k)||0;if(n-v>18e5){r.classList.add('show-intro')}localStorage.setItem(k,n)}catch(e){}setTimeout(function(){if(!window.__motion){r.classList.remove('motion','show-intro')}},4000)})(document);
 </script>
 <link rel="stylesheet" href="assets/css/site.css">
 <script type="application/ld+json">
@@ -45,7 +45,7 @@
 </script>
 
 </head>
-<body class="">
+<body class="has-dark-hero">
 <a class="skip-link" href="#main">Skip to content</a>
 <div class="intro" aria-hidden="true"><div class="intro-inner"><p class="intro-word">The Things That <em>I</em> See</p><p class="intro-sub">Photography &amp; Film &middot; Colorado</p><div class="intro-bar"><span></span></div></div></div>
 <header class="site-header" data-header>
@@ -100,34 +100,20 @@
 </div>
 
 <main id="main">
-<section class="hero">
-  <div class="container hero-grid">
-    <div class="hero-copy">
-      <p class="eyebrow rise">Catholic &amp; Christian wedding photography &middot; Colorado</p>
-      <h1 class="hero-title rise rise-2">Honest wedding photographs, made with <em>reverence.</em></h1>
-      <p class="lede rise rise-3">I&rsquo;m Jason Smith, a photographer and filmmaker in Centennial, Colorado. For twenty years I&rsquo;ve used this work to tell the story of Christ&rsquo;s work in His world, one couple at a time.</p>
-      <form class="date-check rise rise-4" action="enquire.html" method="get" data-date-check>
-        <input type="hidden" name="type" value="wedding">
-        <label class="label" for="hero-date">Is your wedding date open?</label>
-        <div class="date-check-row">
-          <input class="input" type="date" id="hero-date" name="date" required>
-          <button class="btn btn-solid" type="submit">Check</button>
-        </div>
-        <p class="date-check-result" data-date-result aria-live="polite"></p>
-      </form>
-      <p class="hero-note rise rise-4"><span>Weddings from $2,500</span><span>Film from $2,300</span><span>Parishioner at St. Mary&rsquo;s</span></p>
+<section class="zoom-hero" data-zoom-hero data-dark-hero>
+  <div class="zoom-stage">
+    <div class="zoom-frame"><img class="img" src="assets/img/cathedral-aisle-960.webp" srcset="assets/img/cathedral-aisle-480.webp 480w, assets/img/cathedral-aisle-960.webp 960w, assets/img/cathedral-aisle-1600.webp 1600w" sizes="(orientation: portrait) 160vh, 100vw" width="2500" height="1668" alt="A wide view down the aisle of a gilded cathedral during a wedding" loading="eager" fetchpriority="high" decoding="async" style="--tone:#6d4625;--ratio:2500/1668"><div class="zoom-shade"></div></div>
+    <h1 class="zoom-title" aria-label="The Things That I See: honest wedding photographs, made with reverence">
+      <span class="zt zt-top">The things</span>
+      <span class="zt zt-bottom"><em>I</em>&nbsp;see.</span>
+    </h1>
+    <div class="zoom-copy">
+      <p class="eyebrow">Catholic &amp; Christian weddings &middot; Colorado</p>
+      <p class="zoom-line">Honest wedding photographs, made with <em>reverence.</em></p>
+      <div class="btn-row"><a class="btn btn-light" href="enquire.html">Check your date</a><a class="btn btn-ghost-light" href="portfolio.html">See the work</a></div>
     </div>
-    <div class="hero-media">
-      <div class="seal" aria-hidden="true">
-        <svg viewBox="0 0 120 120"><defs><path id="seal-c" d="M60,60 m-46,0 a46,46 0 1,1 92,0 a46,46 0 1,1 -92,0"/></defs>
-          <g class="seal-text"><text font-family="Jost, sans-serif" font-size="8.6" fill="currentColor"><textPath href="#seal-c" textLength="286" lengthAdjust="spacing">PHOTOGRAPHY &#183; FILM &#183; CENTENNIAL &#183; COLORADO &#183;</textPath></text></g></svg>
-        <span class="cross"></span>
-      </div>
-      <div class="frame viewfinder">
-        <img class="img" src="assets/img/hero-mass-960.webp" srcset="assets/img/hero-mass-480.webp 480w, assets/img/hero-mass-960.webp 960w, assets/img/hero-mass-1500.webp 1500w" sizes="(min-width: 900px) 52vw, 100vw" width="1500" height="2250" alt="A bride&#x27;s veil trailing down the aisle toward the altar during a nuptial Mass" loading="eager" fetchpriority="high" decoding="async" style="--tone:#b8a590;--ratio:1500/2250">
-      </div>
-      <p class="hero-badge">&ldquo;Christ enters all aspects of my work.&rdquo;<small>Jason Smith</small></p>
-    </div>
+    <p class="zoom-meta"><span>Jason Smith</span><span>Photography &amp; film</span><span>Centennial, Colorado</span></p>
+    <p class="zoom-cue" aria-hidden="true"><span></span>Scroll</p>
   </div>
 </section>
 
@@ -143,6 +129,17 @@
   </div>
 </section>
 
+<section class="manifesto">
+  <div class="container">
+    <p class="eyebrow">Why I do this</p>
+    <p class="manifesto-text">I photograph the nervous laughter before the aisle <span class="inline-img"><img class="img" src="assets/img/father-of-bride-960.webp" srcset="assets/img/father-of-bride-480.webp 480w, assets/img/father-of-bride-960.webp 960w, assets/img/father-of-bride-1600.webp 1600w" sizes="160px" width="2500" height="1668" alt="A father walks his daughter down a warm-lit church aisle" loading="lazy" decoding="async" style="--tone:#986e49;--ratio:2500/1668"></span> the tear-filled vows, the quiet of the Mass <span class="inline-img"><img class="img" src="assets/img/elevation-960.webp" srcset="assets/img/elevation-480.webp 480w, assets/img/elevation-960.webp 960w, assets/img/elevation-1600.webp 1600w" sizes="160px" width="2500" height="2500" alt="The priest elevates the chalice as the couple kneels at the altar" loading="lazy" decoding="async" style="--tone:#baa285;--ratio:2500/2500"></span> and the joy no one rehearsed <span class="inline-img"><img class="img" src="assets/img/sparkler-exit-960.webp" srcset="assets/img/sparkler-exit-480.webp 480w, assets/img/sparkler-exit-960.webp 960w, assets/img/sparkler-exit-1600.webp 1600w" sizes="160px" width="2500" height="1670" alt="Newlyweds walk through a tunnel of sparklers at night" loading="lazy" decoding="async" style="--tone:#80654d;--ratio:2500/1670"></span> so you can live it fully, and keep it for generations.</p>
+    <div class="manifesto-sign">
+      <p class="manifesto-quote">&ldquo;Christ enters all aspects of my work.&rdquo;</p>
+      <p class="label">Jason Smith</p>
+    </div>
+  </div>
+</section>
+
 <section class="section section--tight">
   <div class="container stats">
     <div class="stat"><p class="stat-num"><span data-count="20">20</span><sup>yrs</sup></p><p class="stat-label">behind the lens, telling stories of faith and family</p></div>
@@ -152,63 +149,23 @@
   </div>
 </section>
 
-<section class="section">
-  <div class="container split">
-    <div class="split-media">
-      <div class="frame r-land">
-        <img class="img" src="assets/img/jason-portrait-960.webp" srcset="assets/img/jason-portrait-480.webp 480w, assets/img/jason-portrait-960.webp 960w, assets/img/jason-portrait-1500.webp 1500w" sizes="(min-width: 900px) 46vw, 100vw" width="1500" height="1000" alt="Jason Smith, photographer" loading="lazy" decoding="async" style="--tone:#9c9c9c;--ratio:1500/1000">
-      </div>
-    </div>
-    <div class="stack stack-lg">
-      <p class="eyebrow">Hi, I&rsquo;m Jason</p>
-      <h2 class="h2">A jack-of-all-trades with <em>one</em> true passion.</h2>
-      <div class="prose">
-        <p>I&rsquo;m a happily married father of six, and I wear a lot of hats: designer, photographer, videographer. Before all this I worked in clinical pharmacy and research, and I still love carpentry. That mix shapes how I see a wedding day.</p>
-        <p>Authenticity is the heart of every image I make. I&rsquo;ll give you gentle direction when you need it, then step back so you can be present with the people you love.</p>
-      </div>
-      <dl class="facts">
-        <div><dt>Based in</dt><dd>Centennial, Colorado</dd></div>
-        <div><dt>Behind the lens</dt><dd>20 years</dd></div>
-        <div><dt>At home</dt><dd>Married, father of six</dd></div>
-        <div><dt>Parish</dt><dd>St. Mary&rsquo;s Catholic Church</dd></div>
-      </dl>
-      <a class="link-arrow" href="about.html">More about me</a>
-    </div>
-  </div>
-</section>
-
-<section class="section">
+<section class="section svc-section">
   <div class="container">
     <div class="section-head section-head--row">
       <div class="stack">
         <p class="eyebrow">What I photograph</p>
-        <h2 class="h2">Every photo tells a <em>story.</em></h2>
+        <h2 class="h2">Four ways to tell <em>your</em> story.</h2>
       </div>
       <a class="link-arrow" href="investment.html">See all pricing</a>
     </div>
-    <div class="services">
-      <a class="service" href="weddings.html">
-        <div class="frame"><img class="img" src="assets/img/father-of-bride-960.webp" srcset="assets/img/father-of-bride-480.webp 480w, assets/img/father-of-bride-960.webp 960w, assets/img/father-of-bride-1600.webp 1600w" sizes="(min-width: 1000px) 24vw, 50vw" width="2500" height="1668" alt="A father walks his daughter down a warm-lit church aisle" loading="lazy" decoding="async" style="--tone:#986e49;--ratio:2500/1668"></div>
-        <p class="service-title">Weddings</p>
-        <p class="service-meta"><span>The big day</span><b>from $2,500</b></p>
-      </a>
-      <a class="service" href="engagements.html">
-        <div class="frame"><img class="img" src="assets/img/flatirons-sunset-960.webp" srcset="assets/img/flatirons-sunset-480.webp 480w, assets/img/flatirons-sunset-960.webp 960w, assets/img/flatirons-sunset-1500.webp 1500w" sizes="(min-width: 1000px) 24vw, 50vw" width="1500" height="1001" alt="An engaged couple touching foreheads at sunset in front of the Flatirons" loading="lazy" decoding="async" style="--tone:#87766b;--ratio:1500/1001"></div>
-        <p class="service-title">Engagements</p>
-        <p class="service-meta"><span>The beginning</span><b>$750</b></p>
-      </a>
-      <a class="service" href="family.html">
-        <div class="frame"><img class="img" src="assets/img/golden-sisters-960.webp" srcset="assets/img/golden-sisters-480.webp 480w, assets/img/golden-sisters-960.webp 960w, assets/img/golden-sisters-1500.webp 1500w" sizes="(min-width: 1000px) 24vw, 50vw" width="1500" height="1500" alt="A mother and two daughters hugging in golden light" loading="lazy" decoding="async" style="--tone:#9c6837;--ratio:1500/1500"></div>
-        <p class="service-title">Family</p>
-        <p class="service-meta"><span>Living life</span><b>from $250</b></p>
-      </a>
-      <a class="service" href="seniors.html">
-        <div class="frame"><img class="img" src="assets/img/meadow-dress-960.webp" srcset="assets/img/meadow-dress-480.webp 480w, assets/img/meadow-dress-960.webp 960w, assets/img/meadow-dress-1600.webp 1600w" sizes="(min-width: 1000px) 24vw, 50vw" width="2500" height="3750" alt="A senior in a white dress in a flowering meadow" loading="lazy" decoding="async" style="--tone:#a3a17d;--ratio:2500/3750"></div>
-        <p class="service-title">Seniors</p>
-        <p class="service-meta"><span>Everyday life</span><b>from $400</b></p>
-      </a>
-    </div>
+    <ul class="svc-list">
+      <li><a class="svc-row" href="weddings.html"><span class="svc-thumb"><img class="img" src="assets/img/father-of-bride-960.webp" srcset="assets/img/father-of-bride-480.webp 480w, assets/img/father-of-bride-960.webp 960w, assets/img/father-of-bride-1600.webp 1600w" sizes="(min-width: 900px) 360px, 72px" width="2500" height="1668" alt="A father walks his daughter down a warm-lit church aisle" loading="lazy" decoding="async" style="--tone:#986e49;--ratio:2500/1668"></span><span class="svc-name">Weddings</span><span class="svc-desc">The big day, photography &amp; film</span><span class="svc-price">from $2,500</span><span class="svc-arrow" aria-hidden="true">&rarr;</span></a></li>
+      <li><a class="svc-row" href="engagements.html"><span class="svc-thumb"><img class="img" src="assets/img/flatirons-sunset-960.webp" srcset="assets/img/flatirons-sunset-480.webp 480w, assets/img/flatirons-sunset-960.webp 960w, assets/img/flatirons-sunset-1500.webp 1500w" sizes="(min-width: 900px) 360px, 72px" width="1500" height="1001" alt="An engaged couple touching foreheads at sunset in front of the Flatirons" loading="lazy" decoding="async" style="--tone:#87766b;--ratio:1500/1001"></span><span class="svc-name">Engagements</span><span class="svc-desc">The beginning of the journey</span><span class="svc-price">$750</span><span class="svc-arrow" aria-hidden="true">&rarr;</span></a></li>
+      <li><a class="svc-row" href="family.html"><span class="svc-thumb"><img class="img" src="assets/img/golden-sisters-960.webp" srcset="assets/img/golden-sisters-480.webp 480w, assets/img/golden-sisters-960.webp 960w, assets/img/golden-sisters-1500.webp 1500w" sizes="(min-width: 900px) 360px, 72px" width="1500" height="1500" alt="A mother and two daughters hugging in golden light" loading="lazy" decoding="async" style="--tone:#9c6837;--ratio:1500/1500"></span><span class="svc-name">Family</span><span class="svc-desc">Candid or classic, at home or out</span><span class="svc-price">from $250</span><span class="svc-arrow" aria-hidden="true">&rarr;</span></a></li>
+      <li><a class="svc-row" href="seniors.html"><span class="svc-thumb"><img class="img" src="assets/img/meadow-dress-960.webp" srcset="assets/img/meadow-dress-480.webp 480w, assets/img/meadow-dress-960.webp 960w, assets/img/meadow-dress-1600.webp 1600w" sizes="(min-width: 900px) 360px, 72px" width="2500" height="3750" alt="A senior in a white dress in a flowering meadow" loading="lazy" decoding="async" style="--tone:#a3a17d;--ratio:2500/3750"></span><span class="svc-name">Seniors</span><span class="svc-desc">Your year, gallery in one week</span><span class="svc-price">from $400</span><span class="svc-arrow" aria-hidden="true">&rarr;</span></a></li>
+    </ul>
   </div>
+  <div class="svc-float" aria-hidden="true"></div>
 </section>
 
 <div class="marquee-band" aria-hidden="true">
@@ -267,25 +224,32 @@
   <div class="container"><div class="hgal-progress"><span></span></div></div>
 </section>
 
-<section class="section section--stone">
-  <div class="container">
-    <div class="section-head">
-      <p class="eyebrow">Kind words</p>
+<section class="section">
+  <div class="container split">
+    <div class="split-media">
+      <div class="frame r-land">
+        <img class="img" src="assets/img/jason-portrait-960.webp" srcset="assets/img/jason-portrait-480.webp 480w, assets/img/jason-portrait-960.webp 960w, assets/img/jason-portrait-1500.webp 1500w" sizes="(min-width: 900px) 46vw, 100vw" width="1500" height="1000" alt="Jason Smith, photographer" loading="lazy" decoding="async" style="--tone:#9c9c9c;--ratio:1500/1000">
+      </div>
     </div>
-    <div class="quotes">
-      <figure class="quote">
-        <blockquote>Jason made our engagement photoshoot an absolute delight! His creativity and easygoing nature turned the experience into a fun and memorable event. He captured our love perfectly and made us feel comfortable throughout.</blockquote>
-        <cite>Katie &amp; Mike</cite>
-      </figure>
-      <figure class="quote">
-        <blockquote>Not only was it an absolute breeze to work together, but his creativity truly blew me away. If you&rsquo;re in need of some stunning wedding photos, look no further!</blockquote>
-        <cite>Sara &amp; Silvio</cite>
-      </figure>
+    <div class="stack stack-lg">
+      <p class="eyebrow">Hi, I&rsquo;m Jason</p>
+      <h2 class="h2">A jack-of-all-trades with <em>one</em> true passion.</h2>
+      <div class="prose">
+        <p>I&rsquo;m a happily married father of six, and I wear a lot of hats: designer, photographer, videographer. Before all this I worked in clinical pharmacy and research, and I still love carpentry. That mix shapes how I see a wedding day.</p>
+        <p>Authenticity is the heart of every image I make. I&rsquo;ll give you gentle direction when you need it, then step back so you can be present with the people you love.</p>
+      </div>
+      <dl class="facts">
+        <div><dt>Based in</dt><dd>Centennial, Colorado</dd></div>
+        <div><dt>Behind the lens</dt><dd>20 years</dd></div>
+        <div><dt>At home</dt><dd>Married, father of six</dd></div>
+        <div><dt>Parish</dt><dd>St. Mary&rsquo;s Catholic Church</dd></div>
+      </dl>
+      <a class="link-arrow" href="about.html">More about me</a>
     </div>
   </div>
 </section>
 
-<section class="section">
+<section class="chapters">
   <div class="container">
     <div class="section-head section-head--row">
       <div class="stack">
@@ -294,13 +258,62 @@
       </div>
       <p class="lede">Most couples book 9 to 18 months ahead, especially for spring and fall. Shorter timeline? Ask anyway.</p>
     </div>
-    <ol class="steps">
-      <li class="step"><span class="step-num">I</span><h3>Enquire</h3><p>Tell me your date and a few details. You&rsquo;ll see which collection fits straight away.</p></li>
-      <li class="step"><span class="step-num">II</span><h3>Talk it through</h3><p>We meet by phone or over coffee. I answer every question, and prices are always negotiable.</p></li>
-      <li class="step"><span class="step-num">III</span><h3>Engagement</h3><p>A relaxed session to get comfortable in front of the camera before the big day.</p></li>
-      <li class="step"><span class="step-num">IV</span><h3>Your day</h3><p>I coordinate with your parish beforehand, then document the day as it unfolds.</p></li>
-      <li class="step"><span class="step-num">V</span><h3>Your gallery</h3><p>A preview within a week, the full gallery in about 6 to 8 weeks, and an heirloom album if you&rsquo;d like one.</p></li>
-    </ol>
+  </div>
+  <div class="container chapter-stack">
+    <article class="chapter" style="--i:0">
+      <div class="chapter-copy">
+        <p class="chapter-num">I</p>
+        <h3 class="chapter-title">Enquire</h3>
+        <p class="chapter-text">Tell me your date and a few details. You&rsquo;ll see which collection fits straight away, and I&rsquo;ll reply to you personally.</p>
+      </div>
+      <div class="chapter-media"><img class="img" src="assets/img/ring-box-960.webp" srcset="assets/img/ring-box-480.webp 480w, assets/img/ring-box-960.webp 960w, assets/img/ring-box-1500.webp 1500w" sizes="(min-width: 900px) 50vw, 100vw" width="1500" height="1000" alt="Wedding rings in a wooden box beside a white rose" loading="lazy" decoding="async" style="--tone:#685f59;--ratio:1500/1000"></div>
+    </article>
+    <article class="chapter" style="--i:1">
+      <div class="chapter-copy">
+        <p class="chapter-num">II</p>
+        <h3 class="chapter-title">Talk it through</h3>
+        <p class="chapter-text">We meet by phone or over coffee. I answer every question, and every price is negotiable.</p>
+      </div>
+      <div class="chapter-media"><img class="img" src="assets/img/story-what-to-expect-960.webp" srcset="assets/img/story-what-to-expect-480.webp 480w, assets/img/story-what-to-expect-960.webp 960w, assets/img/story-what-to-expect-1500.webp 1500w" sizes="(min-width: 900px) 50vw, 100vw" width="1500" height="1000" alt="A couple seated in a pew beneath stained glass" loading="lazy" decoding="async" style="--tone:#817b78;--ratio:1500/1000"></div>
+    </article>
+    <article class="chapter" style="--i:2">
+      <div class="chapter-copy">
+        <p class="chapter-num">III</p>
+        <h3 class="chapter-title">Your engagement</h3>
+        <p class="chapter-text">A relaxed session to get comfortable in front of the camera, with photos made for save-the-dates.</p>
+      </div>
+      <div class="chapter-media"><img class="img" src="assets/img/flatirons-sunset-960.webp" srcset="assets/img/flatirons-sunset-480.webp 480w, assets/img/flatirons-sunset-960.webp 960w, assets/img/flatirons-sunset-1500.webp 1500w" sizes="(min-width: 900px) 50vw, 100vw" width="1500" height="1001" alt="An engaged couple touching foreheads at sunset in front of the Flatirons" loading="lazy" decoding="async" style="--tone:#87766b;--ratio:1500/1001"></div>
+    </article>
+    <article class="chapter" style="--i:3">
+      <div class="chapter-copy">
+        <p class="chapter-num">IV</p>
+        <h3 class="chapter-title">The day itself</h3>
+        <p class="chapter-text">I coordinate with your parish beforehand, then document the day quietly as it unfolds.</p>
+      </div>
+      <div class="chapter-media"><img class="img" src="assets/img/father-of-bride-960.webp" srcset="assets/img/father-of-bride-480.webp 480w, assets/img/father-of-bride-960.webp 960w, assets/img/father-of-bride-1600.webp 1600w" sizes="(min-width: 900px) 50vw, 100vw" width="2500" height="1668" alt="A father walks his daughter down a warm-lit church aisle" loading="lazy" decoding="async" style="--tone:#986e49;--ratio:2500/1668"></div>
+    </article>
+    <article class="chapter" style="--i:4">
+      <div class="chapter-copy">
+        <p class="chapter-num">V</p>
+        <h3 class="chapter-title">Your heirloom</h3>
+        <p class="chapter-text">A preview within a week, the full gallery in about 6 to 8 weeks, and a KISSBOOK or ZNO album if you&rsquo;d like one.</p>
+      </div>
+      <div class="chapter-media"><img class="img" src="assets/img/columns-kiss-960.webp" srcset="assets/img/columns-kiss-480.webp 480w, assets/img/columns-kiss-960.webp 960w, assets/img/columns-kiss-1600.webp 1600w" sizes="(min-width: 900px) 50vw, 100vw" width="2500" height="2500" alt="A couple kissing between tall white columns" loading="lazy" decoding="async" style="--tone:#c0b49e;--ratio:2500/2500"></div>
+    </article>
+  </div>
+</section>
+
+<section class="section quote-hero">
+  <div class="container">
+    <p class="eyebrow">Kind words</p>
+    <figure class="big-quote">
+      <blockquote>Jason made our engagement photoshoot an absolute <em>delight.</em> He captured our love perfectly and made us feel comfortable throughout.</blockquote>
+      <figcaption><span class="label">Katie &amp; Mike</span><span class="muted small">Engagement session</span></figcaption>
+    </figure>
+    <figure class="big-quote big-quote--alt">
+      <blockquote>Not only was it an absolute breeze to work together, but his creativity truly <em>blew me away.</em></blockquote>
+      <figcaption><span class="label">Sara &amp; Silvio</span><span class="muted small">Wedding</span></figcaption>
+    </figure>
   </div>
 </section>
 
@@ -410,6 +423,7 @@
       <p>Site by Code Bunny</p>
     </div>
   </div>
+  <p class="footer-giant" aria-hidden="true">The Things That <em>I</em> See</p>
 </footer>
 
 <div class="mobile-cta" data-mobile-cta>
