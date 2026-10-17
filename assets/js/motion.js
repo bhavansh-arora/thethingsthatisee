@@ -43,7 +43,7 @@
   var LIST = ".eyebrow, .kicker, .lede, .prose, .facts, .btn-row, .ticks > li, .note-card, .quote, .price-card, .story, .svc-card, " +
     ".pillar, .faq details, .note, .date-check, .capture, .kicker-list, .featured-inner, .stat, .toc, .guide-body > *, .summary, " +
     ".aside-card, .link-arrow, .filters, .masonry > *, .thread-body, .invite, .flick-ui, .hero-sign, .letter-sign, .footer-grid > *";
-  var targets = $$(LIST).filter(keep).concat(heads, $$(".drop"));
+  var targets = $$(LIST).filter(keep).concat(heads, $$(".drop"), $$(".footer-giant"));
   function show(el) { el.classList.add("is-in"); }
   var io = new IntersectionObserver(function (entries) {
     var entering = entries.filter(function (e) { return e.isIntersecting; }).map(function (e) { return e.target; });
@@ -76,6 +76,11 @@
 
   // ---------- scroll-linked: parallax drift, thread line, bottom catch-all ----------
   var drifters = $$("[data-speed]");
+  drifters.forEach(function (el) { el._s = { sy: 0, mx: 0, my: 0, tx: 0, ty: 0, dx: 0, dy: 0 }; });
+  function apply(el) {
+    var s = el._s;
+    el.style.transform = "translate3d(" + (s.mx + s.dx).toFixed(1) + "px," + (s.sy + s.my + s.dy).toFixed(1) + "px,0)";
+  }
   var threads = $$(".thread");
   var ticking = false;
   function update() {
@@ -84,15 +89,140 @@
     drifters.forEach(function (el) {
       var r = el.parentElement.getBoundingClientRect();
       if (r.bottom < -200 || r.top > vh + 200) return;
-      var offset = (r.top + r.height / 2 - vh / 2) * -parseFloat(el.getAttribute("data-speed"));
-      el.style.transform = "translate3d(0," + offset.toFixed(1) + "px,0)";
+      el._s.sy = (r.top + r.height / 2 - vh / 2) * -parseFloat(el.getAttribute("data-speed"));
+      apply(el);
     });
     threads.forEach(function (t) {
       var r = t.getBoundingClientRect(), bar = t.querySelector(".thread-line span");
-      if (bar) bar.style.transform = "scaleY(" + Math.max(0, Math.min(1, (vh * 0.65 - r.top) / r.height)).toFixed(3) + ")";
+      var p = Math.max(0, Math.min(1, (vh * 0.65 - r.top) / r.height));
+      if (bar) bar.style.transform = "scaleY(" + p.toFixed(3) + ")";
+      if (t._pen) t._pen.style.top = (p * 100).toFixed(2) + "%";
     });
     if (window.scrollY + vh >= document.documentElement.scrollHeight - 6) targets.forEach(show);
   }
+
+  // ---------- photographs develop as they appear ----------
+  var dio = new IntersectionObserver(function (entries) {
+    entries.forEach(function (e) {
+      if (!e.isIntersecting) return;
+      dio.unobserve(e.target);
+      var img = e.target;
+      var go = function () { setTimeout(function () { img.classList.add("developed"); }, 120); };
+      if (img.tagName !== "IMG" || img.complete) go(); else { img.addEventListener("load", go, { once: true }); img.addEventListener("error", go, { once: true }); }
+    });
+  }, { threshold: 0.25 });
+  $$("main .img").forEach(function (img) { dio.observe(img); });
+
+  // ---------- thread pen ----------
+  threads.forEach(function (t) {
+    var line = t.querySelector(".thread-line");
+    if (!line) return;
+    var pen = document.createElement("i"); pen.className = "thread-pen"; pen.setAttribute("aria-hidden", "true");
+    line.appendChild(pen); t._pen = pen;
+  });
+
+  var fine = window.matchMedia("(pointer: fine)").matches;
+
+  // ---------- hero collage: mouse depth + drag the prints around ----------
+  if (fine) {
+    var mouseX = 0, mouseY = 0, raf = null;
+    window.addEventListener("mousemove", function (e) {
+      mouseX = e.clientX / window.innerWidth - 0.5;
+      mouseY = e.clientY / window.innerHeight - 0.5;
+      if (!raf) raf = requestAnimationFrame(follow);
+    }, { passive: true });
+    var follow = function () {
+      raf = null;
+      var moving = false;
+      drifters.forEach(function (el) {
+        var depth = (parseInt(getComputedStyle(el).zIndex, 10) || 1) * 7;
+        var s = el._s;
+        s.tx = -mouseX * depth; s.ty = -mouseY * depth;
+        s.mx += (s.tx - s.mx) * 0.12; s.my += (s.ty - s.my) * 0.12;
+        if (Math.abs(s.tx - s.mx) > 0.2 || Math.abs(s.ty - s.my) > 0.2) moving = true;
+        apply(el);
+      });
+      if (moving) raf = requestAnimationFrame(follow);
+    };
+
+    var topZ = 10;
+    $$(".collage").forEach(function (col) {
+      col.classList.add("is-draggable");
+      if (col.closest(".home-hero")) {
+        var hint = document.createElement("span");
+        hint.className = "drag-hint"; hint.textContent = "pick one up"; hint.setAttribute("aria-hidden", "true");
+        col.appendChild(hint);
+      }
+      $$(".collage-item", col).forEach(function (item) {
+        if (!item._s) return;
+        var startX, startY, ox, oy, held = false;
+        item.addEventListener("pointerdown", function (e) {
+          if (e.pointerType !== "mouse" || e.button !== 0) return;
+          e.preventDefault();
+          held = true; startX = e.clientX; startY = e.clientY; ox = item._s.dx; oy = item._s.dy;
+          item.classList.add("is-held"); item.style.zIndex = String(++topZ);
+          item.setPointerCapture(e.pointerId);
+          var hint = col.querySelector(".drag-hint"); if (hint) hint.style.opacity = "0";
+        });
+        item.addEventListener("pointermove", function (e) {
+          if (!held) return;
+          item._s.dx = ox + e.clientX - startX; item._s.dy = oy + e.clientY - startY;
+          apply(item);
+        });
+        var drop = function () { if (!held) return; held = false; item.classList.remove("is-held"); };
+        item.addEventListener("pointerup", drop);
+        item.addEventListener("pointercancel", drop);
+        item.addEventListener("dragstart", function (e) { e.preventDefault(); });
+      });
+    });
+
+    // ---------- 3D tilt toward the cursor ----------
+    $$("a.print, .print.lift, .svc-card, .masonry > .g-link, .story").forEach(function (el) {
+      var target = el.classList.contains("svc-card") ? el.querySelector(".print") : el.classList.contains("story") ? el.querySelector(".frame") : el;
+      if (!target) return;
+      el.addEventListener("pointermove", function (e) {
+        var r = el.getBoundingClientRect();
+        target.style.setProperty("--tx", (((e.clientX - r.left) / r.width - 0.5) * 12).toFixed(2) + "deg");
+        target.style.setProperty("--ty", (-((e.clientY - r.top) / r.height - 0.5) * 12).toFixed(2) + "deg");
+      });
+      el.addEventListener("pointerleave", function () { target.style.removeProperty("--tx"); target.style.removeProperty("--ty"); });
+    });
+  }
+
+  // ---------- film strip speeds up with scrolling ----------
+  $$(".film-track").forEach(function (track) {
+    var anim = track.getAnimations ? track.getAnimations()[0] : null;
+    if (!anim) return;
+    var lastY = window.scrollY, rate = 1, spin = null;
+    var settle = function () {
+      rate += (1 - rate) * 0.06;
+      anim.playbackRate = rate;
+      spin = Math.abs(rate - 1) > 0.02 ? requestAnimationFrame(settle) : (anim.playbackRate = 1, null);
+    };
+    window.addEventListener("scroll", function () {
+      var y = window.scrollY, v = Math.abs(y - lastY); lastY = y;
+      rate = Math.max(rate, 1 + Math.min(v * 0.12, 7));
+      anim.playbackRate = rate;
+      if (!spin) spin = requestAnimationFrame(settle);
+    }, { passive: true });
+  });
+
+  // ---------- flick stack nudges when it first appears ----------
+  var fio = new IntersectionObserver(function (entries) {
+    entries.forEach(function (e) {
+      if (!e.isIntersecting) return;
+      fio.unobserve(e.target);
+      setTimeout(function () {
+        var cards = $$(".flick-card", e.target);
+        var top = cards.reduce(function (a, c) { return (+c.style.zIndex || 0) > (+a.style.zIndex || 0) ? c : a; }, cards[0]);
+        if (!top) return;
+        top.classList.add("nudge");
+        setTimeout(function () { top.classList.remove("nudge"); }, 2400);
+      }, 700);
+    });
+  }, { threshold: 0.6 });
+  $$(".flick-deck").forEach(function (d) { fio.observe(d); });
+
   function onScroll() { if (!ticking) { ticking = true; requestAnimationFrame(update); } }
   window.addEventListener("scroll", onScroll, { passive: true });
   window.addEventListener("resize", onScroll);

@@ -48,6 +48,8 @@ The look is "warm romantic film": cream and blush paper, espresso bands, film gr
 
 Signature pieces: the home hero collage of prints that drop onto the page, the moving film strip, the arched church-window photo, a flickable stack of prints (drag, swipe, tap, buttons or arrow keys), testimonials as taped notes, the "how it works" thread that draws itself as you scroll, the "Save the date" invitation with a wax seal, and the estimate builder's receipt.
 
+Motion details: photographs develop from washed-out sepia into colour as they appear, script lines write themselves, accent words get a hand-drawn brush underline, hero prints float, follow the mouse in depth and can be picked up and dragged (desktop), prints tilt in 3D on hover, notes swing on their tape, the film strip speeds up with scrolling, a pen travels down the thread, and the invitation tips up as its wax seal stamps down.
+
 Scrolling is native, with no smooth-scroll library and no pinned sections. `assets/js/motion.js` (no dependencies) handles the reveals, word-by-word headlines, dropping prints, light parallax and counters with IntersectionObserver and CSS transitions. `assets/js/site.js` runs the flick stack, header, forms, filters and lightbox. Motion is progressive: content is only hidden for animation once `<html class="motion">` is set in the head, and reduced-motion visitors or failed script loads get the full static site.
 
 ### Forms
