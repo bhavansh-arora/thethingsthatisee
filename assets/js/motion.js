@@ -124,9 +124,13 @@
     var url = new URL(a.getAttribute("href"), location.href);
     if (url.origin !== location.origin || !/(\.html|\/)$/.test(url.pathname)) return;
     var next = transitionFor(url);
-    if (!next || warmed[next.t]) return;
-    warmed[next.t] = true;
+    if (!next || warmed[url.pathname]) return;
+    warmed[url.pathname] = true;
     next.p.forEach(function (p) { var im = new Image(); im.src = p[0]; });
+    // Fetch the next page ahead of the click so it opens as the curtain finishes.
+    var link = document.createElement("link");
+    link.rel = "prefetch"; link.href = url.href;
+    document.head.appendChild(link);
   }
   document.addEventListener("pointerover", warm, { passive: true });
   document.addEventListener("touchstart", warm, { passive: true });

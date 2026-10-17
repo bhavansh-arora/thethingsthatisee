@@ -743,9 +743,9 @@ fieldset.field { border: 0; margin: 0; padding: 0; min-width: 0; }
    ========================================================================== */
 
 /* Preloader */
-.preloader { position: fixed; inset: 0; z-index: 500; display: none; background: var(--paper) url("../brand/grain.png"); color: var(--ink); clip-path: inset(0 0 0 0); transition: clip-path 1.15s cubic-bezier(0.76, 0, 0.24, 1); }
+.preloader { position: fixed; inset: 0; z-index: 500; display: none; background: var(--paper) url("../brand/grain.png"); color: var(--ink); transform: none; will-change: transform; transition: transform 1.15s cubic-bezier(0.76, 0, 0.24, 1); }
 .is-loading .preloader, .is-loaded .preloader { display: grid; place-items: center; }
-.is-loaded .preloader { clip-path: inset(0 0 100% 0); }
+.is-loaded .preloader { transform: translate3d(0, -100%, 0); }
 .is-loading body { overflow: hidden; }
 .preloader__inner { display: grid; justify-items: center; gap: 16px; text-align: center; }
 .preloader__mark { width: clamp(60px, 11vw, 88px); color: var(--accent-ink); }
@@ -767,21 +767,21 @@ fieldset.field { border: 0; margin: 0; padding: 0; min-width: 0; }
 .curtain {
   position: fixed; inset: 0; z-index: 400; pointer-events: none; display: grid; place-items: center; color: var(--ivory);
   background: radial-gradient(ellipse 60% 50% at 50% 45%, rgba(198, 164, 106, 0.16), transparent 70%), url("../brand/grain.png"), var(--wine-deep);
-  clip-path: inset(100% 0 0 0); visibility: hidden;
+  transform: translate3d(0, 100%, 0); visibility: hidden; will-change: transform;
 }
-.is-leaving .curtain { visibility: visible; clip-path: inset(0 0 0 0); transition: clip-path 0.7s cubic-bezier(0.76, 0, 0.24, 1); pointer-events: all; }
-.is-entering .curtain { visibility: visible; clip-path: inset(0 0 0 0); }
-.is-entered .curtain { clip-path: inset(0 0 100% 0); transition: clip-path 0.95s cubic-bezier(0.76, 0, 0.24, 1) 0.1s; }
+.is-leaving .curtain { visibility: visible; transform: none; transition: transform 0.7s cubic-bezier(0.76, 0, 0.24, 1); pointer-events: all; }
+.is-entering .curtain { visibility: visible; transform: none; }
+.is-entered .curtain { transform: translate3d(0, -100%, 0); transition: transform 0.95s cubic-bezier(0.76, 0, 0.24, 1) 0.1s; }
 .curtain__inner { display: grid; justify-items: center; gap: clamp(14px, 2vh, 22px); text-align: center; }
 .curtain__mark { width: clamp(40px, 6vw, 54px); color: var(--gold); }
 .curtain__top { position: absolute; left: var(--gutter); right: var(--gutter); top: calc(24px + env(safe-area-inset-top)); display: flex; justify-content: space-between; font-family: var(--mono); font-size: 0.72rem; letter-spacing: 0.06em; text-transform: uppercase; color: rgba(251, 248, 242, 0.6); }
 .curtain__frame {
-  position: relative; width: clamp(140px, min(38vw, 30vh), 280px); aspect-ratio: 4 / 5; border-radius: 999px 999px 18px 18px; overflow: hidden;
+  position: relative; width: clamp(140px, min(38vw, 30vh), 280px); aspect-ratio: 4 / 5; border-radius: 999px 999px 18px 18px; overflow: hidden; isolation: isolate;
   background: rgba(251, 248, 242, 0.06); box-shadow: 0 0 0 1px rgba(198, 164, 106, 0.5), 0 0 0 9px rgba(198, 164, 106, 0.07), 0 40px 80px -30px rgba(0, 0, 0, 0.6);
 }
-.curtain__frame span { position: absolute; inset: 0; background-size: cover; clip-path: inset(100% 0 0 0); transform: scale(1.18); }
-.is-leaving .curtain__frame span { animation: plFrame 0.5s cubic-bezier(0.76, 0, 0.24, 1) forwards; animation-delay: calc(0.24s + var(--i) * 0.15s); }
-.curtain__frame span.is-shown { clip-path: inset(0 0 0 0); transform: none; }
+.curtain__frame span { position: absolute; inset: 0; background-size: cover; transform: translate3d(0, 101%, 0); will-change: transform; }
+.is-leaving .curtain__frame span { animation: plSlide 0.5s cubic-bezier(0.76, 0, 0.24, 1) forwards; animation-delay: calc(0.24s + var(--i) * 0.15s); }
+.curtain__frame span.is-shown { transform: none; }
 .curtain__title { overflow: hidden; padding-bottom: 0.1em; }
 .curtain__title span { display: block; font-family: var(--serif); font-style: italic; font-size: clamp(2.2rem, 1.2rem + 3.6vw, 4.2rem); line-height: 1.05; letter-spacing: -0.01em; color: #e8cf9c; }
 .is-leaving .curtain__title span { animation: rise 0.8s var(--ease-out) both; animation-delay: 0.3s; transform: translateY(110%); }
@@ -1144,8 +1144,8 @@ img.img { background-color: var(--tone, var(--paper-3)); }
   position: relative; width: clamp(140px, min(38vw, 30vh), 280px); aspect-ratio: 4 / 5; border-radius: 999px 999px 18px 18px; overflow: hidden;
   background: rgba(251, 248, 242, 0.06); box-shadow: 0 0 0 1px rgba(198, 164, 106, 0.5), 0 0 0 9px rgba(198, 164, 106, 0.07), 0 40px 80px -30px rgba(0, 0, 0, 0.6);
 }
-.preloader__frame span { position: absolute; inset: 0; background-size: cover; clip-path: inset(100% 0 0 0); transform: scale(1.18); animation: plFrame 0.75s cubic-bezier(0.76, 0, 0.24, 1) forwards; animation-delay: calc(0.35s + var(--i) * 0.24s); }
-@keyframes plFrame { to { clip-path: inset(0 0 0 0); transform: scale(1); } }
+.preloader__frame span { position: absolute; inset: 0; background-size: cover; transform: translate3d(0, 101%, 0); will-change: transform; animation: plSlide 0.75s cubic-bezier(0.76, 0, 0.24, 1) forwards; animation-delay: calc(0.35s + var(--i) * 0.24s); }
+@keyframes plSlide { to { transform: translate3d(0, 0, 0); } }
 .preloader__name span { font-size: clamp(1.8rem, 1rem + 3.4vw, 3.6rem); letter-spacing: -0.05em; line-height: 1; }
 .preloader__name em { font-family: var(--serif); font-style: italic; font-weight: 400; letter-spacing: -0.01em; color: #e8cf9c; }
 .preloader__tag span { color: rgba(251, 248, 242, 0.62); }
@@ -1155,3 +1155,7 @@ img.img { background-color: var(--tone, var(--paper-3)); }
 .preloader__bar { background: rgba(251, 248, 242, 0.1); }
 .preloader__bar span { background: var(--gold); }
 @media (max-height: 640px) { .preloader__frame { width: 130px; } .preloader__tag { display: none; } }
+/* Keep the brand and the close button above the open menu */
+.menu-open .site-header { z-index: 120; }
+/* Date and month fields open their picker from anywhere in the box */
+input[type="date"].input, input[type="month"].input { cursor: pointer; }

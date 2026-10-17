@@ -174,6 +174,13 @@
   // ---------- year ----------
   $$("[data-year]").forEach(function (el) { el.textContent = new Date().getFullYear(); });
 
+  // ---------- date and month fields: open the picker from anywhere in the box ----------
+  document.addEventListener("click", function (e) {
+    var el = e.target;
+    if (!el.matches || !el.matches('input[type="date"], input[type="month"]') || el.disabled || el.readOnly) return;
+    if (typeof el.showPicker === "function") { try { el.showPicker(); } catch (err) {} }
+  });
+
   // ---------- date checks ----------
   $$("[data-date-check]").forEach(function (form) {
     var input = $("input[type=date]", form), out = $("[data-date-result]", form);
