@@ -1159,3 +1159,6 @@ img.img { background-color: var(--tone, var(--paper-3)); }
 .menu-open .site-header { z-index: 120; }
 /* Date and month fields open their picker from anywhere in the box */
 input[type="date"].input, input[type="month"].input { cursor: pointer; }
+/* Keyboard focus in the phone menu stays inside its row */
+.mobile-menu__list a:focus-visible { outline-offset: -3px; border-radius: 10px; }
+.mobile-menu__list a:focus:not(:focus-visible) { outline: none; }

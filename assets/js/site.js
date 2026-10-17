@@ -62,16 +62,21 @@
 
   // ---------- mobile menu ----------
   var toggle = $(".menu-toggle"), menu = $("#mobile-menu");
-  function setMenu(open) {
+  function setMenu(open, fromKeyboard) {
     if (!toggle || !menu) return;
     document.body.classList.toggle("menu-open", open);
     toggle.setAttribute("aria-expanded", String(open));
     toggle.setAttribute("aria-label", open ? "Close menu" : "Open menu");
     menu.setAttribute("aria-hidden", String(!open));
-    if (open) { header.classList.remove("is-hidden"); var first = $("a", menu); if (first) setTimeout(function () { first.focus(); }, 300); }
+    if (open) {
+      header.classList.remove("is-hidden");
+      // Move focus into the menu only for keyboard users; a tap should not leave a focus ring on the first link.
+      var first = $("a", menu);
+      if (first && fromKeyboard) setTimeout(function () { first.focus(); }, 300);
+    }
   }
   if (toggle && menu) {
-    toggle.addEventListener("click", function () { setMenu(!document.body.classList.contains("menu-open")); });
+    toggle.addEventListener("click", function (e) { setMenu(!document.body.classList.contains("menu-open"), e.detail === 0); });
     menu.addEventListener("click", function (e) { if (e.target.closest("a")) setMenu(false); });
     window.addEventListener("resize", function () { if (window.innerWidth >= 1140) setMenu(false); });
   }
