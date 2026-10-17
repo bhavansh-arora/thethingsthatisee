@@ -51,7 +51,7 @@
     }
     var fontsReady = false;
     (document.fonts ? document.fonts.ready : Promise.resolve()).then(function () { fontsReady = true; });
-    var t0 = performance.now(), shown = 0, MIN = 1600, MAX = 3500;
+    var t0 = performance.now(), shown = 0, MIN = 2100, MAX = 3500;
     (function tick(now) {
       var elapsed = now - t0;
       var ready = (loaded && fontsReady) || elapsed > MAX;
