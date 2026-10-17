@@ -37,11 +37,15 @@
   // ---------- header ----------
   var header = $("[data-header]");
   var mobileCta = $("[data-mobile-cta]");
-  var darkHero = $("[data-dark-hero]");
+  var lastY = 0;
   function onScroll() {
     var y = window.scrollY || 0;
-    if (header) header.classList.toggle("is-scrolled", y > 8);
-    if (header && darkHero) header.classList.toggle("past-hero", y > darkHero.offsetHeight - 90);
+    if (header) {
+      header.classList.toggle("is-scrolled", y > 8);
+      var menuOpen = document.body.classList.contains("menu-open");
+      if (Math.abs(y - lastY) > 6) header.classList.toggle("is-hidden", y > lastY && y > 320 && !menuOpen);
+    }
+    lastY = y;
     if (mobileCta) mobileCta.classList.toggle("is-visible", y > Math.min(480, window.innerHeight * 0.6));
   }
   window.addEventListener("scroll", onScroll, { passive: true });
@@ -158,6 +162,83 @@
         cards.forEach(function (c) { c.hidden = !(cat === "all" || c.getAttribute("data-cat") === cat); });
       });
     });
+  });
+
+
+  // ---------- flick stack (drag, swipe, buttons, arrow keys) ----------
+  $$("[data-flick]").forEach(function (flick) {
+    var deck = $(".flick-deck", flick);
+    var cards = $$(".flick-card", deck);
+    var countEl = $("[data-flick-count]", flick);
+    var n = cards.length, order = cards.slice(), shown = 1, busy = false;
+    var tilt = [-4, 3, -2, 5, -5, 2, -3, 4, -1, 3, -4, 2];
+    function layout() {
+      order.forEach(function (c, depth) {
+        c.style.zIndex = String(n - depth);
+        var r = depth === 0 ? -1.5 : tilt[cards.indexOf(c) % tilt.length];
+        var off = Math.min(depth, 4);
+        c.style.transform = "translate(" + (off * 3) + "px," + (off * -4) + "px) rotate(" + r + "deg)";
+        c.style.opacity = depth > 5 ? "0" : "1";
+        c.setAttribute("aria-hidden", depth === 0 ? "false" : "true");
+      });
+      if (countEl) countEl.innerHTML = String(shown).padStart(2, "0") + " <span>/ " + String(n).padStart(2, "0") + "</span>";
+    }
+    function next(dir) {
+      if (busy) return;
+      busy = true;
+      var top = order[0];
+      top.style.transform = "translate(" + (dir * 120) + "%, -6%) rotate(" + (dir * 24) + "deg)";
+      top.style.opacity = "0";
+      setTimeout(function () {
+        order.push(order.shift());
+        shown = shown % n + 1;
+        top.style.transition = "none";
+        layout();
+        top.style.opacity = "0";
+        void top.offsetWidth;
+        top.style.transition = "";
+        top.style.opacity = order.indexOf(top) > 5 ? "0" : "1";
+        busy = false;
+      }, 380);
+    }
+    function prev() {
+      if (busy) return;
+      order.unshift(order.pop());
+      shown = (shown - 2 + n) % n + 1;
+      layout();
+    }
+    var startX = 0, startY = 0, dx = 0, dragging = false, pid = null;
+    deck.addEventListener("pointerdown", function (e) {
+      var top = order[0];
+      if (!top.contains(e.target) || busy) return;
+      dragging = true; pid = e.pointerId; startX = e.clientX; startY = e.clientY; dx = 0;
+      top.classList.add("is-dragging");
+      deck.setPointerCapture(pid);
+    });
+    deck.addEventListener("pointermove", function (e) {
+      if (!dragging || e.pointerId !== pid) return;
+      dx = e.clientX - startX;
+      var dy = (e.clientY - startY) * 0.3;
+      order[0].style.transform = "translate(" + dx + "px," + dy + "px) rotate(" + (-1.5 + dx / 14) + "deg)";
+    });
+    function end() {
+      if (!dragging) return;
+      dragging = false;
+      var top = order[0];
+      top.classList.remove("is-dragging");
+      if (Math.abs(dx) > 90) next(dx > 0 ? 1 : -1);
+      else { layout(); if (Math.abs(dx) < 6) next(1); }
+    }
+    deck.addEventListener("pointerup", end);
+    deck.addEventListener("pointercancel", function () { dragging = false; order[0].classList.remove("is-dragging"); layout(); });
+    var nb = $("[data-flick-next]", flick), pb = $("[data-flick-prev]", flick);
+    if (nb) nb.addEventListener("click", function () { next(1); });
+    if (pb) pb.addEventListener("click", prev);
+    flick.addEventListener("keydown", function (e) {
+      if (e.key === "ArrowRight") { e.preventDefault(); next(1); }
+      if (e.key === "ArrowLeft") { e.preventDefault(); prev(); }
+    });
+    layout();
   });
 
   // ---------- lightbox ----------

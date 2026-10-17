@@ -5,14 +5,19 @@
   "scripts": ["assets/js/investment.js"],
   "og_image": "ring-box"
 } -->
-<section class="page-hero" style="padding-bottom:0">
-  <div class="container">
-    <div class="page-hero-head" style="margin-bottom:0">
-      <div class="stack">
-        <p class="eyebrow">Investment</p>
-        <h1 class="h1">Invest in your memories, <em>for generations to come.</em></h1>
-      </div>
+<section class="print-hero print-hero--compact">
+  <div class="leak leak--rose" aria-hidden="true"></div>
+  <div class="leak leak--amber" aria-hidden="true"></div>
+  <div class="container print-hero-grid">
+    <div class="print-hero-copy">
+      <p class="kicker">Investment</p>
+      <h1 class="h1">Invest in your memories, <em>for generations to come.</em></h1>
       <p class="lede">Clear prices, shaped around your day. Build a wedding estimate below, then send it to me in one tap. All prices are negotiable.</p>
+    </div>
+    <div class="collage" aria-hidden="true">
+      <div class="collage-item" style="--x:18%;--y:2%;--w:54%;--z:2" data-speed=".05"><figure class="print drop tape" style="--r:-3deg;--ar:4/5" data-delay="0"><div class="frame"><x-img name="sparkler-exit" sizes="(min-width: 960px) 26vw, 50vw" eager></x-img></div><figcaption>the send-off</figcaption></figure></div>
+      <div class="collage-item" style="--x:0%;--y:46%;--w:40%;--z:3" data-speed=".12"><figure class="print drop tape" style="--r:-9deg;--ar:1/1" data-delay="160"><div class="frame"><x-img name="ring-box" sizes="(min-width: 960px) 26vw, 50vw" eager></x-img></div><figcaption>the rings</figcaption></figure></div>
+      <div class="collage-item" style="--x:60%;--y:40%;--w:40%;--z:4" data-speed=".16"><figure class="print drop tape" style="--r:7deg;--ar:4/5" data-delay="320"><div class="frame"><x-img name="hedge-portrait" sizes="(min-width: 960px) 26vw, 50vw" eager></x-img></div><figcaption>forever</figcaption></figure></div>
     </div>
   </div>
 </section>
@@ -61,7 +66,7 @@
     </form>
 
     <aside class="summary" id="summary" aria-live="polite">
-      <p class="label">Your estimate</p>
+      <p class="summary-title">Your estimate</p>
       <ul class="summary-lines" id="summary-lines"></ul>
       <div class="summary-total"><span class="label" style="margin:0">Total</span><strong id="summary-total">$2,500</strong></div>
       <a class="btn btn-light btn-block" id="summary-send" href="enquire.html?type=wedding">Send this to Jason</a>

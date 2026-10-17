@@ -42,15 +42,13 @@ Every photo slot currently shows a labelled placeholder naming the intended shot
 
 The build writes responsive `srcset`, width and height (no layout shift), lazy loading, and the lightbox's full-size link automatically.
 
-### Motion
+### Design and motion
 
-Signature moments: the home hero's scroll-driven zoom (the photo grows from a window between the giant title words to full screen), the manifesto whose words light up as you read, the services list with a cursor-following photo, the stacking "How it works" chapters, full-screen cover heroes on inner pages with a transparent header, and the full-width footer wordmark.
+The look is "warm romantic film": cream and blush paper, espresso bands, film grain and drifting light leaks, Cormorant Garamond with Pinyon Script accents. Photographs appear as physical prints with white borders, tape and handwritten captions.
 
-`assets/js/motion.js` also adds the intro curtain (once per 30 minutes), word-by-word headline reveals, curtain-wipe photo reveals, parallax, the pinned horizontal gallery, the scroll-speed marquee, count-up stats, the hide-on-scroll header, and the desktop cursor and magnetic buttons. Smooth scrolling (Lenis) runs on mouse and trackpad only; touch devices keep native scrolling. Page-to-page fades use the browser's View Transitions.
+Signature pieces: the home hero collage of prints that drop onto the page, the moving film strip, the arched church-window photo, a flickable stack of prints (drag, swipe, tap, buttons or arrow keys), testimonials as taped notes, the "how it works" thread that draws itself as you scroll, the "Save the date" invitation with a wax seal, and the estimate builder's receipt.
 
-Motion is progressive: content is only hidden for animation once `<html class="motion">` is set in the page head. Visitors with "reduce motion" turned on, or browsers where the scripts fail to load within 4 seconds, get the full static site.
-
-Libraries are bundled in `assets/vendor/` (GSAP 3.12.5 and ScrollTrigger under GSAP's standard no-charge license; Lenis 1.1.13, MIT), so the site has no third-party script CDN.
+Scrolling is native, with no smooth-scroll library and no pinned sections. `assets/js/motion.js` (no dependencies) handles the reveals, word-by-word headlines, dropping prints, light parallax and counters with IntersectionObserver and CSS transitions. `assets/js/site.js` runs the flick stack, header, forms, filters and lightbox. Motion is progressive: content is only hidden for animation once `<html class="motion">` is set in the head, and reduced-motion visitors or failed script loads get the full static site.
 
 ### Forms
 

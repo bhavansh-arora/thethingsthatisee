@@ -1,21 +1,27 @@
-<section class="cta-band">
-  <div class="container cta-grid">
-    <div class="cta-media frame viewfinder">
-      <x-img name="elevation" sizes="(min-width: 900px) 40vw, 100vw"></x-img>
-    </div>
-    <div class="cta-copy">
-      <p class="eyebrow">Your story begins here</p>
-      <h2 class="h2">Let&rsquo;s talk about <em>your</em> day.</h2>
-      <p class="lede">Tell me your date and a few details. You&rsquo;ll see which collection fits straight away, and I&rsquo;ll reply to you personally.</p>
-      <form class="date-check" action="enquire.html" method="get" data-date-check>
-        <label class="label" for="cta-date">Is your date open?</label>
-        <div class="date-check-row">
-          <input class="input" type="date" id="cta-date" name="date" required>
-          <button class="btn btn-solid" type="submit">Check</button>
-        </div>
-        <p class="date-check-result" data-date-result aria-live="polite"></p>
-      </form>
-      <p class="small muted">Or write to <a href="mailto:jason@thethingsthatisee.com">jason@thethingsthatisee.com</a> &middot; <a href="tel:+17142904333">714-290-4333</a></p>
+<section class="invite-band">
+  <div class="leak leak--rose" aria-hidden="true"></div>
+  <div class="leak leak--amber" aria-hidden="true"></div>
+  <div class="container">
+    <div class="invite-wrap">
+      <figure class="print" aria-hidden="true"><div class="frame"><x-img name="columns-kiss" sizes="240px"></x-img></div></figure>
+      <figure class="print" aria-hidden="true"><div class="frame"><x-img name="flatirons-sunset" sizes="240px"></x-img></div></figure>
+      <div class="invite">
+        <p class="kicker">Save the date</p>
+        <svg class="flourish" viewBox="0 0 120 14" aria-hidden="true"><path d="M2 7h44M74 7h44" stroke="currentColor" stroke-width="0.8"/><path d="M60 2c-4 0-6 5-10 5s-4-3-1-3M60 12c4 0 6-5 10-5s4 3 1 3M60 2c4 0 6 5 10 5M60 12c-4 0-6-5-10-5" fill="none" stroke="currentColor" stroke-width="0.8"/></svg>
+        <h2 class="h2">Let&rsquo;s talk about <em>your</em> day.</h2>
+        <p class="lede">Tell me your date and a few details. You&rsquo;ll see which collection fits straight away, and I&rsquo;ll reply to you personally.</p>
+        <form class="date-check" action="enquire.html" method="get" data-date-check>
+          <input type="hidden" name="type" value="wedding">
+          <label class="label" for="cta-date">Is your date open?</label>
+          <div class="date-check-row">
+            <input class="input" type="date" id="cta-date" name="date" required>
+            <button class="btn btn-solid" type="submit">Check</button>
+          </div>
+          <p class="date-check-result" data-date-result aria-live="polite"></p>
+        </form>
+        <p class="small muted">Or write to <a href="mailto:jason@thethingsthatisee.com">jason@thethingsthatisee.com</a> &middot; <a href="tel:+17142904333">714-290-4333</a></p>
+        <span class="seal" aria-hidden="true">J</span>
+      </div>
     </div>
   </div>
 </section>
