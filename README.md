@@ -50,6 +50,8 @@ Signature pieces: the home hero collage of prints that drop onto the page, the m
 
 Motion details: photographs develop from washed-out sepia into colour as they appear, script lines write themselves, accent words get a hand-drawn brush underline, hero prints float, follow the mouse in depth and can be picked up and dragged (desktop), prints tilt in 3D on hover, notes swing on their tape, the film strip speeds up with scrolling, a pen travels down the thread, and the invitation tips up as its wax seal stamps down.
 
+The Darkroom (`assets/js/darkroom.js`, home and portfolio) is a custom WebGL scene: photographs emerge from darkness and develop in a tray of liquid under a red safelight, the cursor or a finger sends ripples through the developer, and prints change with a liquid dissolve. It only renders while on screen, and visitors without WebGL or with reduced motion see a still photograph. The arched sanctuary window has light beams and drifting dust, page changes burn out to amber like the end of a film reel, and a warm glow follows the cursor on desktop.
+
 Scrolling is native, with no smooth-scroll library and no pinned sections. `assets/js/motion.js` (no dependencies) handles the reveals, word-by-word headlines, dropping prints, light parallax and counters with IntersectionObserver and CSS transitions. `assets/js/site.js` runs the flick stack, header, forms, filters and lightbox. Motion is progressive: content is only hidden for animation once `<html class="motion">` is set in the head, and reduced-motion visitors or failed script loads get the full static site.
 
 ### Forms

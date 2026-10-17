@@ -759,10 +759,11 @@ fieldset.builder-group { border: 0; padding: 0; margin: 0; min-width: 0; }
 
 /* ---------- motion states (html.motion is set in <head>; removed if scripts fail) ---------- */
 @view-transition { navigation: auto; }
-::view-transition-old(root) { animation: vt-out 0.22s var(--ease) both; }
-::view-transition-new(root) { animation: vt-in 0.32s var(--ease) both; }
-@keyframes vt-out { to { opacity: 0; } }
-@keyframes vt-in { from { opacity: 0; } }
+::view-transition-old(root) { animation: burn-out 0.5s cubic-bezier(0.5, 0, 0.75, 0) both; }
+::view-transition-new(root) { animation: burn-in 0.7s cubic-bezier(0.2, 0.7, 0.3, 1) 0.12s both; }
+@keyframes burn-out { 0% { filter: none; } 55% { filter: sepia(0.9) saturate(1.6) brightness(1.35) contrast(1.1); } 100% { opacity: 0; filter: sepia(1) saturate(2.4) brightness(2.6) contrast(0.8); } }
+@keyframes burn-in { from { opacity: 0; filter: sepia(0.8) brightness(1.9) saturate(1.4); } to { opacity: 1; filter: none; } }
+html::view-transition { background: #f3c79e; }
 .w { display: inline-block; overflow: hidden; vertical-align: top; padding-bottom: 0.1em; margin-bottom: -0.1em; }
 .wi { display: inline-block; }
 html.motion :is(.eyebrow, .kicker, .lede, .prose, .facts, .btn-row, .ticks > li, .note-card, .quote, .price-card, .story, .svc-card, .pillar, .faq details, .note, .date-check, .capture, .kicker-list, .featured-inner, .stat, .toc, .guide-body > *, .summary, .aside-card, .link-arrow, .filters, .masonry > *, .thread-body, .invite, .flick-ui, .hero-sign, .letter-sign, .footer-grid > *):not(.reply *, [data-step] *, .mobile-menu *) {
@@ -885,3 +886,46 @@ html.motion .thread-body .print { transition: rotate 1s var(--pop) 0.25s, scale 
 html.motion .svc-card .print { animation: sway 6s ease-in-out infinite alternate; }
 html.motion .svc-card:nth-child(even) .print { animation-duration: 7.5s; animation-direction: alternate-reverse; }
 .svc-card:hover .print { animation-play-state: paused; }
+
+
+/* =====================================================================
+   V6: the darkroom, church light, cursor glow
+   ===================================================================== */
+.darkroom { position: relative; height: 100vh; height: 100svh; min-height: 560px; max-height: 1100px; overflow: hidden; background: #160d0b; color: var(--nave-ink); isolation: isolate; cursor: crosshair; }
+.darkroom-canvas { position: absolute; inset: 0; width: 100%; height: 100%; display: block; touch-action: pan-y; }
+.darkroom-fallback { position: absolute; inset: 0; display: none; }
+.darkroom-fallback .img { width: 100%; height: 100%; object-fit: cover; aspect-ratio: auto; filter: brightness(0.62) sepia(0.15); }
+.darkroom.no-webgl .darkroom-fallback { display: block; }
+.darkroom.no-webgl .darkroom-canvas, .darkroom.no-webgl .darkroom-hint, .darkroom.no-webgl .darkroom-meta { display: none; }
+.darkroom-ui { position: absolute; inset: 0; z-index: 2; display: flex; flex-direction: column; justify-content: space-between; padding-block: clamp(32px, 6vh, 72px) clamp(24px, 4vh, 44px); pointer-events: none; background: linear-gradient(rgba(22, 13, 11, 0.55), transparent 32%, transparent 70%, rgba(22, 13, 11, 0.6)); }
+.darkroom-top { display: flex; justify-content: space-between; align-items: flex-start; gap: 20px; }
+.darkroom .eyebrow { color: #f0a08a; }
+.darkroom .h2 { color: var(--nave-ink); text-shadow: 0 2px 30px rgba(0, 0, 0, 0.35); }
+.darkroom .h2 em { color: #f3b3a0; }
+.safelight { display: inline-flex; align-items: center; gap: 10px; padding: 8px 14px; border: 1px solid rgba(240, 120, 100, 0.35); border-radius: 999px; font-size: 0.64rem; font-weight: 500; letter-spacing: 0.24em; text-transform: uppercase; color: #f0a08a; white-space: nowrap; }
+.safelight i { width: 8px; height: 8px; border-radius: 50%; background: #ff4d3a; box-shadow: 0 0 12px 3px rgba(255, 77, 58, 0.7); animation: glow 2.4s ease-in-out infinite; }
+@keyframes glow { 50% { opacity: 0.55; box-shadow: 0 0 6px 1px rgba(255, 77, 58, 0.5); } }
+.darkroom-bottom { display: flex; justify-content: space-between; align-items: flex-end; gap: 16px; flex-wrap: wrap; }
+.darkroom-hint { font-family: var(--script); font-size: clamp(1.4rem, 1.1rem + 0.8vw, 2rem); color: rgba(245, 237, 227, 0.8); }
+.darkroom-meta { display: flex; align-items: center; gap: 18px; pointer-events: auto; }
+.darkroom-caption { font-family: var(--script); font-size: clamp(1.6rem, 1.2rem + 1vw, 2.4rem); color: var(--nave-ink); min-height: 1.2em; }
+.darkroom-count { font-size: 0.72rem; letter-spacing: 0.2em; color: rgba(245, 237, 227, 0.7); font-variant-numeric: tabular-nums; }
+.darkroom-next { display: grid; place-items: center; width: 52px; height: 52px; border-radius: 50%; border: 1px solid rgba(245, 237, 227, 0.4); background: rgba(22, 13, 11, 0.35); color: var(--nave-ink); cursor: pointer; transition: background-color 0.25s, transform 0.25s; }
+.darkroom-next:hover { background: rgba(245, 237, 227, 0.16); transform: translateX(3px); }
+@media (max-width: 640px) { .safelight { display: none; } .darkroom-hint { display: none; } }
+
+/* church light: beams + dust through the arched window */
+.arch-window::after {
+  content: ""; position: absolute; inset: -20%; z-index: 2; pointer-events: none; mix-blend-mode: screen;
+  background:
+    linear-gradient(112deg, transparent 30%, rgba(255, 214, 160, 0.42) 38%, transparent 47%),
+    linear-gradient(118deg, transparent 50%, rgba(255, 200, 150, 0.3) 56%, transparent 63%),
+    linear-gradient(108deg, transparent 16%, rgba(255, 225, 180, 0.24) 22%, transparent 29%);
+}
+html.motion .arch-window::after { animation: beams 9s ease-in-out infinite alternate; }
+@keyframes beams { from { opacity: 0.55; transform: translateX(-3%); } to { opacity: 1; transform: translateX(3%); } }
+.motes { position: absolute; inset: 0; z-index: 3; width: 100%; height: 100%; pointer-events: none; mix-blend-mode: screen; }
+
+/* warm glow that follows the cursor */
+.cursor-glow { position: fixed; left: 0; top: 0; z-index: 89; width: 560px; height: 560px; margin: -280px 0 0 -280px; border-radius: 50%; pointer-events: none; background: radial-gradient(circle, rgba(255, 190, 140, 0.32), rgba(255, 170, 130, 0.1) 42%, transparent 68%); mix-blend-mode: soft-light; opacity: 0; transition: opacity 0.6s; will-change: transform; }
+.cursor-glow.on { opacity: 1; }

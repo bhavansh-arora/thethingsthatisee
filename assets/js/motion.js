@@ -176,6 +176,21 @@
       });
     });
 
+
+    // ---------- warm glow follows the cursor ----------
+    var glowEl = document.createElement("div"); glowEl.className = "cursor-glow"; glowEl.setAttribute("aria-hidden", "true");
+    document.body.appendChild(glowEl);
+    var gx = window.innerWidth / 2, gy = window.innerHeight / 2, cx = gx, cy = gy, graf = null;
+    window.addEventListener("mousemove", function (e) {
+      gx = e.clientX; gy = e.clientY; glowEl.classList.add("on");
+      if (!graf) graf = requestAnimationFrame(function glide() {
+        cx += (gx - cx) * 0.14; cy += (gy - cy) * 0.14;
+        glowEl.style.transform = "translate3d(" + cx.toFixed(1) + "px," + cy.toFixed(1) + "px,0)";
+        graf = Math.abs(gx - cx) + Math.abs(gy - cy) > 0.5 ? requestAnimationFrame(glide) : null;
+      });
+    }, { passive: true });
+    document.addEventListener("mouseleave", function () { glowEl.classList.remove("on"); });
+
     // ---------- 3D tilt toward the cursor ----------
     $$("a.print, .print.lift, .svc-card, .masonry > .g-link, .story").forEach(function (el) {
       var target = el.classList.contains("svc-card") ? el.querySelector(".print") : el.classList.contains("story") ? el.querySelector(".frame") : el;
@@ -222,6 +237,33 @@
     });
   }, { threshold: 0.6 });
   $$(".flick-deck").forEach(function (d) { fio.observe(d); });
+
+
+  // ---------- dust drifting through the church light ----------
+  $$(".arch-window").forEach(function (win) {
+    var cv = document.createElement("canvas"); cv.className = "motes"; cv.setAttribute("aria-hidden", "true");
+    win.appendChild(cv);
+    var ctx = cv.getContext("2d"), parts = [], on = false, W = 0, H = 0;
+    function resize() { var d = Math.min(window.devicePixelRatio || 1, 2); W = cv.width = win.clientWidth * d; H = cv.height = win.clientHeight * d; }
+    function spawn(p) { p.x = Math.random() * W; p.y = Math.random() * H; p.r = (1 + Math.random() * 2.4) * (W / 500); p.vx = (Math.random() - 0.3) * 0.15 * (W / 500); p.vy = -(0.08 + Math.random() * 0.25) * (W / 500); p.a = Math.random() * Math.PI * 2; return p; }
+    resize();
+    for (var i = 0; i < 90; i++) parts.push(spawn({}));
+    function tick() {
+      if (!on) return;
+      ctx.clearRect(0, 0, W, H);
+      parts.forEach(function (p) {
+        p.x += p.vx + Math.sin(p.a) * 0.12; p.y += p.vy; p.a += 0.012;
+        if (p.y < -10 || p.x < -10 || p.x > W + 10) { spawn(p); p.y = H + 5; }
+        var beam = Math.max(0, 1 - Math.abs((p.x / W) - (0.25 + p.y / H * 0.5)) * 2.4);
+        var tw = 0.35 + 0.65 * Math.abs(Math.sin(p.a * 2));
+        ctx.globalAlpha = (0.15 + beam * 0.75) * tw;
+        ctx.fillStyle = "#ffe2b8";
+        ctx.beginPath(); ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2); ctx.fill();
+      });
+      requestAnimationFrame(tick);
+    }
+    new IntersectionObserver(function (es) { var v = es[0].isIntersecting; if (v && !on) { on = true; resize(); requestAnimationFrame(tick); } if (!v) on = false; }).observe(win);
+  });
 
   function onScroll() { if (!ticking) { ticking = true; requestAnimationFrame(update); } }
   window.addEventListener("scroll", onScroll, { passive: true });
