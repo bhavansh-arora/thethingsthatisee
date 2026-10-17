@@ -42,6 +42,14 @@ Every photo slot currently shows a labelled placeholder naming the intended shot
 
 The build writes responsive `srcset`, width and height (no layout shift), lazy loading, and the lightbox's full-size link automatically.
 
+### Motion
+
+`assets/js/motion.js` adds the intro curtain (once per 30 minutes), word-by-word headline reveals, curtain-wipe photo reveals, parallax, the pinned horizontal gallery, the scroll-speed marquee, count-up stats, the hide-on-scroll header, and the desktop cursor and magnetic buttons. Smooth scrolling (Lenis) runs on mouse and trackpad only; touch devices keep native scrolling. Page-to-page fades use the browser's View Transitions.
+
+Motion is progressive: content is only hidden for animation once `<html class="motion">` is set in the page head. Visitors with "reduce motion" turned on, or browsers where the scripts fail to load within 4 seconds, get the full static site.
+
+Libraries are bundled in `assets/vendor/` (GSAP 3.12.5 and ScrollTrigger under GSAP's standard no-charge license; Lenis 1.1.13, MIT), so the site has no third-party script CDN.
+
 ### Forms
 
 Set `formEndpoint` in `assets/js/config.js` to any endpoint that accepts JSON POSTs (Formspree, Basin, or a HoneyBook or Dubsado webhook). While it's empty, forms run in preview mode: they validate and show the success state but send nothing.

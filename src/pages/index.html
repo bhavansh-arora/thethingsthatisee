@@ -22,6 +22,11 @@
       <p class="hero-note rise rise-4"><span>Weddings from $2,500</span><span>Film from $2,300</span><span>Parishioner at St. Mary&rsquo;s</span></p>
     </div>
     <div class="hero-media">
+      <div class="seal" aria-hidden="true">
+        <svg viewBox="0 0 120 120"><defs><path id="seal-c" d="M60,60 m-46,0 a46,46 0 1,1 92,0 a46,46 0 1,1 -92,0"/></defs>
+          <g class="seal-text"><text font-family="Jost, sans-serif" font-size="8.6" fill="currentColor"><textPath href="#seal-c" textLength="286" lengthAdjust="spacing">PHOTOGRAPHY &#183; FILM &#183; CENTENNIAL &#183; COLORADO &#183;</textPath></text></g></svg>
+        <span class="cross"></span>
+      </div>
       <div class="frame viewfinder">
         <x-img name="hero-mass" sizes="(min-width: 900px) 52vw, 100vw" eager></x-img>
       </div>
@@ -39,6 +44,15 @@
       <li>St. Mary&rsquo;s Catholic Church</li>
       <li>Nativity of Our Lord</li>
     </ul>
+  </div>
+</section>
+
+<section class="section section--tight">
+  <div class="container stats">
+    <div class="stat"><p class="stat-num"><span data-count="20">20</span><sup>yrs</sup></p><p class="stat-label">behind the lens, telling stories of faith and family</p></div>
+    <div class="stat"><p class="stat-num"><span data-count="6">6</span></p><p class="stat-label">children at home, so chaos doesn&rsquo;t rattle me</p></div>
+    <div class="stat"><p class="stat-num"><span data-count="1">1</span><sup>wk</sup></p><p class="stat-label">to your wedding preview and your senior gallery</p></div>
+    <div class="stat"><p class="stat-num"><span data-count="10">10</span><sup>yrs</sup></p><p class="stat-label">your Signature gallery stays online to share</p></div>
   </div>
 </section>
 
@@ -101,6 +115,10 @@
   </div>
 </section>
 
+<div class="marquee-band" aria-hidden="true">
+  <div class="marquee"><div class="marquee-group"><span>Weddings</span><i class="dot"></i><span>Engagements</span><i class="dot"></i><span>Families</span><i class="dot"></i><span>Seniors</span><i class="dot"></i><span>Film</span><i class="dot"></i></div><div class="marquee-group"><span>Weddings</span><i class="dot"></i><span>Engagements</span><i class="dot"></i><span>Families</span><i class="dot"></i><span>Seniors</span><i class="dot"></i><span>Film</span><i class="dot"></i></div></div>
+</div>
+
 <section class="band-nave">
   <div class="container split split--wide-media">
     <div class="split-media">
@@ -128,26 +146,29 @@
   </div>
 </section>
 
-<section class="section" data-gallery>
-  <div class="container">
-    <div class="section-head section-head--row">
-      <div class="stack">
-        <p class="eyebrow">Recent favorites</p>
-        <h2 class="h2">The things <em>I</em> see.</h2>
-      </div>
-      <a class="link-arrow" href="portfolio.html">Full portfolio</a>
+<section class="hgal-section" data-gallery>
+  <div class="container hgal-head section-head section-head--row">
+    <div class="stack">
+      <p class="eyebrow">Recent favorites</p>
+      <h2 class="h2">The things <em>I</em> see.</h2>
     </div>
-    <div class="reel">
-      <div class="frame"><x-img name="columns-kiss" link cat="wedding" sizes="(min-width: 900px) 40vw, 74vw"></x-img></div>
-      <div class="frame"><x-img name="byzantine-dome" link cat="wedding" sizes="(min-width: 900px) 25vw, 74vw"></x-img></div>
-      <div class="frame"><x-img name="flatirons-laugh" link cat="engagement" sizes="(min-width: 900px) 33vw, 74vw"></x-img></div>
-      <div class="frame"><x-img name="sparkler-exit" link cat="wedding" sizes="(min-width: 900px) 33vw, 74vw"></x-img></div>
-      <div class="frame"><x-img name="autumn-family" link cat="family" sizes="(min-width: 900px) 25vw, 74vw"></x-img></div>
-      <div class="frame"><x-img name="rain-kiss" link cat="engagement" sizes="(min-width: 900px) 33vw, 74vw"></x-img></div>
-      <div class="frame"><x-img name="pond-reflection" link cat="senior" sizes="(min-width: 900px) 33vw, 74vw"></x-img></div>
-      <div class="frame"><x-img name="streamer-exit" link cat="wedding" sizes="(min-width: 900px) 33vw, 74vw"></x-img></div>
+    <a class="link-arrow" href="portfolio.html">Full portfolio</a>
+  </div>
+  <div class="hgal">
+    <div class="hgal-track">
+      <figure class="hgal-item"><div class="frame"><x-img name="columns-kiss" link cat="wedding" caption="Kiss between the columns" sizes="(min-width: 900px) 46vw, 76vw"></x-img></div><figcaption><b>Wedding</b><span>Kiss between the columns</span></figcaption></figure>
+      <figure class="hgal-item hgal-item--wide"><div class="frame"><x-img name="byzantine-dome" link cat="wedding" caption="Beneath the dome" sizes="(min-width: 900px) 46vw, 76vw"></x-img></div><figcaption><b>Wedding</b><span>Beneath the dome</span></figcaption></figure>
+      <figure class="hgal-item hgal-item--wide"><div class="frame"><x-img name="flatirons-laugh" link cat="engagement" caption="Below the Flatirons" sizes="(min-width: 900px) 46vw, 76vw"></x-img></div><figcaption><b>Engagement</b><span>Below the Flatirons</span></figcaption></figure>
+      <figure class="hgal-item"><div class="frame"><x-img name="pond-reflection" link cat="senior" caption="Botanic Gardens" sizes="(min-width: 900px) 46vw, 76vw"></x-img></div><figcaption><b>Senior</b><span>Botanic Gardens</span></figcaption></figure>
+      <figure class="hgal-item hgal-item--wide"><div class="frame"><x-img name="sparkler-exit" link cat="wedding" caption="The send-off" sizes="(min-width: 900px) 46vw, 76vw"></x-img></div><figcaption><b>Wedding</b><span>The send-off</span></figcaption></figure>
+      <figure class="hgal-item hgal-item--wide"><div class="frame"><x-img name="autumn-family" link cat="family" caption="Autumn, Centennial" sizes="(min-width: 900px) 46vw, 76vw"></x-img></div><figcaption><b>Family</b><span>Autumn, Centennial</span></figcaption></figure>
+      <figure class="hgal-item"><div class="frame"><x-img name="rain-kiss" link cat="engagement" caption="Rain on brick" sizes="(min-width: 900px) 46vw, 76vw"></x-img></div><figcaption><b>Engagement</b><span>Rain on brick</span></figcaption></figure>
+      <figure class="hgal-item hgal-item--wide"><div class="frame"><x-img name="father-of-bride" link cat="wedding" caption="Down the aisle" sizes="(min-width: 900px) 46vw, 76vw"></x-img></div><figcaption><b>Wedding</b><span>Down the aisle</span></figcaption></figure>
+      <figure class="hgal-item"><div class="frame"><x-img name="golden-sisters" link cat="family" caption="Golden hour" sizes="(min-width: 900px) 46vw, 76vw"></x-img></div><figcaption><b>Family</b><span>Golden hour</span></figcaption></figure>
+      <figure class="hgal-item hgal-item--wide"><div class="frame"><x-img name="streamer-exit" link cat="wedding" caption="Joy, unscripted" sizes="(min-width: 900px) 46vw, 76vw"></x-img></div><figcaption><b>Wedding</b><span>Joy, unscripted</span></figcaption></figure>
     </div>
   </div>
+  <div class="container"><div class="hgal-progress"><span></span></div></div>
 </section>
 
 <section class="section section--stone">

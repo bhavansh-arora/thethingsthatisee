@@ -18,6 +18,9 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..600;1,6..96,400..500&family=Jost:wght@300;400;500;600&display=swap">
+<script>
+(function(d){var r=d.documentElement;if(!window.matchMedia||matchMedia('(prefers-reduced-motion: reduce)').matches)return;r.classList.add('motion');try{var k='ttis-intro',n=Date.now(),v=+localStorage.getItem(k)||0;if(n-v>18e5){r.classList.add('show-intro')}localStorage.setItem(k,n)}catch(e){}setTimeout(function(){if(!window.__motion){r.classList.remove('motion','show-intro')}},4000)})(document);
+</script>
 <link rel="stylesheet" href="assets/css/site.css">
 <script type="application/ld+json">
 {
@@ -43,6 +46,7 @@
 </head>
 <body class="">
 <a class="skip-link" href="#main">Skip to content</a>
+<div class="intro" aria-hidden="true"><div class="intro-inner"><p class="intro-word">The Things That <em>I</em> See</p><p class="intro-sub">Photography &amp; Film &middot; Colorado</p><div class="intro-bar"><span></span></div></div></div>
 <header class="site-header" data-header>
   <div class="container header-inner">
     <a class="wordmark" href="index.html" aria-label="The Things That I See Photography, home">
@@ -113,6 +117,11 @@
       <p class="hero-note rise rise-4"><span>Weddings from $2,500</span><span>Film from $2,300</span><span>Parishioner at St. Mary&rsquo;s</span></p>
     </div>
     <div class="hero-media">
+      <div class="seal" aria-hidden="true">
+        <svg viewBox="0 0 120 120"><defs><path id="seal-c" d="M60,60 m-46,0 a46,46 0 1,1 92,0 a46,46 0 1,1 -92,0"/></defs>
+          <g class="seal-text"><text font-family="Jost, sans-serif" font-size="8.6" fill="currentColor"><textPath href="#seal-c" textLength="286" lengthAdjust="spacing">PHOTOGRAPHY &#183; FILM &#183; CENTENNIAL &#183; COLORADO &#183;</textPath></text></g></svg>
+        <span class="cross"></span>
+      </div>
       <div class="frame viewfinder">
         <span class="img img--pending" role="img" aria-label="A bride&#x27;s veil trailing down the aisle toward the altar during a nuptial Mass" data-shot="Veil leading to the altar during Mass" style="--tone:#b8955e;--ratio:1500/2250"></span>
       </div>
@@ -130,6 +139,15 @@
       <li>St. Mary&rsquo;s Catholic Church</li>
       <li>Nativity of Our Lord</li>
     </ul>
+  </div>
+</section>
+
+<section class="section section--tight">
+  <div class="container stats">
+    <div class="stat"><p class="stat-num"><span data-count="20">20</span><sup>yrs</sup></p><p class="stat-label">behind the lens, telling stories of faith and family</p></div>
+    <div class="stat"><p class="stat-num"><span data-count="6">6</span></p><p class="stat-label">children at home, so chaos doesn&rsquo;t rattle me</p></div>
+    <div class="stat"><p class="stat-num"><span data-count="1">1</span><sup>wk</sup></p><p class="stat-label">to your wedding preview and your senior gallery</p></div>
+    <div class="stat"><p class="stat-num"><span data-count="10">10</span><sup>yrs</sup></p><p class="stat-label">your Signature gallery stays online to share</p></div>
   </div>
 </section>
 
@@ -192,6 +210,10 @@
   </div>
 </section>
 
+<div class="marquee-band" aria-hidden="true">
+  <div class="marquee"><div class="marquee-group"><span>Weddings</span><i class="dot"></i><span>Engagements</span><i class="dot"></i><span>Families</span><i class="dot"></i><span>Seniors</span><i class="dot"></i><span>Film</span><i class="dot"></i></div><div class="marquee-group"><span>Weddings</span><i class="dot"></i><span>Engagements</span><i class="dot"></i><span>Families</span><i class="dot"></i><span>Seniors</span><i class="dot"></i><span>Film</span><i class="dot"></i></div></div>
+</div>
+
 <section class="band-nave">
   <div class="container split split--wide-media">
     <div class="split-media">
@@ -219,26 +241,29 @@
   </div>
 </section>
 
-<section class="section" data-gallery>
-  <div class="container">
-    <div class="section-head section-head--row">
-      <div class="stack">
-        <p class="eyebrow">Recent favorites</p>
-        <h2 class="h2">The things <em>I</em> see.</h2>
-      </div>
-      <a class="link-arrow" href="portfolio.html">Full portfolio</a>
+<section class="hgal-section" data-gallery>
+  <div class="container hgal-head section-head section-head--row">
+    <div class="stack">
+      <p class="eyebrow">Recent favorites</p>
+      <h2 class="h2">The things <em>I</em> see.</h2>
     </div>
-    <div class="reel">
-      <div class="frame"><a class="g-link" href="#" data-full="" data-caption="A couple kissing between tall white columns" data-cat="wedding" data-name="columns-kiss"><span class="img img--pending" role="img" aria-label="A couple kissing between tall white columns" data-shot="Kiss between white columns" style="--tone:#ddd2bf;--ratio:2500/2500"></span></a></div>
-      <div class="frame"><a class="g-link" href="#" data-full="" data-caption="Painted Byzantine dome of a church above a wedding ceremony" data-cat="wedding" data-name="byzantine-dome"><span class="img img--pending" role="img" aria-label="Painted Byzantine dome of a church above a wedding ceremony" data-shot="Painted church dome, looking up" style="--tone:#3f5274;--ratio:2500/1667"></span></a></div>
-      <div class="frame"><a class="g-link" href="#" data-full="" data-caption="An engaged couple laughing in a meadow below the Flatirons" data-cat="engagement" data-name="flatirons-laugh"><span class="img img--pending" role="img" aria-label="An engaged couple laughing in a meadow below the Flatirons" data-shot="Laughing in a meadow, Flatirons" style="--tone:#a99278;--ratio:2500/1669"></span></a></div>
-      <div class="frame"><a class="g-link" href="#" data-full="" data-caption="Newlyweds walk through a tunnel of sparklers at night" data-cat="wedding" data-name="sparkler-exit"><span class="img img--pending" role="img" aria-label="Newlyweds walk through a tunnel of sparklers at night" data-shot="Sparkler exit at night" style="--tone:#5a3f2c;--ratio:2500/1670"></span></a></div>
-      <div class="frame"><a class="g-link" href="#" data-full="" data-caption="A family under bright autumn trees" data-cat="family" data-name="autumn-family"><span class="img img--pending" role="img" aria-label="A family under bright autumn trees" data-shot="Autumn family portrait" style="--tone:#b3803a;--ratio:1500/1000"></span></a></div>
-      <div class="frame"><a class="g-link" href="#" data-full="" data-caption="A couple kissing on a rainy brick street" data-cat="engagement" data-name="rain-kiss"><span class="img img--pending" role="img" aria-label="A couple kissing on a rainy brick street" data-shot="Kiss on a rainy brick street" style="--tone:#5f5a55;--ratio:2500/2500"></span></a></div>
-      <div class="frame"><a class="g-link" href="#" data-full="" data-caption="A senior in a white dress reflected in a garden pond" data-cat="senior" data-name="pond-reflection"><span class="img img--pending" role="img" aria-label="A senior in a white dress reflected in a garden pond" data-shot="Pond reflection, white dress" style="--tone:#4a5244;--ratio:2500/3750"></span></a></div>
-      <div class="frame"><a class="g-link" href="#" data-full="" data-caption="Guests throw streamers as the newlyweds make their exit" data-cat="wedding" data-name="streamer-exit"><span class="img img--pending" role="img" aria-label="Guests throw streamers as the newlyweds make their exit" data-shot="Streamer exit" style="--tone:#8a5b4a;--ratio:2500/1406"></span></a></div>
+    <a class="link-arrow" href="portfolio.html">Full portfolio</a>
+  </div>
+  <div class="hgal">
+    <div class="hgal-track">
+      <figure class="hgal-item"><div class="frame"><a class="g-link" href="#" data-full="" data-caption="Kiss between the columns" data-cat="wedding" data-name="columns-kiss"><span class="img img--pending" role="img" aria-label="A couple kissing between tall white columns" data-shot="Kiss between white columns" style="--tone:#ddd2bf;--ratio:2500/2500"></span></a></div><figcaption><b>Wedding</b><span>Kiss between the columns</span></figcaption></figure>
+      <figure class="hgal-item hgal-item--wide"><div class="frame"><a class="g-link" href="#" data-full="" data-caption="Beneath the dome" data-cat="wedding" data-name="byzantine-dome"><span class="img img--pending" role="img" aria-label="Painted Byzantine dome of a church above a wedding ceremony" data-shot="Painted church dome, looking up" style="--tone:#3f5274;--ratio:2500/1667"></span></a></div><figcaption><b>Wedding</b><span>Beneath the dome</span></figcaption></figure>
+      <figure class="hgal-item hgal-item--wide"><div class="frame"><a class="g-link" href="#" data-full="" data-caption="Below the Flatirons" data-cat="engagement" data-name="flatirons-laugh"><span class="img img--pending" role="img" aria-label="An engaged couple laughing in a meadow below the Flatirons" data-shot="Laughing in a meadow, Flatirons" style="--tone:#a99278;--ratio:2500/1669"></span></a></div><figcaption><b>Engagement</b><span>Below the Flatirons</span></figcaption></figure>
+      <figure class="hgal-item"><div class="frame"><a class="g-link" href="#" data-full="" data-caption="Botanic Gardens" data-cat="senior" data-name="pond-reflection"><span class="img img--pending" role="img" aria-label="A senior in a white dress reflected in a garden pond" data-shot="Pond reflection, white dress" style="--tone:#4a5244;--ratio:2500/3750"></span></a></div><figcaption><b>Senior</b><span>Botanic Gardens</span></figcaption></figure>
+      <figure class="hgal-item hgal-item--wide"><div class="frame"><a class="g-link" href="#" data-full="" data-caption="The send-off" data-cat="wedding" data-name="sparkler-exit"><span class="img img--pending" role="img" aria-label="Newlyweds walk through a tunnel of sparklers at night" data-shot="Sparkler exit at night" style="--tone:#5a3f2c;--ratio:2500/1670"></span></a></div><figcaption><b>Wedding</b><span>The send-off</span></figcaption></figure>
+      <figure class="hgal-item hgal-item--wide"><div class="frame"><a class="g-link" href="#" data-full="" data-caption="Autumn, Centennial" data-cat="family" data-name="autumn-family"><span class="img img--pending" role="img" aria-label="A family under bright autumn trees" data-shot="Autumn family portrait" style="--tone:#b3803a;--ratio:1500/1000"></span></a></div><figcaption><b>Family</b><span>Autumn, Centennial</span></figcaption></figure>
+      <figure class="hgal-item"><div class="frame"><a class="g-link" href="#" data-full="" data-caption="Rain on brick" data-cat="engagement" data-name="rain-kiss"><span class="img img--pending" role="img" aria-label="A couple kissing on a rainy brick street" data-shot="Kiss on a rainy brick street" style="--tone:#5f5a55;--ratio:2500/2500"></span></a></div><figcaption><b>Engagement</b><span>Rain on brick</span></figcaption></figure>
+      <figure class="hgal-item hgal-item--wide"><div class="frame"><a class="g-link" href="#" data-full="" data-caption="Down the aisle" data-cat="wedding" data-name="father-of-bride"><span class="img img--pending" role="img" aria-label="A father walks his daughter down a warm-lit church aisle" data-shot="Father walking the bride down the aisle" style="--tone:#9c6a3c;--ratio:2500/1668"></span></a></div><figcaption><b>Wedding</b><span>Down the aisle</span></figcaption></figure>
+      <figure class="hgal-item"><div class="frame"><a class="g-link" href="#" data-full="" data-caption="Golden hour" data-cat="family" data-name="golden-sisters"><span class="img img--pending" role="img" aria-label="A mother and two daughters hugging in golden light" data-shot="Mother and daughters, golden light" style="--tone:#b07a3c;--ratio:1500/1500"></span></a></div><figcaption><b>Family</b><span>Golden hour</span></figcaption></figure>
+      <figure class="hgal-item hgal-item--wide"><div class="frame"><a class="g-link" href="#" data-full="" data-caption="Joy, unscripted" data-cat="wedding" data-name="streamer-exit"><span class="img img--pending" role="img" aria-label="Guests throw streamers as the newlyweds make their exit" data-shot="Streamer exit" style="--tone:#8a5b4a;--ratio:2500/1406"></span></a></div><figcaption><b>Wedding</b><span>Joy, unscripted</span></figcaption></figure>
     </div>
   </div>
+  <div class="container"><div class="hgal-progress"><span></span></div></div>
 </section>
 
 <section class="section section--stone">
@@ -407,6 +432,10 @@
 
 <script src="assets/js/config.js" defer></script>
 <script src="assets/js/site.js" defer></script>
+<script src="assets/vendor/gsap.min.js" defer></script>
+<script src="assets/vendor/ScrollTrigger.min.js" defer></script>
+<script src="assets/vendor/lenis.min.js" defer></script>
+<script src="assets/js/motion.js" defer></script>
 
 </body>
 </html>
