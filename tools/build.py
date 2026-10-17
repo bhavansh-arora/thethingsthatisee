@@ -21,6 +21,7 @@ META_RE = re.compile(r"\A<!--meta\s*(\{.*?\})\s*-->\s*", re.S)
 XIMG_RE = re.compile(r"<x-img\b([^>]*)>(?:</x-img>)?")
 ATTR_RE = re.compile(r'([\w-]+)(?:="([^"]*)")?')
 PARTIAL_RE = re.compile(r"\{\{>\s*([\w-]+)\s*\}\}")
+POS_RE = re.compile(r"\{\{pos\s+([\w-]+)\s*\}\}")
 SRC_RE = re.compile(r"\{\{src\s+([\w-]+)(?:\s+(\d+))?\s*\}\}")
 
 
@@ -71,6 +72,7 @@ def image_url(name, width=960):
 
 
 def expand_srcs(text):
+    text = POS_RE.sub(lambda m: IMAGES[m.group(1)].get("pos", "50% 50%"), text)
     return SRC_RE.sub(lambda m: image_url(m.group(1), int(m.group(2) or 960)), text)
 
 

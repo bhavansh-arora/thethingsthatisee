@@ -34,11 +34,13 @@ python3 tools/build.py
 
 ### Photos
 
-Every photo slot is listed in `src/images.json` with responsive WebP files in `assets/img/`. Use one in a page with `<x-img name="slot" sizes="..."></x-img>` (add `pos="50% 30%"` to set the crop, `eager` for above-the-fold images, `link cat="wedding"` to open it in the lightbox). `{{src slot 480}}` gives a single image URL for backgrounds. The build writes `srcset`, width and height (no layout shift) and lazy loading.
+Every photo on the site is Jason's own work, taken from his current website. Each slot in `src/images.json` has responsive WebP files in `assets/img/` and a `pos` crop point. The crop points come from face detection, so wherever a photo is cropped (hero, tiles, cards, story strips) the faces stay in frame. Photos where no face is visible (empty church interiors, rings, ceilings, couples seen from behind) are not used.
+
+Use a photo in a page with `<x-img name="slot" sizes="..."></x-img>` (`eager` for above-the-fold images, `link cat="wedding"` to open it in the lightbox, `pos="50% 30%"` to override the crop). `{{src slot 480}}` gives a single image URL and `{{pos slot}}` its crop point, for background images. The build writes `srcset`, width and height (no layout shift) and lazy loading.
 
 ### Design and motion
 
-The look is a modern dark studio: espresso black, ivory and champagne gold, Inter Tight with Instrument Serif italic accents and Geist Mono labels. The design system is in `assets/css/site.css`.
+The look is a light studio: warm ivory paper, espresso ink and champagne gold, Inter Tight with Instrument Serif italic accents and Geist Mono labels. The design system is in `assets/css/site.css`.
 
 Signature pieces: a counting preloader with the eye-and-cross mark (first visit only), a curtain wipe between pages, the full-frame hero slideshow with a rotating word, a statement whose words light up as you scroll with photos set inline, a bento grid with count-up numbers and a live date checker, a pinned horizontal scroll of real stories (desktop), the "In the sanctuary" feature frame, process cards that stack and dim, a scroll-speed marquee, a custom cursor with labels, hover photo previews on the story list and Sessions menu, magnetic buttons, and a giant footer wordmark whose letters rise in.
 
@@ -62,5 +64,5 @@ GitHub Pages: Settings, Pages, deploy from the `main` branch root. A `.nojekyll`
 - **Engagement sessions:** his FAQ says they're included in every wedding collection, while his Pricing page lists them as a $750 add-on. This site treats them as an add-on and the FAQ wording was adjusted to match.
 - **Deluxe family session:** his site reads "Up to  hours" (the number is missing). This site says "Extended session".
 - **Drafted copy:** the headlines, the About page's chapters and "Four trades" lines, the Catholic wedding guide, and the location blurbs were written for this site from his own FAQ and bio. They need his review.
-- **About photos:** the family photo and the portrait are assumed to be Jason and his family.
+- **A photo of Jason:** his site has no confirmed portrait of him, so the site doesn't show one. A headshot (and a family photo, if he'd like) would make the About page and the home introduction more personal.
 - **Stat captions:** "20 years behind the lens" and "six children at home" come from his bio; confirm he's happy with how they're phrased.
