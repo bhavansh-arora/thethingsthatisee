@@ -54,7 +54,16 @@
   <div class="preloader__foot"><span>Photo + Film<br>Centennial, Colorado</span><span class="preloader__count" data-count-loader>000</span></div>
   <div class="preloader__bar"><span></span></div>
 </div>
-<div class="curtain" aria-hidden="true"><svg class="curtain__mark" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M3 20C8 12 13.5 8.5 20 8.5S32 12 37 20C32 28 26.5 31.5 20 31.5S8 28 3 20z"/><path d="M20 13.5a6.5 6.5 0 1 0 0 13a6.5 6.5 0 1 0 0-13z"/><path d="M20 16.6v6.8M17.4 18.9h5.2"/></svg></div>
+<div class="curtain" aria-hidden="true">
+  <div class="curtain__top"><span>The Things That I See</span><span>Photo + Film</span></div>
+  <div class="curtain__inner">
+    <svg class="curtain__mark" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M3 20C8 12 13.5 8.5 20 8.5S32 12 37 20C32 28 26.5 31.5 20 31.5S8 28 3 20z"/><path d="M20 13.5a6.5 6.5 0 1 0 0 13a6.5 6.5 0 1 0 0-13z"/><path d="M20 16.6v6.8M17.4 18.9h5.2"/></svg>
+    <div class="curtain__frame"><span style="--i:0"></span><span style="--i:1"></span><span style="--i:2"></span></div>
+    <p class="curtain__title"><span data-curtain-title></span></p>
+  </div>
+</div>
+<script>try{var n=JSON.parse(sessionStorage.getItem("ttis-nav-data")||"null");sessionStorage.removeItem("ttis-nav-data");if(n&&document.documentElement.classList.contains("is-entering")){var c=document.querySelector(".curtain"),f=c.querySelectorAll(".curtain__frame span")[2];f.style.backgroundImage="url("+n.u+")";f.style.backgroundPosition=n.pos;f.classList.add("is-shown");c.querySelector("[data-curtain-title]").textContent=n.t}}catch(e){}</script>
+{{> transitions}}
 <div class="scroll-progress" aria-hidden="true"><span></span></div>
 <div class="cursor" aria-hidden="true"><span class="cursor__ring"><span class="cursor__label"></span></span><span class="cursor__dot"></span></div>
 <div class="hover-preview" aria-hidden="true"><div class="hover-preview__inner"></div></div>

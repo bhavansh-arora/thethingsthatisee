@@ -71,13 +71,13 @@
       }, 180);
     })(t0);
   } else if (html.classList.contains("is-entering")) {
-    requestAnimationFrame(function () {
+    setTimeout(function () {
       requestAnimationFrame(function () {
         html.classList.add("is-entered");
         startIntro();
         setTimeout(function () { html.classList.remove("is-entering", "is-entered"); }, 1200);
       });
-    });
+    }, 260);
   } else {
     startIntro();
   }
@@ -92,10 +92,45 @@
     if (url.pathname === location.pathname) return;
     if (document.body.classList.contains("menu-open")) { document.body.classList.remove("menu-open"); }
     e.preventDefault();
-    try { sessionStorage.setItem("ttis-nav", "1"); } catch (err) {}
+    var next = transitionFor(url);
+    var curtain = $(".curtain");
+    if (curtain && next) {
+      $$(".curtain__frame span", curtain).forEach(function (s, i) {
+        s.classList.remove("is-shown");
+        s.style.backgroundImage = "url(" + next.p[i][0] + ")";
+        s.style.backgroundPosition = next.p[i][1];
+        s.style.animation = "none"; void s.offsetWidth; s.style.animation = "";
+      });
+      $("[data-curtain-title]", curtain).textContent = next.t;
+    }
+    try {
+      sessionStorage.setItem("ttis-nav", "1");
+      if (next) sessionStorage.setItem("ttis-nav-data", JSON.stringify({ t: next.t, u: next.p[2][0], pos: next.p[2][1] }));
+    } catch (err) {}
     html.classList.add("is-leaving");
-    setTimeout(function () { location.href = url.href; }, 720);
+    setTimeout(function () { location.href = url.href; }, 1000);
   });
+  // Photo sets for each page's transition, warmed up as soon as a link is hovered or touched.
+  var transitions = {};
+  try { transitions = JSON.parse(document.getElementById("ttis-transitions").textContent); } catch (err) {}
+  function transitionFor(url) {
+    var file = url.pathname.split("/").pop() || "index.html";
+    return transitions[file] || transitions["index.html"];
+  }
+  var warmed = {};
+  function warm(e) {
+    var a = e.target.closest && e.target.closest("a[href]");
+    if (!a || a.target === "_blank") return;
+    var url = new URL(a.getAttribute("href"), location.href);
+    if (url.origin !== location.origin || !/(\.html|\/)$/.test(url.pathname)) return;
+    var next = transitionFor(url);
+    if (!next || warmed[next.t]) return;
+    warmed[next.t] = true;
+    next.p.forEach(function (p) { var im = new Image(); im.src = p[0]; });
+  }
+  document.addEventListener("pointerover", warm, { passive: true });
+  document.addEventListener("touchstart", warm, { passive: true });
+  document.addEventListener("focusin", warm);
   window.addEventListener("pageshow", function (e) {
     if (e.persisted) html.classList.remove("is-leaving", "is-entering", "is-entered");
   });
