@@ -212,6 +212,12 @@
     document.addEventListener("mouseleave", function () { cursor.classList.add("is-hidden"); });
     window.addEventListener("mousedown", function () { cursor.classList.add("is-down"); });
     window.addEventListener("mouseup", function () { cursor.classList.remove("is-down"); });
+    // A link that opens a new tab takes the mouseup with it, so release the press when this window loses focus.
+    var release = function () { cursor.classList.remove("is-down"); };
+    window.addEventListener("blur", release);
+    window.addEventListener("pagehide", release);
+    document.addEventListener("visibilitychange", release);
+    window.addEventListener("dragend", release);
     (function follow() {
       rx += (mx - rx) * 0.18; ry += (my - ry) * 0.18;
       px += (mx - px) * 0.12; py += (my - py) * 0.12;

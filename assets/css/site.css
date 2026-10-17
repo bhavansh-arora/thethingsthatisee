@@ -796,6 +796,9 @@ main, .tile, .qcard, .chapter, .price-card, .form-panel, .faq details { backgrou
 .cursor.is-label .cursor__dot, .cursor.is-hover .cursor__dot { opacity: 0; }
 .cursor.is-hidden .cursor__ring, .cursor.is-hidden .cursor__dot { opacity: 0; }
 .cursor.is-down .cursor__ring { width: 32px; height: 32px; margin: -16px 0 0 -16px; }
+/* Pressing keeps hover and label circles at their size, with a slight squeeze */
+.cursor.is-hover.is-down .cursor__ring { width: 52px; height: 52px; margin: -26px 0 0 -26px; }
+.cursor.is-label.is-down .cursor__ring { width: 82px; height: 82px; margin: -41px 0 0 -41px; }
 
 /* Hover image preview */
 .hover-preview { display: none; }
