@@ -2,147 +2,162 @@
   "title": "Investment & Pricing | The Things That I See Photography",
   "description": "Wedding photography from $2,500, wedding film from $2,300, senior portraits from $400 and family sessions from $250. Build your estimate in seconds.",
   "nav": "investment",
-  "scripts": ["assets/js/investment.js"],
+  "scripts": [
+    "assets/js/investment.js"
+  ],
   "og_image": "ring-box"
 } -->
-<section class="print-hero print-hero--compact">
-  <div class="leak leak--rose" aria-hidden="true"></div>
-  <div class="leak leak--amber" aria-hidden="true"></div>
-  <div class="container print-hero-grid">
-    <div class="print-hero-copy">
-      <p class="kicker">Investment</p>
-      <h1 class="h1">Invest in your memories, <em>for generations to come.</em></h1>
-      <p class="lede">Clear prices, shaped around your day. Build a wedding estimate below, then send it to me in one tap. All prices are negotiable.</p>
-    </div>
-    <div class="collage" aria-hidden="true">
-      <div class="collage-item" style="--x:18%;--y:2%;--w:54%;--z:2" data-speed=".05"><figure class="print drop tape" style="--r:-3deg;--ar:4/5" data-delay="0"><div class="frame"><x-img name="sparkler-exit" sizes="(min-width: 960px) 26vw, 50vw" eager></x-img></div><figcaption>the send-off</figcaption></figure></div>
-      <div class="collage-item" style="--x:0%;--y:46%;--w:40%;--z:3" data-speed=".12"><figure class="print drop tape" style="--r:-9deg;--ar:1/1" data-delay="160"><div class="frame"><x-img name="ring-box" sizes="(min-width: 960px) 26vw, 50vw" eager></x-img></div><figcaption>the rings</figcaption></figure></div>
-      <div class="collage-item" style="--x:60%;--y:40%;--w:40%;--z:4" data-speed=".16"><figure class="print drop tape" style="--r:7deg;--ar:4/5" data-delay="320"><div class="frame"><x-img name="hedge-portrait" sizes="(min-width: 960px) 26vw, 50vw" eager></x-img></div><figcaption>forever</figcaption></figure></div>
+<section class="page-hero">
+  <div class="container">
+    <div class="page-hero__meta reveal"><span class="label">(01) &mdash; Investment</span><span class="label">All prices negotiable</span></div>
+    <div class="page-hero__grid">
+      <h1 class="h-xl page-hero__title" data-lines>Invest in your<br>memories, <em>for generations.</em></h1>
+      <div class="page-hero__lede reveal" data-delay="2">
+        <p class="lede">Clear prices, shaped around your day. Build a wedding estimate below, then send it to Jason in one tap.</p>
+        <div class="row"><a class="btn btn--gold" href="#builder">Build your estimate <span class="btn__icon">{{> arrow}}</span></a><a class="btn btn--ghost" href="#seniors">Sessions</a></div>
+      </div>
     </div>
   </div>
 </section>
-
-<section class="section" id="builder">
+<section class="section section--flush-top" id="builder">
   <div class="container builder">
     <form id="estimate" novalidate>
       <fieldset class="builder-group">
-        <legend><span class="eyebrow">Step I</span><h2 class="h3" style="margin-top:10px">Choose your wedding coverage</h2></legend>
-        <p class="muted small" style="margin-bottom:16px">Includes my time, vision, and your high-resolution digital files.</p>
-        <div class="choice-grid">
-          <label class="choice"><input type="radio" name="coverage" value="classic" checked>
-            <span class="choice-box"><span class="choice-title">The Classic Coverage</span><span class="choice-meta">Full wedding-day coverage by me, standard editing, and an online gallery for 5 years with unlimited downloads.</span><span class="choice-price">$2,500</span></span></label>
-          <label class="choice"><input type="radio" name="coverage" value="signature">
-            <span class="choice-box"><span class="choice-title">The Signature Coverage</span><span class="choice-meta">Your wedding day plus up to 3 hours at a rehearsal dinner or welcome party, a 10-year gallery, and priority fast-tracked editing.</span><span class="choice-price">$3,500</span></span></label>
+        <legend><span class="label">Step 01 / 03</span><span class="h-md">Choose your wedding coverage</span><span class="body">Includes Jason&rsquo;s time, vision, and your high-resolution digital files.</span></legend>
+        <div class="opts opts--2">
+          <label class="opt"><input type="radio" name="coverage" value="classic" checked><span class="opt__box"><span class="opt__title">The Classic Coverage</span><span class="opt__meta">Full wedding-day coverage by Jason, standard editing, and an online gallery for 5 years with unlimited downloads.</span><span class="opt__price">$2,500</span></span></label>
+          <label class="opt"><input type="radio" name="coverage" value="signature"><span class="opt__box"><span class="opt__title">The Signature Coverage</span><span class="opt__meta">Your wedding day plus up to 3 hours at a rehearsal dinner or welcome party, a 10-year gallery, and priority fast-tracked editing.</span><span class="opt__price">$3,500</span></span></label>
         </div>
       </fieldset>
-
       <fieldset class="builder-group">
-        <legend><span class="eyebrow">Step II</span><h2 class="h3" style="margin-top:10px">Add extras</h2></legend>
-        <div class="choice-grid">
-          <label class="choice"><input type="checkbox" name="extra" value="second">
-            <span class="choice-box"><span class="choice-title">Second photographer</span><span class="choice-meta">Alternate angles, guest reactions, and both of you getting ready at once. Recommended for a full Mass.</span><span class="choice-price">+ $900</span></span></label>
-          <label class="choice"><input type="checkbox" name="extra" value="engagement">
-            <span class="choice-box"><span class="choice-title">Engagement session</span><span class="choice-meta">Get comfortable in front of the camera before the big day, with photos for your save-the-dates.</span><span class="choice-price">+ $750</span></span></label>
-          <label class="choice"><input type="checkbox" name="extra" value="event">
-            <span class="choice-box"><span class="choice-title">Event add-on</span><span class="choice-meta">Coverage for a rehearsal dinner, welcome party, or farewell brunch to complete your story.</span><span class="choice-price">+ $750</span></span></label>
+        <legend><span class="label">Step 02 / 03</span><span class="h-md">Add extras</span></legend>
+        <div class="opts">
+          <label class="opt"><input type="checkbox" name="extra" value="second"><span class="opt__box"><span class="opt__title">Second photographer</span><span class="opt__meta">Alternate angles, guest reactions, and both of you getting ready at once. Recommended for a full Mass.</span><span class="opt__price">+ $900</span></span></label>
+          <label class="opt"><input type="checkbox" name="extra" value="engagement"><span class="opt__box"><span class="opt__title">Engagement session</span><span class="opt__meta">Get comfortable in front of the camera before the big day, with photos for your save-the-dates.</span><span class="opt__price">+ $750</span></span></label>
+          <label class="opt"><input type="checkbox" name="extra" value="event"><span class="opt__box"><span class="opt__title">Event add-on</span><span class="opt__meta">Coverage for a rehearsal dinner, welcome party, or farewell brunch to complete your story.</span><span class="opt__price">+ $750</span></span></label>
         </div>
       </fieldset>
-
       <fieldset class="builder-group" id="film">
-        <legend><span class="eyebrow">Step III</span><h2 class="h3" style="margin-top:10px">Add a wedding film</h2></legend>
-        <div class="choice-grid">
-          <label class="choice"><input type="radio" name="film" value="none" checked>
-            <span class="choice-box"><span class="choice-title">Photography only</span><span class="choice-meta">You can always add film later.</span></span></label>
-          <label class="choice"><input type="radio" name="film" value="v1">
-            <span class="choice-box"><span class="choice-title">V1. The Keepsake</span><span class="choice-meta">A short film. Uncomplicated, clean, quiet. 3 to 4 minute cinematic highlight (music only), 1 videographer, 8 hours, 4K.</span><span class="choice-price">$2,300 <s class="muted">$2,600</s></span></span></label>
-          <label class="choice"><input type="radio" name="film" value="v2">
-            <span class="choice-box"><span class="choice-title">V2. The Narrative &middot; <em style="color:var(--gilt)">most couples choose</em></span><span class="choice-meta">The full day, an edited short. 4 to 5 minute film with music and dialogue, 2 videographers, 9 hours, 4K, drone establishing shots.</span><span class="choice-price">$3,200 <s class="muted">$3,500</s></span></span></label>
-          <label class="choice"><input type="radio" name="film" value="v3">
-            <span class="choice-box"><span class="choice-title">V3. The Legacy</span><span class="choice-meta">A feature film, hand-cut. 15 to 20 minute feature plus a 3 to 4 minute highlight, 2 videographers, 10 hours, 4K.</span><span class="choice-price">$4,500 <s class="muted">$4,800</s></span></span></label>
+        <legend><span class="label">Step 03 / 03</span><span class="h-md">Add a wedding film</span><span class="body">Shot in 4K by Jason&rsquo;s film team, cut to match your photographs.</span></legend>
+        <div class="opts opts--2">
+          <label class="opt"><input type="radio" name="film" value="none" checked><span class="opt__box"><span class="opt__title">Photography only</span><span class="opt__meta">You can always add film later.</span></span></label>
+          <label class="opt"><input type="radio" name="film" value="v1"><span class="opt__box"><span class="opt__title">V1. The Keepsake</span><span class="opt__meta">A short film. Uncomplicated, clean, quiet. 3 to 4 minute cinematic highlight (music only), 1 videographer, 8 hours, 4K.</span><span class="opt__price">$2,300 <s>$2,600</s></span></span></label>
+          <label class="opt"><input type="radio" name="film" value="v2"><span class="opt__box"><span class="opt__title">V2. The Narrative &middot; <em>most couples choose</em></span><span class="opt__meta">The full day, an edited short. 4 to 5 minute film with music and dialogue, 2 videographers, 9 hours, 4K, drone establishing shots.</span><span class="opt__price">$3,200 <s>$3,500</s></span></span></label>
+          <label class="opt"><input type="radio" name="film" value="v3"><span class="opt__box"><span class="opt__title">V3. The Legacy</span><span class="opt__meta">A feature film, hand-cut. 15 to 20 minute feature plus a 3 to 4 minute highlight, 2 videographers, 10 hours, 4K.</span><span class="opt__price">$4,500 <s>$4,800</s></span></span></label>
         </div>
-        <label class="choice" style="margin-top:10px"><input type="checkbox" name="extraVideographer" value="1" disabled>
-          <span class="choice-box"><span class="choice-title">Additional videographer for The Keepsake</span><span class="choice-price">+ $500</span></span></label>
+        <div class="opts mt-s">
+          <label class="opt"><input type="checkbox" name="extraVideographer" value="1" disabled><span class="opt__box"><span class="opt__title">Additional videographer for The Keepsake</span><span class="opt__price">+ $500</span></span></label>
+        </div>
       </fieldset>
     </form>
-
     <aside class="summary" id="summary" aria-live="polite">
-      <p class="summary-title">Your estimate</p>
+      <span class="label label--dot label--live">Your estimate</span>
       <ul class="summary-lines" id="summary-lines"></ul>
-      <div class="summary-total"><span class="label" style="margin:0">Total</span><strong id="summary-total">$2,500</strong></div>
-      <a class="btn btn-light btn-block" id="summary-send" href="enquire.html?type=wedding">Send this to Jason</a>
+      <div class="summary-total"><span class="label">Total</span><strong id="summary-total">$2,500</strong></div>
+      <a class="btn btn--gold btn--block" id="summary-send" href="enquire.html?type=wedding">Send this to Jason <span class="btn__icon">{{> arrow}}</span></a>
       <p class="small">A starting point, not a contract. Every price is negotiable, and albums (KISSBOOK, ZNO) can be added.</p>
     </aside>
   </div>
   <div class="summary-bar" id="summary-bar">
-    <div><p class="label">Estimate</p><strong id="bar-total">$2,500</strong></div>
-    <a class="btn btn-light" id="bar-send" href="enquire.html?type=wedding">Send to Jason</a>
+    <div><span class="label">Estimate</span><br><strong id="bar-total">$2,500</strong></div>
+    <a class="btn btn--gold" id="bar-send" href="enquire.html?type=wedding">Send to Jason</a>
   </div>
 </section>
 
-<section class="section section--stone" id="seniors">
+<section class="section section--flush-top" id="seniors">
   <div class="container">
-    <div class="section-head section-head--row">
-      <div class="stack"><p class="eyebrow">Senior photography</p><h2 class="h2">Senior <em>portraits</em></h2></div>
-      <a class="link-arrow" href="seniors.html">See senior work</a>
+    <div class="head head--split">
+      <div class="head__top"><span class="label">(02) &mdash; Senior photography</span><span class="label">Gallery in one week</span></div>
+      <h2 class="h-xl" data-lines>Senior<br><em>portraits.</em></h2>
+      <p class="lede reveal">Half an hour to three hours, with posing help and print rights in every package.</p>
     </div>
-    <div class="prices prices--3">
-      <div class="price-card"><p class="price-name">Essentials</p><p class="price-amount num">$400</p>
-        <ul class="price-list"><li>Half an hour of photography</li><li>Expert posing help</li><li>Private online gallery</li><li>10 to 15 high-res images</li><li>Download &amp; print rights</li></ul>
-        <a class="btn btn-ghost" href="enquire.html?type=senior">Book</a></div>
-      <div class="price-card price-card--feature"><span class="price-flag">Most popular</span><p class="price-name">Signature</p><p class="price-amount num">$700</p>
-        <ul class="price-list"><li>Up to 1.5 hours of photography</li><li>Multiple outfits + posing help</li><li>Private online gallery</li><li>15 to 25 fully edited images</li><li>Download &amp; print rights</li></ul>
-        <a class="btn btn-solid" href="enquire.html?type=senior">Book</a></div>
-      <div class="price-card"><p class="price-name">Elite</p><p class="price-amount num">$1,000</p>
-        <ul class="price-list"><li>Up to 3 hours of photography</li><li>2+ locations</li><li>Multiple outfits + posing help</li><li>25+ fully edited images</li><li>Download &amp; print rights</li></ul>
-        <a class="btn btn-ghost" href="enquire.html?type=senior">Book</a></div>
+    <div class="pricing--3">
+      <article class="price-card reveal"><div class="media"><x-img name="leaf-wave" sizes="(min-width:1000px) 33vw, 100vw" pos="50% 45%"></x-img></div>
+        <div class="price-card__body">
+          <div class="price-card__head"><span class="label">Senior &middot; 01</span></div>
+          <div class="stack" style="--stack:10px"><h3 class="h-md">Essentials</h3><p class="price"><strong>$400</strong></p></div>
+          <p class="body">A streamlined session for great shots at a great value.</p><ul class="checklist"><li>Half an hour of photography</li><li>Expert posing help</li><li>Private online gallery</li><li>10 to 15 high-res images</li><li>Download &amp; print rights</li></ul>
+          <a class="btn btn--ghost" href="enquire.html?type=senior">Book Essentials</a>
+        </div>
+      </article>
+      <article class="price-card price-card--feature reveal"><div class="price-card__flag"><span class="pill">Most popular</span></div><div class="media"><x-img name="meadow-dress" sizes="(min-width:1000px) 33vw, 100vw" pos="50% 25%"></x-img></div>
+        <div class="price-card__body">
+          <div class="price-card__head"><span class="label">Senior &middot; 02</span></div>
+          <div class="stack" style="--stack:10px"><h3 class="h-md">Signature</h3><p class="price"><strong>$700</strong></p></div>
+          <p class="body">Your full experience, with time, variety and premium edits.</p><ul class="checklist"><li>Up to 1.5 hours of photography</li><li>Multiple outfits + posing help</li><li>Private online gallery</li><li>15 to 25 fully edited images</li><li>Download &amp; print rights</li></ul>
+          <a class="btn btn--gold" href="enquire.html?type=senior">Book Signature</a>
+        </div>
+      </article>
+      <article class="price-card reveal"><div class="media"><x-img name="conservatory" sizes="(min-width:1000px) 33vw, 100vw" pos="50% 45%"></x-img></div>
+        <div class="price-card__body">
+          <div class="price-card__head"><span class="label">Senior &middot; 03</span></div>
+          <div class="stack" style="--stack:10px"><h3 class="h-md">Elite</h3><p class="price"><strong>$1,000</strong></p></div>
+          <p class="body">The most complete, all-inclusive senior experience.</p><ul class="checklist"><li>Up to 3 hours of photography</li><li>2+ locations</li><li>Multiple outfits + posing help</li><li>25+ fully edited images</li><li>Download &amp; print rights</li></ul>
+          <a class="btn btn--ghost" href="enquire.html?type=senior">Book Elite</a>
+        </div>
+      </article>
     </div>
   </div>
 </section>
 
-<section class="section section--stone" id="family" style="padding-top:0">
+<section class="section section--flush-top" id="family">
   <div class="container">
-    <div class="section-head section-head--row">
-      <div class="stack"><p class="eyebrow">Family photography</p><h2 class="h2">Family <em>sessions</em></h2></div>
-      <a class="link-arrow" href="family.html">See family work</a>
+    <div class="head head--split">
+      <div class="head__top"><span class="label">(03) &mdash; Family photography</span><span class="label">Candid or classic</span></div>
+      <h2 class="h-xl" data-lines>Family<br><em>sessions.</em></h2>
+      <p class="lede reveal">From a quick mini-session to a deluxe outing across two locations.</p>
     </div>
-    <div class="prices prices--3">
-      <div class="price-card"><p class="price-name">Family Mini-Session</p><p class="price-amount num">$250</p>
-        <ul class="price-list"><li>Half an hour of photography</li><li>1 location</li></ul>
-        <a class="btn btn-ghost" href="enquire.html?type=family">Book</a></div>
-      <div class="price-card price-card--feature"><span class="price-flag">Most families</span><p class="price-name">Family Photography</p><p class="price-amount num">$500</p>
-        <ul class="price-list"><li>Up to 1 hour of photography</li><li>1 location</li></ul>
-        <a class="btn btn-solid" href="enquire.html?type=family">Book</a></div>
-      <div class="price-card"><p class="price-name">Deluxe Family Photography</p><p class="price-amount num">$750</p>
-        <ul class="price-list"><li>Extended session</li><li>2+ locations</li><li>Multiple outfits</li></ul>
-        <a class="btn btn-ghost" href="enquire.html?type=family">Book</a></div>
+    <div class="pricing--3">
+      <article class="price-card reveal"><div class="media"><x-img name="flower-siblings" sizes="(min-width:1000px) 33vw, 100vw" pos="50% 45%"></x-img></div>
+        <div class="price-card__body">
+          <div class="price-card__head"><span class="label">Family &middot; 01</span></div>
+          <div class="stack" style="--stack:10px"><h3 class="h-md">Family Mini-Session</h3><p class="price"><strong>$250</strong></p></div>
+          <ul class="checklist"><li>Half an hour of photography</li><li>1 location</li></ul>
+          <a class="btn btn--ghost" href="enquire.html?type=family">Book a mini</a>
+        </div>
+      </article>
+      <article class="price-card price-card--feature reveal"><div class="price-card__flag"><span class="pill">Most families</span></div><div class="media"><x-img name="autumn-family" sizes="(min-width:1000px) 33vw, 100vw" pos="50% 45%"></x-img></div>
+        <div class="price-card__body">
+          <div class="price-card__head"><span class="label">Family &middot; 02</span></div>
+          <div class="stack" style="--stack:10px"><h3 class="h-md">Family Photography</h3><p class="price"><strong>$500</strong></p></div>
+          <ul class="checklist"><li>Up to 1 hour of photography</li><li>1 location</li></ul>
+          <a class="btn btn--gold" href="enquire.html?type=family">Book a session</a>
+        </div>
+      </article>
+      <article class="price-card reveal"><div class="media"><x-img name="mansion-lawn" sizes="(min-width:1000px) 33vw, 100vw" pos="50% 45%"></x-img></div>
+        <div class="price-card__body">
+          <div class="price-card__head"><span class="label">Family &middot; 03</span></div>
+          <div class="stack" style="--stack:10px"><h3 class="h-md">Deluxe Family Photography</h3><p class="price"><strong>$750</strong></p></div>
+          <ul class="checklist"><li>Extended session</li><li>2+ locations</li><li>Multiple outfits</li></ul>
+          <a class="btn btn--ghost" href="enquire.html?type=family">Book deluxe</a>
+        </div>
+      </article>
     </div>
   </div>
 </section>
 
-<section class="section" id="faq">
-  <div class="container faq-cols">
-    <div class="stack">
-      <p class="eyebrow">FAQ</p>
-      <h2 class="h2">Good <em>questions</em></h2>
-      <p class="muted">Anything else? <a href="mailto:jason@thethingsthatisee.com">Email me</a> or call <a href="tel:+17142904333">714-290-4333</a>.</p>
+<section class="section section--flush-top" id="faq">
+  <div class="container faq-layout">
+    <div class="faq-layout__aside stack" style="--stack:24px">
+      <div class="head__top reveal"><span class="label">(04) &mdash; FAQ</span><span class="label">14 answers</span></div>
+      <h2 class="h-xl" data-lines>Good<br><em>questions.</em></h2>
+      <p class="body reveal">Anything else? <a class="link" href="mailto:jason@thethingsthatisee.com">Email Jason</a> or call <a class="link" href="tel:+17142904333">714-290-4333</a>.</p>
     </div>
     <div class="faq">
-      <details><summary>What is your photography style?</summary><div><p>I photograph weddings in a candid, story-driven way with gentle direction when you need it. My goal is to capture honest emotion and real interactions, then step in with simple guidance for portraits so you never feel stiff or over-posed.</p></div></details>
-      <details><summary>Where are you based, and do you travel?</summary><div><p>I&rsquo;m based in Centennial and photograph weddings throughout Denver, the Front Range, and across Colorado. I&rsquo;m also happy to travel for out-of-state weddings, especially when you&rsquo;re coming &ldquo;home&rdquo; to get married at a meaningful church or venue.</p></div></details>
-      <details><summary>What&rsquo;s included in your wedding collections?</summary><div><p>All of my wedding collections include full-resolution edited images, an online gallery to share with family and friends, and personal print rights. Many couples also add a custom wedding album (like KISSBOOKS or ZNO flatlay albums) so they have a tangible way to relive the day.</p></div></details>
-      <details><summary>How far in advance should we book?</summary><div><p>Most couples book 9 to 18 months before their wedding, especially for popular spring and fall dates. If you&rsquo;re planning on a shorter timeline, feel free to reach out. I occasionally have last-minute availability.</p></div></details>
-      <details><summary>How many photos will we receive, and when?</summary><div><p>For a full-day wedding, you can expect a large, well-curated gallery that covers your day from start to finish. I send a small preview within the first week and your full gallery within about 6 to 8 weeks, depending on the season.</p></div></details>
-      <details><summary>Do you have experience with Catholic and Christian ceremonies?</summary><div><p>Yes. I regularly photograph Catholic and Christian weddings and am very comfortable working within church guidelines. I understand the flow of a Mass or worship service and know how to photograph the important moments while keeping the focus on prayer and the sacrament.</p></div></details>
-      <details><summary>How do you handle church rules about photography?</summary><div><p>Before your wedding, I connect with your parish or church to understand their specific guidelines: where I can stand, when I can move, and whether flash is allowed. On the day, I work quietly from the sides or back as needed so I&rsquo;m respectful of the liturgy while still capturing the moments that matter to you.</p></div></details>
-      <details><summary>Will we still get family and group photos if your style is candid?</summary><div><p>Absolutely. We&rsquo;ll set aside dedicated time for family, wedding-party, and any special group photos you&rsquo;d like. Once those are done, I shift back into a more documentary approach so you can enjoy your people while I capture the day as it unfolds.</p></div></details>
-      <details><summary>Do you offer engagement sessions?</summary><div><p>Yes. Engagement sessions are a relaxed chance for us to get to know each other, practice being in front of the camera, and create meaningful photos on a quieter day before the wedding.</p></div></details>
-      <details><summary>Do you offer wedding albums and prints?</summary><div><p>Yes. I offer custom-designed wedding albums, including KISSBOOKS and ZNO flatlay books, as well as professional prints. I&rsquo;ll walk you through the design process so your album tells the full story of your day in a way that feels timeless and true to you.</p></div></details>
-      <details><summary>Do you work with a second photographer?</summary><div><p>For many weddings, yes. A second photographer is especially helpful for larger guest counts, Catholic Masses, or when you want both of you photographed getting ready in different locations. They help cover alternate angles and extra candids while I focus on the main story.</p></div></details>
-      <details><summary>Do you have backup gear?</summary><div><p>Yes. I work with professional-grade cameras, lenses, and lighting. I always bring backup gear and use multiple memory cards so your images are protected from the moment I photograph them.</p></div></details>
-      <details><summary>What happens if the weather is bad or the timeline changes?</summary><div><p>Part of my job is to stay calm and adaptable. If weather shifts or the schedule runs behind, I&rsquo;ll help you adjust the plan, suggest backup portrait locations (inside your church, under cover, or nearby), and make sure we still capture what&rsquo;s most important to you.</p></div></details>
-      <details><summary>Are your prices negotiable?</summary><div><p>Yes. All prices are negotiable, because I believe everyone deserves beautiful photography, regardless of their budget. Tell me about your day and we&rsquo;ll find the right fit.</p></div></details>
+      <details class="reveal"><summary>What is your photography style?<span class="faq__icon" aria-hidden="true"></span></summary><div class="faq__body"><div><p>Jason photographs weddings in a candid, story-driven way with gentle direction when you need it. The goal is to capture honest emotion and real interactions, then step in with simple guidance for portraits so you never feel stiff or over-posed.</p></div></div></details>
+      <details class="reveal"><summary>Where are you based, and do you travel?<span class="faq__icon" aria-hidden="true"></span></summary><div class="faq__body"><div><p>Jason is based in Centennial and photograph weddings throughout Denver, the Front Range, and across Colorado. I&rsquo;m also happy to travel for out-of-state weddings, especially when you&rsquo;re coming &ldquo;home&rdquo; to get married at a meaningful church or venue.</p></div></div></details>
+      <details class="reveal"><summary>What&rsquo;s included in your wedding collections?<span class="faq__icon" aria-hidden="true"></span></summary><div class="faq__body"><div><p>All wedding collections include full-resolution edited images, an online gallery to share with family and friends, and personal print rights. Many couples also add a custom wedding album (like KISSBOOKS or ZNO flatlay albums) so they have a tangible way to relive the day.</p></div></div></details>
+      <details class="reveal"><summary>How far in advance should we book?<span class="faq__icon" aria-hidden="true"></span></summary><div class="faq__body"><div><p>Most couples book 9 to 18 months before their wedding, especially for popular spring and fall dates. If you&rsquo;re planning on a shorter timeline, feel free to reach out. Jason occasionally has last-minute availability.</p></div></div></details>
+      <details class="reveal"><summary>How many photos will we receive, and when?<span class="faq__icon" aria-hidden="true"></span></summary><div class="faq__body"><div><p>For a full-day wedding, you can expect a large, well-curated gallery that covers your day from start to finish. Jason sends a small preview within the first week and your full gallery within about 6 to 8 weeks, depending on the season.</p></div></div></details>
+      <details class="reveal"><summary>Do you have experience with Catholic and Christian ceremonies?<span class="faq__icon" aria-hidden="true"></span></summary><div class="faq__body"><div><p>Yes. Jason regularly photographs Catholic and Christian weddings and is very comfortable working within church guidelines. He understands the flow of a Mass or worship service and know how to photograph the important moments while keeping the focus on prayer and the sacrament.</p></div></div></details>
+      <details class="reveal"><summary>How do you handle church rules about photography?<span class="faq__icon" aria-hidden="true"></span></summary><div class="faq__body"><div><p>Before your wedding, Jason connects with your parish or church to understand their specific guidelines: where he can stand, when he can move, and whether flash is allowed. On the day, he works quietly from the sides or back as needed so he&rsquo;s respectful of the liturgy while still capturing the moments that matter to you.</p></div></div></details>
+      <details class="reveal"><summary>Will we still get family and group photos if your style is candid?<span class="faq__icon" aria-hidden="true"></span></summary><div class="faq__body"><div><p>Absolutely. We&rsquo;ll set aside dedicated time for family, wedding-party, and any special group photos you&rsquo;d like. Once those are done, Jason shifts back into a more documentary approach so you can enjoy your people while he captures the day as it unfolds.</p></div></div></details>
+      <details class="reveal"><summary>Do you offer engagement sessions?<span class="faq__icon" aria-hidden="true"></span></summary><div class="faq__body"><div><p>Yes. Engagement sessions are a relaxed chance to get to know each other, practice being in front of the camera, and create meaningful photos on a quieter day before the wedding.</p></div></div></details>
+      <details class="reveal"><summary>Do you offer wedding albums and prints?<span class="faq__icon" aria-hidden="true"></span></summary><div class="faq__body"><div><p>Yes. Jason offers custom-designed wedding albums, including KISSBOOKS and ZNO flatlay books, as well as professional prints. He&rsquo;ll walk you through the design process so your album tells the full story of your day in a way that feels timeless and true to you.</p></div></div></details>
+      <details class="reveal"><summary>Do you work with a second photographer?<span class="faq__icon" aria-hidden="true"></span></summary><div class="faq__body"><div><p>For many weddings, yes. A second photographer is especially helpful for larger guest counts, Catholic Masses, or when you want both of you photographed getting ready in different locations. They help cover alternate angles and extra candids while Jason focuses on the main story.</p></div></div></details>
+      <details class="reveal"><summary>Do you have backup gear?<span class="faq__icon" aria-hidden="true"></span></summary><div class="faq__body"><div><p>Yes. Jason works with professional-grade cameras, lenses, and lighting. He always brings backup gear and use multiple memory cards so your images are protected from the moment they&rsquo;re taken.</p></div></div></details>
+      <details class="reveal"><summary>What happens if the weather is bad or the timeline changes?<span class="faq__icon" aria-hidden="true"></span></summary><div class="faq__body"><div><p>Part of the job is to stay calm and adaptable. If weather shifts or the schedule runs behind, Jason will help you adjust the plan, suggest backup portrait locations (inside your church, under cover, or nearby), and make sure we still capture what&rsquo;s most important to you.</p></div></div></details>
+      <details class="reveal"><summary>Are your prices negotiable?<span class="faq__icon" aria-hidden="true"></span></summary><div class="faq__body"><div><p>Yes. All prices are negotiable, because Jason believes everyone deserves beautiful photography, regardless of their budget. Tell me about your day and we&rsquo;ll find the right fit.</p></div></div></details>
     </div>
   </div>
 </section>
-
-{{> cta}}

@@ -6,7 +6,7 @@
 <title>About Jason Smith | The Things That I See Photography</title>
 <meta name="description" content="Husband, father of six, designer, photographer and filmmaker in Centennial, Colorado. Twenty years telling the story of Christ&#x27;s work in His world.">
 <link rel="canonical" href="https://www.thethingsthatisee.com/about.html">
-<meta name="theme-color" content="#f5ede3">
+<meta name="theme-color" content="#080706">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="The Things That I See Photography">
 <meta property="og:title" content="About Jason Smith | The Things That I See Photography">
@@ -18,11 +18,9 @@
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Jost:wght@300;400;500&family=Pinyon+Script&display=swap">
-<script>
-(function(d){var r=d.documentElement;r.classList.add('js');if(!window.matchMedia||matchMedia('(prefers-reduced-motion: reduce)').matches)return;r.classList.add('motion');setTimeout(function(){if(!window.__motion){r.classList.remove('motion')}},3000)})(document);
-</script>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&family=Inter+Tight:wght@300;400;500;600&display=swap">
 <link rel="stylesheet" href="assets/css/site.css">
+<script>try{var d=document.documentElement;d.classList.add("js");if(sessionStorage.getItem("ttis-nav")){d.classList.add("is-entering");sessionStorage.removeItem("ttis-nav")}else if(!sessionStorage.getItem("ttis-seen")&&!matchMedia("(prefers-reduced-motion: reduce)").matches){d.classList.add("is-loading")}setTimeout(function(){d.classList.remove("is-loading","is-entering")},5000)}catch(e){}</script>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -46,269 +44,214 @@
 
 </head>
 <body class="">
+<div class="preloader" aria-hidden="true">
+  <div class="preloader__inner">
+    <svg class="preloader__mark" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.2"><path pathLength="1" d="M3 20C8 12 13.5 8.5 20 8.5S32 12 37 20C32 28 26.5 31.5 20 31.5S8 28 3 20z"/><path pathLength="1" d="M20 13.5a6.5 6.5 0 1 0 0 13a6.5 6.5 0 1 0 0-13z"/><path pathLength="1" d="M20 16.6v6.8M17.4 18.9h5.2"/></svg>
+    <p class="preloader__name"><span>The Things That I See</span></p>
+    <p class="preloader__tag"><span>Every photo tells a story</span></p>
+  </div>
+  <div class="preloader__foot"><span>Photo + Film<br>Colorado</span><span class="preloader__count" data-count-loader>000</span></div>
+  <div class="preloader__bar"><span></span></div>
+</div>
+<div class="curtain" aria-hidden="true"><svg class="curtain__mark" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M3 20C8 12 13.5 8.5 20 8.5S32 12 37 20C32 28 26.5 31.5 20 31.5S8 28 3 20z"/><path d="M20 13.5a6.5 6.5 0 1 0 0 13a6.5 6.5 0 1 0 0-13z"/><path d="M20 16.6v6.8M17.4 18.9h5.2"/></svg></div>
+<div class="scroll-progress" aria-hidden="true"><span></span></div>
+<div class="cursor" aria-hidden="true"><span class="cursor__ring"><span class="cursor__label"></span></span><span class="cursor__dot"></span></div>
+<div class="hover-preview" aria-hidden="true"><div class="hover-preview__inner"></div></div>
 <a class="skip-link" href="#main">Skip to content</a>
 <header class="site-header" data-header>
-  <div class="container header-inner">
-    <a class="wordmark" href="index.html" aria-label="The Things That I See Photography, home">
-      <span class="wordmark-name">The Things That <em>I</em> See</span>
-      <span class="wordmark-sub">Photography &amp; Film &middot; Colorado</span>
-    </a>
+  <div class="site-header__inner">
+    <a class="brand" href="index.html" aria-label="The Things That I See Photography, home"><svg class="brand__mark" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M3 20C8 12 13.5 8.5 20 8.5S32 12 37 20C32 28 26.5 31.5 20 31.5S8 28 3 20z"/><path d="M20 13.5a6.5 6.5 0 1 0 0 13a6.5 6.5 0 1 0 0-13z"/><path d="M20 16.6v6.8M17.4 18.9h5.2"/></svg>
+<span class="brand__name">The Things That I See<em>photo + film</em></span></a>
     <nav class="nav" aria-label="Primary">
-      <ul class="nav-list">
-        <li><a href="weddings.html" data-nav="weddings">Weddings</a></li>
-        <li class="has-menu">
-          <button class="nav-menu-btn" type="button" aria-expanded="false" aria-controls="sessions-menu">Sessions<svg width="10" height="6" viewBox="0 0 10 6" aria-hidden="true"><path d="M1 1l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.3"/></svg></button>
-          <ul class="nav-sub" id="sessions-menu">
-            <li><a href="engagements.html" data-nav="engagements">Engagements</a></li>
-            <li><a href="family.html" data-nav="family">Family</a></li>
-            <li><a href="seniors.html" data-nav="seniors">Seniors</a></li>
-          </ul>
+      <ul class="nav__list">
+        <li><a class="nav__link" href="weddings.html" data-nav="weddings">Weddings</a></li>
+        <li class="nav__has-menu">
+          <button class="nav__link nav-menu-btn" type="button" aria-expanded="false" aria-controls="sessions-menu">Sessions<svg viewBox="0 0 10 6" aria-hidden="true"><path d="M1 1l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.3"/></svg></button>
+          <div class="nav__sub" id="sessions-menu">
+            <a href="engagements.html" data-nav="engagements" data-preview="assets/img/flatirons-sunset-480.webp"><span>Engagements</span><small>$750</small></a>
+            <a href="family.html" data-nav="family" data-preview="assets/img/golden-sisters-480.webp"><span>Family</span><small>from $250</small></a>
+            <a href="seniors.html" data-nav="seniors" data-preview="assets/img/meadow-dress-480.webp"><span>Seniors</span><small>from $400</small></a>
+          </div>
         </li>
-        <li><a href="portfolio.html" data-nav="portfolio">Portfolio</a></li>
-        <li><a href="investment.html" data-nav="investment">Investment</a></li>
-        <li><a href="stories.html" data-nav="stories">Stories</a></li>
-        <li><a href="about.html" data-nav="about" aria-current="page">About</a></li>
+        <li><a class="nav__link" href="portfolio.html" data-nav="portfolio">Portfolio</a></li>
+        <li><a class="nav__link" href="investment.html" data-nav="investment">Investment</a></li>
+        <li><a class="nav__link" href="stories.html" data-nav="stories">Stories</a></li>
+        <li><a class="nav__link" href="about.html" data-nav="about" aria-current="page">About</a></li>
       </ul>
     </nav>
-    <a class="btn btn-solid header-cta" href="enquire.html">Check your date</a>
+    <a class="btn btn--gold btn--sm header-cta" href="enquire.html">Check your date</a>
     <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu">
-      <span></span><span></span>
+      Menu<span class="menu-toggle__bars" aria-hidden="true"><span></span><span></span></span>
     </button>
   </div>
 </header>
-<div class="mobile-menu" id="mobile-menu" hidden>
-  <nav class="mobile-menu-inner" aria-label="Mobile">
-    <ul class="mobile-links">
-      <li><a href="index.html" data-nav="home">Home</a></li>
-      <li><a href="weddings.html" data-nav="weddings">Weddings</a></li>
-      <li><a href="engagements.html" data-nav="engagements">Engagements</a></li>
-      <li><a href="family.html" data-nav="family">Family</a></li>
-      <li><a href="seniors.html" data-nav="seniors">Seniors</a></li>
-      <li><a href="portfolio.html" data-nav="portfolio">Portfolio</a></li>
-      <li><a href="investment.html" data-nav="investment">Investment</a></li>
-      <li><a href="stories.html" data-nav="stories">Stories</a></li>
-      <li><a href="about.html" data-nav="about" aria-current="page">About</a></li>
+<div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+  <nav aria-label="Mobile">
+    <ul class="mobile-menu__list">
+      <li><a href="index.html" data-nav="home">Home<small>01</small></a></li>
+      <li><a href="weddings.html" data-nav="weddings">Weddings<small>02</small></a></li>
+      <li><a href="engagements.html" data-nav="engagements">Engagements<small>03</small></a></li>
+      <li><a href="family.html" data-nav="family">Family<small>04</small></a></li>
+      <li><a href="seniors.html" data-nav="seniors">Seniors<small>05</small></a></li>
+      <li><a href="portfolio.html" data-nav="portfolio">Portfolio<small>06</small></a></li>
+      <li><a href="investment.html" data-nav="investment">Investment<small>07</small></a></li>
+      <li><a href="stories.html" data-nav="stories">Stories<small>08</small></a></li>
+      <li><a href="about.html" data-nav="about" aria-current="page">About<small>09</small></a></li>
     </ul>
-    <a class="btn btn-light btn-block" href="enquire.html">Check your date</a>
-    <div class="mobile-contact">
-      <a href="mailto:jason@thethingsthatisee.com">jason@thethingsthatisee.com</a>
-      <a href="tel:+17142904333">714-290-4333</a>
-      <a href="https://www.instagram.com/thethingsthatisee.photo" target="_blank" rel="noopener">@thethingsthatisee.photo</a>
-    </div>
   </nav>
+  <div class="mobile-menu__foot">
+    <a class="btn btn--gold btn--block" href="enquire.html">Check your date <span class="btn__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+</span></a>
+    <div class="mobile-menu__social">
+      <a class="pill" href="mailto:jason@thethingsthatisee.com">jason@thethingsthatisee.com</a>
+      <a class="pill" href="tel:+17142904333">714-290-4333</a>
+      <a class="pill" href="https://www.instagram.com/thethingsthatisee.photo" target="_blank" rel="noopener">Instagram</a>
+      <a class="pill" href="https://www.youtube.com/channel/UCDJKnjQf7ZuTIfrowadnzkQ" target="_blank" rel="noopener">YouTube</a>
+    </div>
+  </div>
 </div>
 
 <main id="main">
-<section class="print-hero">
-  <div class="leak leak--rose" aria-hidden="true"></div>
-  <div class="leak leak--amber" aria-hidden="true"></div>
-  <div class="container print-hero-grid">
-    <div class="print-hero-copy">
-      <p class="kicker">About</p>
-      <h1 class="h1">Hi, I&rsquo;m <em>Jason.</em></h1>
-      <p class="lede">A happily married father of six and a jack-of-all-trades based in Centennial, Colorado. Designer, photographer, videographer, but my true passion is capturing life&rsquo;s most precious moments.</p>
-      <div class="btn-row"><a class="btn btn-solid" href="enquire.html">Let&rsquo;s talk</a><a class="btn btn-ghost" href="portfolio.html">See the work</a></div>
-    </div>
-    <div class="collage" aria-hidden="true">
-      <div class="collage-item" style="--x:18%;--y:2%;--w:54%;--z:2" data-speed=".05"><figure class="print drop tape" style="--r:-3deg;--ar:4/5" data-delay="0"><div class="frame"><img class="img" src="assets/img/jason-portrait-960.webp" srcset="assets/img/jason-portrait-480.webp 480w, assets/img/jason-portrait-960.webp 960w, assets/img/jason-portrait-1500.webp 1500w" sizes="(min-width: 960px) 26vw, 50vw" width="1500" height="1000" alt="Jason Smith, photographer" loading="eager" fetchpriority="high" decoding="async" style="--tone:#9c9c9c;--ratio:1500/1000"></div><figcaption>that&rsquo;s me</figcaption></figure></div>
-      <div class="collage-item" style="--x:0%;--y:46%;--w:40%;--z:3" data-speed=".12"><figure class="print drop tape" style="--r:-9deg;--ar:1/1" data-delay="160"><div class="frame"><img class="img" src="assets/img/cafe-family-960.webp" srcset="assets/img/cafe-family-480.webp 480w, assets/img/cafe-family-960.webp 960w, assets/img/cafe-family-1500.webp 1500w" sizes="(min-width: 960px) 26vw, 50vw" width="1500" height="1001" alt="A family of eight gathered at a café" loading="eager" fetchpriority="high" decoding="async" style="--tone:#6a6a6e;--ratio:1500/1001"></div><figcaption>my crew</figcaption></figure></div>
-      <div class="collage-item" style="--x:60%;--y:40%;--w:40%;--z:4" data-speed=".16"><figure class="print drop tape" style="--r:7deg;--ar:4/5" data-delay="320"><div class="frame"><img class="img" src="assets/img/behind-the-camera-960.webp" srcset="assets/img/behind-the-camera-480.webp 480w, assets/img/behind-the-camera-960.webp 960w, assets/img/behind-the-camera-1600.webp 1600w" sizes="(min-width: 960px) 26vw, 50vw" width="2500" height="1667" alt="Two filmmakers with cameras in a bright hotel lobby" loading="eager" fetchpriority="high" decoding="async" style="--tone:#9e9793;--ratio:2500/1667"></div><figcaption>the film team</figcaption></figure></div>
-    </div>
-  </div>
-</section>
-
-<section class="section" id="intro">
-  <div class="container container--narrow stack stack-lg">
-    <p class="eyebrow">My story</p>
-    <h2 class="h2">Whether I like it or not <em>(spoiler: I do),</em> Christ enters all aspects of my work.</h2>
-    <div class="prose">
-      <p>Over the past twenty years, discovering Christ has transformed not just my personal life but the way I approach photography. It&rsquo;s pretty amazing how He guides me in telling stories through this art form.</p>
-      <p>I&rsquo;m a proud member of the St. Mary&rsquo;s Catholic Church community, and I&rsquo;ve been fortunate to use my artistry to bring stories to life that capture Christ&rsquo;s work in His world.</p>
-      <p>If you&rsquo;re looking for someone to make your day unforgettable through personal photography that captures who you are and the love you share, let&rsquo;s talk. Being part of such an important milestone in your life would be an absolute honor.</p>
-    </div>
-  </div>
-</section>
-
-<section class="band-nave">
-  <div class="leak leak--rose" aria-hidden="true"></div>
-  <div class="leak leak--amber" aria-hidden="true"></div>
+<section class="page-hero">
   <div class="container">
-    <div class="section-head">
-      <p class="eyebrow">What shapes my work</p>
-      <h2 class="h2">Four trades, <em>one</em> way of seeing.</h2>
-    </div>
-    <div class="quad">
-      <div class="pillar"><h3>Faith</h3><p>Twenty years of telling the story of Christ&rsquo;s work in His world, at the altar and far beyond it.</p></div>
-      <div class="pillar"><h3>Medicine</h3><p>A career in clinical pharmacy and research taught me calm, care, and attention to detail.</p></div>
-      <div class="pillar"><h3>Carpentry</h3><p>Measure twice, cut once. Respect for craft, and for things built to last generations.</p></div>
-      <div class="pillar"><h3>Design</h3><p>An eye for composition and light that turns a moment into an image you&rsquo;ll want on the wall.</p></div>
-    </div>
-  </div>
-</section>
-
-<section class="section">
-  <div class="container split split--media-right">
-    <div class="split-media">
-      <div class="frame r-land"><img class="img" src="assets/img/cafe-family-960.webp" srcset="assets/img/cafe-family-480.webp 480w, assets/img/cafe-family-960.webp 960w, assets/img/cafe-family-1500.webp 1500w" sizes="(min-width: 900px) 46vw, 100vw" width="1500" height="1001" alt="A family of eight gathered at a café" loading="lazy" decoding="async" style="--tone:#6a6a6e;--ratio:1500/1001"></div>
-    </div>
-    <div class="stack stack-lg">
-      <p class="eyebrow">Behind the lens</p>
-      <h2 class="h2">Authenticity is <em>key</em> to every image.</h2>
-      <div class="prose">
-        <p>I can answer all your questions, so you feel comfortable and informed from the first message to the final gallery.</p>
-        <p>And all my prices are negotiable, because I believe everyone deserves beautiful photography, regardless of budget.</p>
-      </div>
-      <a class="link-arrow" href="investment.html">See investment</a>
-    </div>
-  </div>
-</section>
-
-<section class="featured" aria-label="As featured in">
-  <div class="container featured-inner">
-    <p class="label">As featured in</p>
-    <ul class="featured-names">
-      <li>New York Encounter</li>
-      <li>Denver Catholic</li>
-      <li>St. Mary&rsquo;s Catholic Church</li>
-      <li>Nativity of Our Lord</li>
-    </ul>
-  </div>
-</section>
-
-<section class="section">
-  <div class="container">
-    <div class="quotes">
-      <figure class="quote">
-        <blockquote>Jason made our engagement photoshoot an absolute delight! His creativity and easygoing nature turned the experience into a fun and memorable event. He captured our love perfectly and made us feel comfortable throughout.</blockquote>
-        <cite>Katie &amp; Mike</cite>
-      </figure>
-      <figure class="quote">
-        <blockquote>Not only was it an absolute breeze to work together, but his creativity truly blew me away. If you&rsquo;re in need of some stunning wedding photos, look no further!</blockquote>
-        <cite>Sara &amp; Silvio</cite>
-      </figure>
-    </div>
-  </div>
-</section>
-
-<section class="section section--stone">
-  <div class="container split">
-    <div class="split-media">
-      <div class="frame r-land"><img class="img" src="assets/img/behind-the-camera-960.webp" srcset="assets/img/behind-the-camera-480.webp 480w, assets/img/behind-the-camera-960.webp 960w, assets/img/behind-the-camera-1600.webp 1600w" sizes="(min-width: 900px) 46vw, 100vw" width="2500" height="1667" alt="Two filmmakers with cameras in a bright hotel lobby" loading="lazy" decoding="async" style="--tone:#9e9793;--ratio:2500/1667"></div>
-    </div>
-    <div class="stack stack-lg">
-      <p class="eyebrow">Photography &amp; film</p>
-      <h2 class="h2">Stills and motion, <em>one</em> team.</h2>
-      <p class="lede">From a quiet three-minute highlight to a hand-cut feature film, my film team works alongside me so your photographs and your film tell the same story.</p>
-      <a class="link-arrow" href="investment.html#film">Film collections</a>
-    </div>
-  </div>
-</section>
-
-<section class="invite-band">
-  <div class="leak leak--rose" aria-hidden="true"></div>
-  <div class="leak leak--amber" aria-hidden="true"></div>
-  <div class="container">
-    <div class="invite-wrap">
-      <figure class="print" aria-hidden="true"><div class="frame"><img class="img" src="assets/img/columns-kiss-960.webp" srcset="assets/img/columns-kiss-480.webp 480w, assets/img/columns-kiss-960.webp 960w, assets/img/columns-kiss-1600.webp 1600w" sizes="240px" width="2500" height="2500" alt="A couple kissing between tall white columns" loading="lazy" decoding="async" style="--tone:#c0b49e;--ratio:2500/2500"></div></figure>
-      <figure class="print" aria-hidden="true"><div class="frame"><img class="img" src="assets/img/flatirons-sunset-960.webp" srcset="assets/img/flatirons-sunset-480.webp 480w, assets/img/flatirons-sunset-960.webp 960w, assets/img/flatirons-sunset-1500.webp 1500w" sizes="240px" width="1500" height="1001" alt="An engaged couple touching foreheads at sunset in front of the Flatirons" loading="lazy" decoding="async" style="--tone:#87766b;--ratio:1500/1001"></div></figure>
-      <div class="invite">
-        <p class="kicker">Save the date</p>
-        <svg class="flourish" viewBox="0 0 120 14" aria-hidden="true"><path d="M2 7h44M74 7h44" stroke="currentColor" stroke-width="0.8"/><path d="M60 2c-4 0-6 5-10 5s-4-3-1-3M60 12c4 0 6-5 10-5s4 3 1 3M60 2c4 0 6 5 10 5M60 12c-4 0-6-5-10-5" fill="none" stroke="currentColor" stroke-width="0.8"/></svg>
-        <h2 class="h2">Let&rsquo;s talk about <em>your</em> day.</h2>
-        <p class="lede">Tell me your date and a few details. You&rsquo;ll see which collection fits straight away, and I&rsquo;ll reply to you personally.</p>
-        <form class="date-check" action="enquire.html" method="get" data-date-check>
-          <input type="hidden" name="type" value="wedding">
-          <label class="label" for="cta-date">Is your date open?</label>
-          <div class="date-check-row">
-            <input class="input" type="date" id="cta-date" name="date" required>
-            <button class="btn btn-solid" type="submit">Check</button>
-          </div>
-          <p class="date-check-result" data-date-result aria-live="polite"></p>
-        </form>
-        <p class="small muted">Or write to <a href="mailto:jason@thethingsthatisee.com">jason@thethingsthatisee.com</a> &middot; <a href="tel:+17142904333">714-290-4333</a></p>
-        <span class="seal" aria-hidden="true">J</span>
+    <div class="page-hero__meta reveal"><span class="label">(01) &mdash; About</span><span class="label">Centennial, Colorado</span></div>
+    <div class="page-hero__grid">
+      <h1 class="h-xl page-hero__title" data-lines>Hi, I&rsquo;m<br><em>Jason.</em></h1>
+      <div class="page-hero__lede reveal" data-delay="2">
+        <p class="lede">A happily married father of six and a jack-of-all-trades. Designer, photographer, videographer, but his true passion is capturing life&rsquo;s most precious moments.</p>
+        <div class="row"><a class="btn btn--gold" href="enquire.html">Let&rsquo;s talk <span class="btn__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+</span></a><a class="btn btn--ghost" href="portfolio.html">See the work</a></div>
       </div>
     </div>
   </div>
 </section>
+<section class="frame"><div class="media about-hero-media about-hero-media--land reveal-img"><img class="img" src="assets/img/jason-portrait-960.webp" srcset="assets/img/jason-portrait-480.webp 480w, assets/img/jason-portrait-960.webp 960w, assets/img/jason-portrait-1500.webp 1500w" sizes="100vw" width="1500" height="1000" alt="Jason Smith, photographer" loading="eager" fetchpriority="high" decoding="async" style="--tone:#9c9c9c;--ratio:1500/1000;object-position:50% 35%"></div></section>
 
+<section class="section">
+  <div class="container story-layout">
+    <div class="story-layout__aside stack" style="--stack:24px">
+      <div class="head__top reveal"><span class="label">(02) &mdash; His story</span><span class="label">20 years</span></div>
+      <h2 class="h-lg" data-lines>Whether he likes it<br>or not <em>(spoiler: he does),</em><br>Christ enters all of his work.</h2>
+      <div class="row reveal"><span class="pill">St. Mary&rsquo;s parishioner</span><span class="pill">Father of six</span></div>
+    </div>
+    <div class="chapters">
+      <article class="chapter reveal"><div class="media"><img class="img" src="assets/img/elevation-960.webp" srcset="assets/img/elevation-480.webp 480w, assets/img/elevation-960.webp 960w, assets/img/elevation-1600.webp 1600w" sizes="(min-width:960px) 50vw, 100vw" width="2500" height="2500" alt="The priest elevates the chalice as the couple kneels at the altar" loading="lazy" decoding="async" style="--tone:#baa285;--ratio:2500/2500;object-position:50% 40%"></div>
+        <div class="chapter__body"><span class="label">Chapter 01 &mdash; Faith</span><h3 class="h-md">Twenty years of <em>discovery.</em></h3><div class="body"><p>Over the past twenty years, discovering Christ has transformed not just Jason&rsquo;s personal life but the way he approaches photography. It&rsquo;s pretty amazing how He guides the stories told through this art form.</p><p>Jason is a proud member of the St. Mary&rsquo;s Catholic Church community, and has been fortunate to use his artistry to bring to life stories that capture Christ&rsquo;s work in His world.</p></div></div></article>
+      <article class="chapter reveal"><div class="media"><img class="img" src="assets/img/cafe-family-960.webp" srcset="assets/img/cafe-family-480.webp 480w, assets/img/cafe-family-960.webp 960w, assets/img/cafe-family-1500.webp 1500w" sizes="(min-width:960px) 50vw, 100vw" width="1500" height="1001" alt="A family of eight gathered at a café" loading="lazy" decoding="async" style="--tone:#6a6a6e;--ratio:1500/1001"></div>
+        <div class="chapter__body"><span class="label">Chapter 02 &mdash; Family</span><h3 class="h-md">A full house, a <em>calm</em> eye.</h3><div class="body"><p>Life with six children means a lively reception or a toddler mid-meltdown never rattles him. Authenticity is key to every image, and he&rsquo;ll answer all your questions so you feel comfortable from the first message to the final gallery.</p></div></div></article>
+      <article class="chapter reveal"><div class="media"><img class="img" src="assets/img/behind-the-camera-960.webp" srcset="assets/img/behind-the-camera-480.webp 480w, assets/img/behind-the-camera-960.webp 960w, assets/img/behind-the-camera-1600.webp 1600w" sizes="(min-width:960px) 50vw, 100vw" width="2500" height="1667" alt="Two filmmakers with cameras in a bright hotel lobby" loading="lazy" decoding="async" style="--tone:#9e9793;--ratio:2500/1667"></div>
+        <div class="chapter__body"><span class="label">Chapter 03 &mdash; Photo + film</span><h3 class="h-md">Stills and motion, <em>one</em> team.</h3><div class="body"><p>From a quiet three-minute highlight to a hand-cut feature film, Jason&rsquo;s film team works alongside him so your photographs and your film tell the same story.</p></div><a class="link" href="investment.html#film">Film collections <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+</a></div></article>
+    </div>
+  </div>
+</section>
+
+<section class="section section--flush-top">
+  <div class="container">
+    <div class="head head--split">
+      <div class="head__top"><span class="label">(03) &mdash; What shapes the work</span><span class="label">Four trades</span></div>
+      <h2 class="h-xl" data-lines>Four trades,<br><em>one</em> way of seeing.</h2>
+      <p class="lede reveal">A career before photography still shows up in every gallery.</p>
+    </div>
+    <div class="bento">
+      <div class="tile c-3 reveal" data-delay="0"><div class="tile__top"><span class="label">01</span><span class="label">&#10022;</span></div><div><p class="h-md">Faith</p><p class="mt-s">Twenty years of telling the story of Christ&rsquo;s work in His world, at the altar and far beyond it.</p></div></div>
+      <div class="tile c-3 reveal" data-delay="1"><div class="tile__top"><span class="label">02</span><span class="label">&#10022;</span></div><div><p class="h-md">Medicine</p><p class="mt-s">A career in clinical pharmacy and research taught calm, care and attention to detail.</p></div></div>
+      <div class="tile c-3 reveal" data-delay="2"><div class="tile__top"><span class="label">03</span><span class="label">&#10022;</span></div><div><p class="h-md">Carpentry</p><p class="mt-s">Measure twice, cut once. Respect for craft, and for things built to last generations.</p></div></div>
+      <div class="tile c-3 reveal" data-delay="3"><div class="tile__top"><span class="label">04</span><span class="label">&#10022;</span></div><div><p class="h-md">Design</p><p class="mt-s">An eye for composition and light that turns a moment into an image you&rsquo;ll want on the wall.</p></div></div>
+    </div>
+    <div class="featured mt-xl reveal">
+      <span class="label">As featured in</span>
+      <ul class="featured__names"><li>New York Encounter</li><li>Denver Catholic</li><li>St. Mary&rsquo;s Catholic Church</li><li>Nativity of Our Lord</li></ul>
+    </div>
+  </div>
+</section>
+
+<section class="section section--flush-top">
+  <div class="container">
+    <div class="head head--split">
+      <div class="head__top"><span class="label">(04) &mdash; Kind words</span><span class="label">Real reviews</span></div>
+      <h2 class="h-xl" data-lines>In their<br><em>words.</em></h2>
+      <p class="lede reveal">And every price is negotiable, because everyone deserves beautiful photography, regardless of budget.</p>
+    </div>
+    <div class="quotes quotes--2">
+      <figure class="qcard reveal"><div class="media"><img class="img" src="assets/img/golden-hour-1000.webp" srcset="assets/img/golden-hour-480.webp 480w, assets/img/golden-hour-960.webp 960w, assets/img/golden-hour-1000.webp 1000w" sizes="(min-width:900px) 36vw, 86vw" width="1000" height="668" alt="A woman cups her fiancé&#x27;s face in golden evening light" loading="lazy" decoding="async" style="--tone:#8e8c78;--ratio:1000/668"></div><div class="qcard__body"><blockquote><p>&ldquo;Jason made our engagement photoshoot an absolute delight! His creativity and easygoing nature turned the experience into a fun and memorable event. He captured our love perfectly and made us feel comfortable throughout.&rdquo;</p></blockquote><figcaption class="qcard__who"><strong>Katie &amp; Mike</strong><span class="label">Engagement</span></figcaption></div></figure>
+      <figure class="qcard reveal" data-delay="1"><div class="media"><img class="img" src="assets/img/hedge-portrait-960.webp" srcset="assets/img/hedge-portrait-480.webp 480w, assets/img/hedge-portrait-960.webp 960w, assets/img/hedge-portrait-1600.webp 1600w" sizes="(min-width:900px) 36vw, 86vw" width="2500" height="1667" alt="A bride and groom facing each other in front of a dark green hedge" loading="lazy" decoding="async" style="--tone:#4d534e;--ratio:2500/1667"></div><div class="qcard__body"><blockquote><p>&ldquo;Not only was it an absolute breeze to work together, but his creativity truly blew me away. If you&rsquo;re in need of some stunning wedding photos, look no further!&rdquo;</p></blockquote><figcaption class="qcard__who"><strong>Sara &amp; Silvio</strong><span class="label">Wedding</span></figcaption></div></figure>
+      <a class="qcard qcard--cta reveal" data-delay="2" href="enquire.html"><div class="tile__top"><span class="label label--dot">Let&rsquo;s talk</span><span class="circle-btn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg>
+</span></div><div class="stack"><p class="h-lg">It would be an <em>honor.</em></p><p>Being part of such an important milestone in your life would be an absolute honor.</p></div></a>
+    </div>
+  </div>
+</section>
 
 </main>
 <footer class="site-footer">
-  <div class="container">
-    <div class="footer-lead">
-      <p class="footer-line">Every photo tells a <em>story</em></p>
-      <a class="btn btn-light" href="enquire.html">Start your enquiry</a>
+  <div class="footer-card">
+    <div class="footer-cta">
+      <div>
+        <span class="label label--dot label--live">Now booking weddings &amp; sessions</span>
+        <p class="h-xl mt-m" data-lines>Let&rsquo;s tell<br>your <em>story.</em></p>
+        <p class="lede mt-m">Four quick steps. You&rsquo;ll see the right collection and price before you send anything, and Jason replies to you personally.</p>
+        <form class="inline-form" action="enquire.html" method="get" data-date-check>
+          <input type="hidden" name="type" value="wedding">
+          <label class="label" for="cta-date">Is your wedding date open?</label>
+          <div class="inline-form__row">
+            <input class="input" type="date" id="cta-date" name="date" required>
+            <button class="btn btn--gold btn--sm" type="submit">Check</button>
+          </div>
+          <p class="date-check-result" data-date-result aria-live="polite"></p>
+        </form>
+      </div>
+      <a class="footer-cta__btn" href="enquire.html" data-magnetic-strong><span>Check<br>your date<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg>
+</span></a>
     </div>
     <div class="footer-grid">
-      <div class="footer-studio">
-        <p class="wordmark-name">The Things That <em>I</em> See</p>
-        <p>Catholic and Christian wedding, family and senior photography and film. Based in Centennial, Colorado, and happy to travel.</p>
+      <div class="footer-col footer-col--intro">
+        <a class="brand" href="index.html"><svg class="brand__mark" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M3 20C8 12 13.5 8.5 20 8.5S32 12 37 20C32 28 26.5 31.5 20 31.5S8 28 3 20z"/><path d="M20 13.5a6.5 6.5 0 1 0 0 13a6.5 6.5 0 1 0 0-13z"/><path d="M20 16.6v6.8M17.4 18.9h5.2"/></svg>
+<span class="brand__name">The Things That I See<em>photo + film</em></span></a>
+        <p class="mt-m">Catholic and Christian wedding, engagement, family and senior photography and film by Jason Smith. Based in Centennial, Colorado, and happy to travel.</p>
+        <p class="mt-s"><a class="link" href="mailto:jason@thethingsthatisee.com">jason@thethingsthatisee.com</a></p>
+        <p class="mt-s"><a class="link" href="tel:+17142904333">714-290-4333</a></p>
       </div>
-      <div>
-        <p class="footer-h">Explore</p>
-        <ul>
-          <li><a href="weddings.html">Weddings</a></li>
-          <li><a href="portfolio.html">Portfolio</a></li>
-          <li><a href="investment.html">Investment</a></li>
-          <li><a href="stories.html">Stories</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="guide.html">Catholic wedding guide</a></li>
-        </ul>
-      </div>
-      <div>
-        <p class="footer-h">Sessions</p>
-        <ul>
-          <li><a href="engagements.html">Engagements</a></li>
-          <li><a href="family.html">Family</a></li>
-          <li><a href="seniors.html">Seniors</a></li>
-          <li><a href="investment.html#film">Wedding film</a></li>
-        </ul>
-      </div>
-      <div class="footer-contact">
-        <p class="footer-h">Contact</p>
-        <ul>
-          <li><a href="mailto:jason@thethingsthatisee.com">jason@thethingsthatisee.com</a></li>
-          <li><a href="tel:+17142904333">714-290-4333</a></li>
-          <li>Centennial, Colorado</li>
-        </ul>
-      </div>
-      <div>
-        <p class="footer-h">Follow</p>
-        <ul>
-          <li><a href="https://www.instagram.com/thethingsthatisee.photo" target="_blank" rel="noopener">Instagram</a></li>
-          <li><a href="https://www.youtube.com/channel/UCDJKnjQf7ZuTIfrowadnzkQ" target="_blank" rel="noopener">YouTube</a></li>
-          <li><a href="https://www.pinterest.com/0a2e779fd81d88fd181f47718a53c8" target="_blank" rel="noopener">Pinterest</a></li>
-        </ul>
-      </div>
+      <div class="footer-col"><h3>Explore</h3><ul>
+        <li><a href="weddings.html">Weddings</a></li><li><a href="portfolio.html">Portfolio</a></li><li><a href="investment.html">Investment</a></li><li><a href="stories.html">Stories</a></li><li><a href="about.html">About Jason</a></li><li><a href="guide.html">Catholic wedding guide</a></li>
+      </ul></div>
+      <div class="footer-col"><h3>Sessions</h3><ul>
+        <li><a href="engagements.html">Engagements</a></li><li><a href="family.html">Family</a></li><li><a href="seniors.html">Seniors</a></li><li><a href="investment.html#film">Wedding film</a></li><li><a href="enquire.html">Enquire</a></li>
+      </ul></div>
+      <div class="footer-col"><h3>Follow</h3><ul>
+        <li><a href="https://www.instagram.com/thethingsthatisee.photo" target="_blank" rel="noopener">Instagram</a></li>
+        <li><a href="https://www.youtube.com/channel/UCDJKnjQf7ZuTIfrowadnzkQ" target="_blank" rel="noopener">YouTube</a></li>
+        <li><a href="https://www.pinterest.com/0a2e779fd81d88fd181f47718a53c8" target="_blank" rel="noopener">Pinterest</a></li>
+      </ul></div>
     </div>
-    <div class="footer-base">
-      <p>&copy; 2026 The Things That I See Photography. All rights reserved.</p>
-      <p>Site by Code Bunny</p>
+    <p class="footer-wordmark" aria-hidden="true"><span class="fw-line">The Things</span><span class="fw-line">That I See</span></p>
+    <div class="footer-bottom">
+      <span>&copy; <span data-year>2026</span> The Things That I See Photography</span>
+      <span>Centennial, Colorado</span>
+      <span>Site by Code Bunny</span>
+      <a href="#main">Back to top &uarr;</a>
     </div>
   </div>
-  <p class="footer-giant" aria-hidden="true">the things I see</p>
 </footer>
 
-<div class="mobile-cta" data-mobile-cta>
-  <a class="btn btn-solid" href="enquire.html">Check your date</a>
-  <a class="btn btn-ghost" href="investment.html">Pricing</a>
+<div class="sticky-cta" aria-label="Quick actions">
+  <a class="btn btn--ghost" href="investment.html">Pricing</a>
+  <a class="btn btn--gold" href="enquire.html">Check your date</a>
 </div>
-
 <dialog class="lightbox" data-lightbox aria-label="Photo viewer">
-  <div class="lightbox-stage" data-lightbox-stage></div>
-  <p class="lightbox-caption"><span data-lightbox-caption></span> <span class="lightbox-count" data-lightbox-count></span></p>
-  <button class="lightbox-btn lightbox-close" type="button" data-lightbox-close aria-label="Close">
-    <svg width="20" height="20" viewBox="0 0 20 20" aria-hidden="true"><path d="M4 4l12 12M16 4L4 16" stroke="currentColor" stroke-width="1.4"/></svg>
-  </button>
-  <button class="lightbox-btn lightbox-prev" type="button" data-lightbox-prev aria-label="Previous photo">
-    <svg width="22" height="22" viewBox="0 0 22 22" aria-hidden="true"><path d="M14 4l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="1.4"/></svg>
-  </button>
-  <button class="lightbox-btn lightbox-next" type="button" data-lightbox-next aria-label="Next photo">
-    <svg width="22" height="22" viewBox="0 0 22 22" aria-hidden="true"><path d="M8 4l7 7-7 7" fill="none" stroke="currentColor" stroke-width="1.4"/></svg>
-  </button>
+  <div class="lightbox__bar">
+    <span class="lightbox__count" data-lightbox-count></span>
+    <span class="lightbox__caption" data-lightbox-caption></span>
+    <button class="icon-btn" type="button" data-lightbox-close aria-label="Close"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+  </div>
+  <div class="lightbox__stage" data-lightbox-stage></div>
+  <div class="lightbox__nav">
+    <button class="icon-btn" type="button" data-lightbox-prev aria-label="Previous photo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6"/></svg></button>
+    <button class="icon-btn" type="button" data-lightbox-next aria-label="Next photo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+  </div>
 </dialog>
 
+<script src="assets/vendor/gsap.min.js" defer></script>
+<script src="assets/vendor/ScrollTrigger.min.js" defer></script>
 <script src="assets/js/config.js" defer></script>
 <script src="assets/js/site.js" defer></script>
 <script src="assets/js/motion.js" defer></script>

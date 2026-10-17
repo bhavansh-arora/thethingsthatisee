@@ -6,7 +6,7 @@
 <title>Stories | Real Weddings &amp; Guides | The Things That I See Photography</title>
 <meta name="description" content="Real Catholic weddings, engagement sessions and planning guides from across Denver and Colorado.">
 <link rel="canonical" href="https://www.thethingsthatisee.com/stories.html">
-<meta name="theme-color" content="#f5ede3">
+<meta name="theme-color" content="#080706">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="The Things That I See Photography">
 <meta property="og:title" content="Stories | Real Weddings &amp; Guides | The Things That I See Photography">
@@ -18,11 +18,9 @@
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Jost:wght@300;400;500&family=Pinyon+Script&display=swap">
-<script>
-(function(d){var r=d.documentElement;r.classList.add('js');if(!window.matchMedia||matchMedia('(prefers-reduced-motion: reduce)').matches)return;r.classList.add('motion');setTimeout(function(){if(!window.__motion){r.classList.remove('motion')}},3000)})(document);
-</script>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&family=Inter+Tight:wght@300;400;500;600&display=swap">
 <link rel="stylesheet" href="assets/css/site.css">
+<script>try{var d=document.documentElement;d.classList.add("js");if(sessionStorage.getItem("ttis-nav")){d.classList.add("is-entering");sessionStorage.removeItem("ttis-nav")}else if(!sessionStorage.getItem("ttis-seen")&&!matchMedia("(prefers-reduced-motion: reduce)").matches){d.classList.add("is-loading")}setTimeout(function(){d.classList.remove("is-loading","is-entering")},5000)}catch(e){}</script>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -46,190 +44,183 @@
 
 </head>
 <body class="">
+<div class="preloader" aria-hidden="true">
+  <div class="preloader__inner">
+    <svg class="preloader__mark" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.2"><path pathLength="1" d="M3 20C8 12 13.5 8.5 20 8.5S32 12 37 20C32 28 26.5 31.5 20 31.5S8 28 3 20z"/><path pathLength="1" d="M20 13.5a6.5 6.5 0 1 0 0 13a6.5 6.5 0 1 0 0-13z"/><path pathLength="1" d="M20 16.6v6.8M17.4 18.9h5.2"/></svg>
+    <p class="preloader__name"><span>The Things That I See</span></p>
+    <p class="preloader__tag"><span>Every photo tells a story</span></p>
+  </div>
+  <div class="preloader__foot"><span>Photo + Film<br>Colorado</span><span class="preloader__count" data-count-loader>000</span></div>
+  <div class="preloader__bar"><span></span></div>
+</div>
+<div class="curtain" aria-hidden="true"><svg class="curtain__mark" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M3 20C8 12 13.5 8.5 20 8.5S32 12 37 20C32 28 26.5 31.5 20 31.5S8 28 3 20z"/><path d="M20 13.5a6.5 6.5 0 1 0 0 13a6.5 6.5 0 1 0 0-13z"/><path d="M20 16.6v6.8M17.4 18.9h5.2"/></svg></div>
+<div class="scroll-progress" aria-hidden="true"><span></span></div>
+<div class="cursor" aria-hidden="true"><span class="cursor__ring"><span class="cursor__label"></span></span><span class="cursor__dot"></span></div>
+<div class="hover-preview" aria-hidden="true"><div class="hover-preview__inner"></div></div>
 <a class="skip-link" href="#main">Skip to content</a>
 <header class="site-header" data-header>
-  <div class="container header-inner">
-    <a class="wordmark" href="index.html" aria-label="The Things That I See Photography, home">
-      <span class="wordmark-name">The Things That <em>I</em> See</span>
-      <span class="wordmark-sub">Photography &amp; Film &middot; Colorado</span>
-    </a>
+  <div class="site-header__inner">
+    <a class="brand" href="index.html" aria-label="The Things That I See Photography, home"><svg class="brand__mark" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M3 20C8 12 13.5 8.5 20 8.5S32 12 37 20C32 28 26.5 31.5 20 31.5S8 28 3 20z"/><path d="M20 13.5a6.5 6.5 0 1 0 0 13a6.5 6.5 0 1 0 0-13z"/><path d="M20 16.6v6.8M17.4 18.9h5.2"/></svg>
+<span class="brand__name">The Things That I See<em>photo + film</em></span></a>
     <nav class="nav" aria-label="Primary">
-      <ul class="nav-list">
-        <li><a href="weddings.html" data-nav="weddings">Weddings</a></li>
-        <li class="has-menu">
-          <button class="nav-menu-btn" type="button" aria-expanded="false" aria-controls="sessions-menu">Sessions<svg width="10" height="6" viewBox="0 0 10 6" aria-hidden="true"><path d="M1 1l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.3"/></svg></button>
-          <ul class="nav-sub" id="sessions-menu">
-            <li><a href="engagements.html" data-nav="engagements">Engagements</a></li>
-            <li><a href="family.html" data-nav="family">Family</a></li>
-            <li><a href="seniors.html" data-nav="seniors">Seniors</a></li>
-          </ul>
+      <ul class="nav__list">
+        <li><a class="nav__link" href="weddings.html" data-nav="weddings">Weddings</a></li>
+        <li class="nav__has-menu">
+          <button class="nav__link nav-menu-btn" type="button" aria-expanded="false" aria-controls="sessions-menu">Sessions<svg viewBox="0 0 10 6" aria-hidden="true"><path d="M1 1l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.3"/></svg></button>
+          <div class="nav__sub" id="sessions-menu">
+            <a href="engagements.html" data-nav="engagements" data-preview="assets/img/flatirons-sunset-480.webp"><span>Engagements</span><small>$750</small></a>
+            <a href="family.html" data-nav="family" data-preview="assets/img/golden-sisters-480.webp"><span>Family</span><small>from $250</small></a>
+            <a href="seniors.html" data-nav="seniors" data-preview="assets/img/meadow-dress-480.webp"><span>Seniors</span><small>from $400</small></a>
+          </div>
         </li>
-        <li><a href="portfolio.html" data-nav="portfolio">Portfolio</a></li>
-        <li><a href="investment.html" data-nav="investment">Investment</a></li>
-        <li><a href="stories.html" data-nav="stories" aria-current="page">Stories</a></li>
-        <li><a href="about.html" data-nav="about">About</a></li>
+        <li><a class="nav__link" href="portfolio.html" data-nav="portfolio">Portfolio</a></li>
+        <li><a class="nav__link" href="investment.html" data-nav="investment">Investment</a></li>
+        <li><a class="nav__link" href="stories.html" data-nav="stories" aria-current="page">Stories</a></li>
+        <li><a class="nav__link" href="about.html" data-nav="about">About</a></li>
       </ul>
     </nav>
-    <a class="btn btn-solid header-cta" href="enquire.html">Check your date</a>
+    <a class="btn btn--gold btn--sm header-cta" href="enquire.html">Check your date</a>
     <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu">
-      <span></span><span></span>
+      Menu<span class="menu-toggle__bars" aria-hidden="true"><span></span><span></span></span>
     </button>
   </div>
 </header>
-<div class="mobile-menu" id="mobile-menu" hidden>
-  <nav class="mobile-menu-inner" aria-label="Mobile">
-    <ul class="mobile-links">
-      <li><a href="index.html" data-nav="home">Home</a></li>
-      <li><a href="weddings.html" data-nav="weddings">Weddings</a></li>
-      <li><a href="engagements.html" data-nav="engagements">Engagements</a></li>
-      <li><a href="family.html" data-nav="family">Family</a></li>
-      <li><a href="seniors.html" data-nav="seniors">Seniors</a></li>
-      <li><a href="portfolio.html" data-nav="portfolio">Portfolio</a></li>
-      <li><a href="investment.html" data-nav="investment">Investment</a></li>
-      <li><a href="stories.html" data-nav="stories" aria-current="page">Stories</a></li>
-      <li><a href="about.html" data-nav="about">About</a></li>
+<div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+  <nav aria-label="Mobile">
+    <ul class="mobile-menu__list">
+      <li><a href="index.html" data-nav="home">Home<small>01</small></a></li>
+      <li><a href="weddings.html" data-nav="weddings">Weddings<small>02</small></a></li>
+      <li><a href="engagements.html" data-nav="engagements">Engagements<small>03</small></a></li>
+      <li><a href="family.html" data-nav="family">Family<small>04</small></a></li>
+      <li><a href="seniors.html" data-nav="seniors">Seniors<small>05</small></a></li>
+      <li><a href="portfolio.html" data-nav="portfolio">Portfolio<small>06</small></a></li>
+      <li><a href="investment.html" data-nav="investment">Investment<small>07</small></a></li>
+      <li><a href="stories.html" data-nav="stories" aria-current="page">Stories<small>08</small></a></li>
+      <li><a href="about.html" data-nav="about">About<small>09</small></a></li>
     </ul>
-    <a class="btn btn-light btn-block" href="enquire.html">Check your date</a>
-    <div class="mobile-contact">
-      <a href="mailto:jason@thethingsthatisee.com">jason@thethingsthatisee.com</a>
-      <a href="tel:+17142904333">714-290-4333</a>
-      <a href="https://www.instagram.com/thethingsthatisee.photo" target="_blank" rel="noopener">@thethingsthatisee.photo</a>
-    </div>
   </nav>
+  <div class="mobile-menu__foot">
+    <a class="btn btn--gold btn--block" href="enquire.html">Check your date <span class="btn__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+</span></a>
+    <div class="mobile-menu__social">
+      <a class="pill" href="mailto:jason@thethingsthatisee.com">jason@thethingsthatisee.com</a>
+      <a class="pill" href="tel:+17142904333">714-290-4333</a>
+      <a class="pill" href="https://www.instagram.com/thethingsthatisee.photo" target="_blank" rel="noopener">Instagram</a>
+      <a class="pill" href="https://www.youtube.com/channel/UCDJKnjQf7ZuTIfrowadnzkQ" target="_blank" rel="noopener">YouTube</a>
+    </div>
+  </div>
 </div>
 
 <main id="main">
-<section class="print-hero print-hero--compact">
-  <div class="leak leak--rose" aria-hidden="true"></div>
-  <div class="leak leak--amber" aria-hidden="true"></div>
-  <div class="container print-hero-grid">
-    <div class="print-hero-copy">
-      <p class="kicker">Stories</p>
-      <h1 class="h1">Real couples. Real <em>days.</em></h1>
-      <p class="lede">Weddings from St. Mary&rsquo;s to Holy Ghost, engagement sessions from Red Rocks to Highlands Ranch, and the planning guides I wish every couple had.</p>
-    </div>
-    <div class="collage" aria-hidden="true">
-      <div class="collage-item" style="--x:18%;--y:2%;--w:54%;--z:2" data-speed=".05"><figure class="print drop tape" style="--r:-3deg;--ar:4/5" data-delay="0"><div class="frame"><img class="img" src="assets/img/story-st-francis-960.webp" srcset="assets/img/story-st-francis-480.webp 480w, assets/img/story-st-francis-960.webp 960w, assets/img/story-st-francis-1500.webp 1500w" sizes="(min-width: 960px) 26vw, 50vw" width="1500" height="1000" alt="Newlyweds recessing down the aisle of St. Francis of Assisi" loading="eager" fetchpriority="high" decoding="async" style="--tone:#948176;--ratio:1500/1000"></div><figcaption>St. Francis</figcaption></figure></div>
-      <div class="collage-item" style="--x:0%;--y:46%;--w:40%;--z:3" data-speed=".12"><figure class="print drop tape" style="--r:-9deg;--ar:1/1" data-delay="160"><div class="frame"><img class="img" src="assets/img/story-red-rocks-960.webp" srcset="assets/img/story-red-rocks-480.webp 480w, assets/img/story-red-rocks-960.webp 960w, assets/img/story-red-rocks-1500.webp 1500w" sizes="(min-width: 960px) 26vw, 50vw" width="1500" height="1000" alt="A couple walking through a red rock tunnel at Red Rocks" loading="eager" fetchpriority="high" decoding="async" style="--tone:#6d5346;--ratio:1500/1000"></div><figcaption>Red Rocks</figcaption></figure></div>
-      <div class="collage-item" style="--x:60%;--y:40%;--w:40%;--z:4" data-speed=".16"><figure class="print drop tape" style="--r:7deg;--ar:4/5" data-delay="320"><div class="frame"><img class="img" src="assets/img/story-kelly-jason-960.webp" srcset="assets/img/story-kelly-jason-480.webp 480w, assets/img/story-kelly-jason-960.webp 960w, assets/img/story-kelly-jason-1500.webp 1500w" sizes="(min-width: 960px) 26vw, 50vw" width="1500" height="1000" alt="A winter wedding party outside St. Mary&#x27;s in Littleton" loading="eager" fetchpriority="high" decoding="async" style="--tone:#908884;--ratio:1500/1000"></div><figcaption>St. Mary&rsquo;s</figcaption></figure></div>
+<section class="page-hero">
+  <div class="container">
+    <div class="page-hero__meta reveal"><span class="label">(01) &mdash; Stories</span><span class="label">12 stories &amp; guides</span></div>
+    <div class="page-hero__grid">
+      <h1 class="h-xl page-hero__title" data-lines>Real couples.<br>Real <em>days.</em></h1>
+      <div class="page-hero__lede reveal" data-delay="2">
+        <p class="lede">Weddings from St. Mary&rsquo;s to Holy Ghost, engagement sessions from Red Rocks to Highlands Ranch, and the planning guides every couple deserves.</p>
+      </div>
     </div>
   </div>
 </section>
-
+<section class="frame"><div class="media about-hero-media reveal-img"><img class="img" src="assets/img/story-st-francis-960.webp" srcset="assets/img/story-st-francis-480.webp 480w, assets/img/story-st-francis-960.webp 960w, assets/img/story-st-francis-1500.webp 1500w" sizes="100vw" width="1500" height="1000" alt="Newlyweds recessing down the aisle of St. Francis of Assisi" loading="eager" fetchpriority="high" decoding="async" style="--tone:#948176;--ratio:1500/1000;object-position:50% 40%"></div></section>
 <section class="section" id="list">
   <div class="container">
-    <div class="filters" role="toolbar" aria-label="Filter stories" data-story-filters>
-      <button class="filter-btn" type="button" data-filter="all" aria-pressed="true">All</button>
-      <button class="filter-btn" type="button" data-filter="wedding" aria-pressed="false">Weddings</button>
-      <button class="filter-btn" type="button" data-filter="engagement" aria-pressed="false">Engagements</button>
-      <button class="filter-btn" type="button" data-filter="guide" aria-pressed="false">Guides</button>
-    </div>
-    <div class="stories" data-story-list>
-      <a class="story story--feature" data-cat="wedding" href="https://www.thethingsthatisee.com/stories/maria-coles-st-francis-of-assisi-catholic-wedding-with-cottonwood-lodge-reception/">
-        <div class="frame"><img class="img" src="assets/img/story-st-francis-960.webp" srcset="assets/img/story-st-francis-480.webp 480w, assets/img/story-st-francis-960.webp 960w, assets/img/story-st-francis-1500.webp 1500w" sizes="(min-width: 1000px) 58vw, 100vw" width="1500" height="1000" alt="Newlyweds recessing down the aisle of St. Francis of Assisi" loading="lazy" decoding="async" style="--tone:#948176;--ratio:1500/1000"></div>
-        <div class="stack">
-          <p class="story-meta"><b>Wedding</b><span>Dec 19, 2025</span></p>
-          <p class="story-title">Maria &amp; Cole&rsquo;s St. Francis of Assisi Catholic Wedding With Cottonwood Lodge Reception</p>
-          <span class="link-arrow">Read the story</span>
-        </div>
-      </a>
-      <a class="story" data-cat="guide" href="https://www.thethingsthatisee.com/stories/wedding-photography-timeline-guide/">
-        <div class="frame"><img class="img" src="assets/img/story-timeline-960.webp" srcset="assets/img/story-timeline-480.webp 480w, assets/img/story-timeline-960.webp 960w, assets/img/story-timeline-1500.webp 1500w" sizes="(min-width: 1000px) 32vw, (min-width: 700px) 50vw, 100vw" width="1500" height="844" alt="Black and white photo of newlyweds crossing a street" loading="lazy" decoding="async" style="--tone:#8d8d8d;--ratio:1500/844"></div>
-        <p class="story-meta"><b>Guide</b><span>Mar 14, 2026</span></p>
-        <p class="story-title">The Perfect Wedding Photography Timeline: A Duration Guide</p>
-      </a>
-      <a class="story" data-cat="guide" href="https://www.thethingsthatisee.com/stories/wedding-getting-ready-tips/">
-        <div class="frame"><img class="img" src="assets/img/story-getting-ready-960.webp" srcset="assets/img/story-getting-ready-480.webp 480w, assets/img/story-getting-ready-960.webp 960w, assets/img/story-getting-ready-1500.webp 1500w" sizes="(min-width: 1000px) 32vw, (min-width: 700px) 50vw, 100vw" width="1500" height="1000" alt="A father helps his daughter with her necklace on the wedding morning" loading="lazy" decoding="async" style="--tone:#c6c6c7;--ratio:1500/1000"></div>
-        <p class="story-meta"><b>Guide</b><span>Mar 14, 2026</span></p>
-        <p class="story-title">The Morning Of: How to Prep for Perfect Getting Ready Photos</p>
-      </a>
-      <a class="story" data-cat="guide" href="https://www.thethingsthatisee.com/stories/bridal-show-survival-guide/">
-        <div class="frame"><img class="img" src="assets/img/story-bridal-show-960.webp" srcset="assets/img/story-bridal-show-480.webp 480w, assets/img/story-bridal-show-960.webp 960w, assets/img/story-bridal-show-1500.webp 1500w" sizes="(min-width: 1000px) 32vw, (min-width: 700px) 50vw, 100vw" width="1500" height="1000" alt="A bride and groom standing apart in front of a green hedge" loading="lazy" decoding="async" style="--tone:#4d534e;--ratio:1500/1000"></div>
-        <p class="story-meta"><b>Guide</b><span>Mar 13, 2026</span></p>
-        <p class="story-title">Just Got Home From the Wedding Show? Read This First.</p>
-      </a>
-      <a class="story" data-cat="engagement" href="https://www.thethingsthatisee.com/stories/red-rocks-amphitheatre-engagement-photos/">
-        <div class="frame"><img class="img" src="assets/img/story-red-rocks-960.webp" srcset="assets/img/story-red-rocks-480.webp 480w, assets/img/story-red-rocks-960.webp 960w, assets/img/story-red-rocks-1500.webp 1500w" sizes="(min-width: 1000px) 32vw, (min-width: 700px) 50vw, 100vw" width="1500" height="1000" alt="A couple walking through a red rock tunnel at Red Rocks" loading="lazy" decoding="async" style="--tone:#6d5346;--ratio:1500/1000"></div>
-        <p class="story-meta"><b>Engagement</b><span>Feb 27, 2026</span></p>
-        <p class="story-title">Red Rocks Amphitheatre Engagement Photos with Makayla and Michael</p>
-      </a>
-      <a class="story" data-cat="guide" href="https://www.thethingsthatisee.com/stories/what-to-expect-when-you-book-a-photography-session/">
-        <div class="frame"><img class="img" src="assets/img/story-what-to-expect-960.webp" srcset="assets/img/story-what-to-expect-480.webp 480w, assets/img/story-what-to-expect-960.webp 960w, assets/img/story-what-to-expect-1500.webp 1500w" sizes="(min-width: 1000px) 32vw, (min-width: 700px) 50vw, 100vw" width="1500" height="1000" alt="A couple seated in a pew beneath stained glass" loading="lazy" decoding="async" style="--tone:#817b78;--ratio:1500/1000"></div>
-        <p class="story-meta"><b>Guide</b><span>Dec 10, 2025</span></p>
-        <p class="story-title">What to Expect When You Book a Photography Session</p>
-      </a>
-      <a class="story" data-cat="wedding" href="https://www.thethingsthatisee.com/stories/kelly-jason-st-marys-catholic-church-littleton-winter-wedding/">
-        <div class="frame"><img class="img" src="assets/img/story-kelly-jason-960.webp" srcset="assets/img/story-kelly-jason-480.webp 480w, assets/img/story-kelly-jason-960.webp 960w, assets/img/story-kelly-jason-1500.webp 1500w" sizes="(min-width: 1000px) 32vw, (min-width: 700px) 50vw, 100vw" width="1500" height="1000" alt="A winter wedding party outside St. Mary&#x27;s in Littleton" loading="lazy" decoding="async" style="--tone:#908884;--ratio:1500/1000"></div>
-        <p class="story-meta"><b>Wedding</b><span>Dec 6, 2025</span></p>
-        <p class="story-title">Kelly &amp; Jason: St. Mary&rsquo;s Catholic Church Littleton Winter Wedding</p>
-      </a>
-      <a class="story" data-cat="wedding" href="https://www.thethingsthatisee.com/stories/st-marys-littleton-wedding-with-cheesman-park-photos-and-knights-of-columbus-hall-reception/">
-        <div class="frame"><img class="img" src="assets/img/story-cheesman-960.webp" srcset="assets/img/story-cheesman-480.webp 480w, assets/img/story-cheesman-960.webp 960w, assets/img/story-cheesman-1500.webp 1500w" sizes="(min-width: 1000px) 32vw, (min-width: 700px) 50vw, 100vw" width="1500" height="1000" alt="A couple embracing in the Cheesman Park pavilion" loading="lazy" decoding="async" style="--tone:#c4ac9b;--ratio:1500/1000"></div>
-        <p class="story-meta"><b>Wedding</b><span>Nov 28, 2025</span></p>
-        <p class="story-title">St. Mary&rsquo;s Littleton Wedding With Cheesman Park Photos and Knights of Columbus Hall Reception</p>
-      </a>
-      <a class="story" data-cat="engagement" href="https://www.thethingsthatisee.com/stories/christina-tanners-highlands-ranch-mansion-engagement-session/">
-        <div class="frame"><img class="img" src="assets/img/story-highlands-ranch-960.webp" srcset="assets/img/story-highlands-ranch-480.webp 480w, assets/img/story-highlands-ranch-960.webp 960w, assets/img/story-highlands-ranch-1500.webp 1500w" sizes="(min-width: 1000px) 32vw, (min-width: 700px) 50vw, 100vw" width="1500" height="1000" alt="An engaged couple sitting on the lawn at Highlands Ranch Mansion" loading="lazy" decoding="async" style="--tone:#8d857a;--ratio:1500/1000"></div>
-        <p class="story-meta"><b>Engagement</b><span>Nov 17, 2025</span></p>
-        <p class="story-title">Christina &amp; Tanner&rsquo;s Highlands Ranch Mansion Engagement Session</p>
-      </a>
-      <a class="story" data-cat="wedding" href="https://www.thethingsthatisee.com/stories/maddie-and-pietro/">
-        <div class="frame"><img class="img" src="assets/img/story-holy-ghost-960.webp" srcset="assets/img/story-holy-ghost-480.webp 480w, assets/img/story-holy-ghost-960.webp 960w, assets/img/story-holy-ghost-1500.webp 1500w" sizes="(min-width: 1000px) 32vw, (min-width: 700px) 50vw, 100vw" width="1500" height="1000" alt="Newlyweds on the steps of Holy Ghost Catholic Church, Denver" loading="lazy" decoding="async" style="--tone:#b1a88f;--ratio:1500/1000"></div>
-        <p class="story-meta"><b>Wedding</b><span>Jul 4, 2025</span></p>
-        <p class="story-title">Holy Ghost Catholic Church Denver Wedding With Inverness Reception</p>
-      </a>
-      <a class="story" data-cat="wedding" href="https://www.thethingsthatisee.com/stories/sarah-elijahs-nativity-of-our-lord-catholic-church-wedding-portraits-and-reception/">
-        <div class="frame"><img class="img" src="assets/img/story-nativity-960.webp" srcset="assets/img/story-nativity-480.webp 480w, assets/img/story-nativity-960.webp 960w, assets/img/story-nativity-1500.webp 1500w" sizes="(min-width: 1000px) 32vw, (min-width: 700px) 50vw, 100vw" width="1500" height="844" alt="A wedding party on the lawn at Nativity of Our Lord" loading="lazy" decoding="async" style="--tone:#979785;--ratio:1500/844"></div>
-        <p class="story-meta"><b>Wedding</b><span>Dec 2, 2024</span></p>
-        <p class="story-title">Sarah &amp; Elijah&rsquo;s Reception at Nativity of Our Lord Catholic Church</p>
-      </a>
-      <a class="story" data-cat="wedding" href="https://www.thethingsthatisee.com/stories/josephine-and-dennis-find-love-across-the-pacific/">
-        <div class="frame"><img class="img" src="assets/img/story-pacific-960.webp" srcset="assets/img/story-pacific-480.webp 480w, assets/img/story-pacific-960.webp 960w, assets/img/story-pacific-1500.webp 1500w" sizes="(min-width: 1000px) 32vw, (min-width: 700px) 50vw, 100vw" width="1500" height="1500" alt="A father walks his daughter down a garden path on her wedding day" loading="lazy" decoding="async" style="--tone:#5b5c51;--ratio:1500/1500"></div>
-        <p class="story-meta"><b>Wedding</b><span>Nov 25, 2024</span></p>
-        <p class="story-title">Josephine and Dennis Find Love Across the Pacific</p>
-      </a>
-    </div>
-  </div>
-</section>
-
-<section class="band-nave">
-  <div class="leak leak--rose" aria-hidden="true"></div>
-  <div class="leak leak--amber" aria-hidden="true"></div>
-  <div class="container split">
-    <div class="stack stack-lg">
-      <p class="eyebrow"><span class="cross" aria-hidden="true"></span> Free guide</p>
-      <h2 class="h2">Planning a <em>Catholic</em> wedding?</h2>
-      <p class="lede">Working with your parish, the moments of the Mass worth planning around, and how to build a calm timeline. Everything I share with my own couples.</p>
-      <a class="btn btn-light" href="guide.html" style="align-self:flex-start">Read the guide</a>
-    </div>
-    <div class="split-media"><div class="frame r-land"><img class="img" src="assets/img/orthodox-ceremony-960.webp" srcset="assets/img/orthodox-ceremony-480.webp 480w, assets/img/orthodox-ceremony-960.webp 960w, assets/img/orthodox-ceremony-1600.webp 1600w" sizes="(min-width: 900px) 46vw, 100vw" width="2500" height="1667" alt="A wedding ceremony beneath painted icons in an Orthodox church" loading="lazy" decoding="async" style="--tone:#80766e;--ratio:2500/1667"></div></div>
-  </div>
-</section>
-
-<section class="invite-band">
-  <div class="leak leak--rose" aria-hidden="true"></div>
-  <div class="leak leak--amber" aria-hidden="true"></div>
-  <div class="container">
-    <div class="invite-wrap">
-      <figure class="print" aria-hidden="true"><div class="frame"><img class="img" src="assets/img/columns-kiss-960.webp" srcset="assets/img/columns-kiss-480.webp 480w, assets/img/columns-kiss-960.webp 960w, assets/img/columns-kiss-1600.webp 1600w" sizes="240px" width="2500" height="2500" alt="A couple kissing between tall white columns" loading="lazy" decoding="async" style="--tone:#c0b49e;--ratio:2500/2500"></div></figure>
-      <figure class="print" aria-hidden="true"><div class="frame"><img class="img" src="assets/img/flatirons-sunset-960.webp" srcset="assets/img/flatirons-sunset-480.webp 480w, assets/img/flatirons-sunset-960.webp 960w, assets/img/flatirons-sunset-1500.webp 1500w" sizes="240px" width="1500" height="1001" alt="An engaged couple touching foreheads at sunset in front of the Flatirons" loading="lazy" decoding="async" style="--tone:#87766b;--ratio:1500/1001"></div></figure>
-      <div class="invite">
-        <p class="kicker">Save the date</p>
-        <svg class="flourish" viewBox="0 0 120 14" aria-hidden="true"><path d="M2 7h44M74 7h44" stroke="currentColor" stroke-width="0.8"/><path d="M60 2c-4 0-6 5-10 5s-4-3-1-3M60 12c4 0 6-5 10-5s4 3 1 3M60 2c4 0 6 5 10 5M60 12c-4 0-6-5-10-5" fill="none" stroke="currentColor" stroke-width="0.8"/></svg>
-        <h2 class="h2">Let&rsquo;s talk about <em>your</em> day.</h2>
-        <p class="lede">Tell me your date and a few details. You&rsquo;ll see which collection fits straight away, and I&rsquo;ll reply to you personally.</p>
-        <form class="date-check" action="enquire.html" method="get" data-date-check>
-          <input type="hidden" name="type" value="wedding">
-          <label class="label" for="cta-date">Is your date open?</label>
-          <div class="date-check-row">
-            <input class="input" type="date" id="cta-date" name="date" required>
-            <button class="btn btn-solid" type="submit">Check</button>
-          </div>
-          <p class="date-check-result" data-date-result aria-live="polite"></p>
-        </form>
-        <p class="small muted">Or write to <a href="mailto:jason@thethingsthatisee.com">jason@thethingsthatisee.com</a> &middot; <a href="tel:+17142904333">714-290-4333</a></p>
-        <span class="seal" aria-hidden="true">J</span>
+    <div class="filters-bar">
+      <div class="filters" role="toolbar" aria-label="Filter stories" data-story-filters>
+        <button class="chip filter-btn" type="button" data-filter="all" aria-pressed="true">All</button>
+        <button class="chip filter-btn" type="button" data-filter="wedding" aria-pressed="false">Weddings</button>
+        <button class="chip filter-btn" type="button" data-filter="engagement" aria-pressed="false">Engagements</button>
+        <button class="chip filter-btn" type="button" data-filter="guide" aria-pressed="false">Guides</button>
       </div>
+    </div>
+    <ul class="index-list" data-story-list>
+      <li class="story" data-cat="wedding"><a class="index-row" href="https://www.thethingsthatisee.com/stories/maria-coles-st-francis-of-assisi-catholic-wedding-with-cottonwood-lodge-reception/" target="_blank" rel="noopener" data-preview="assets/img/story-st-francis-960.webp" data-cursor="Read">
+        <span class="index-row__num">01</span>
+        <span class="index-row__thumb"><img class="img" src="assets/img/story-st-francis-960.webp" srcset="assets/img/story-st-francis-480.webp 480w, assets/img/story-st-francis-960.webp 960w, assets/img/story-st-francis-1500.webp 1500w" sizes="64px" width="1500" height="1000" alt="Newlyweds recessing down the aisle of St. Francis of Assisi" loading="lazy" decoding="async" style="--tone:#948176;--ratio:1500/1000"></span>
+        <span class="index-row__body"><span class="index-row__meta"><b>Wedding</b><span>Dec 19, 2025</span></span><span class="index-row__name index-row__name--sm">Maria <em>&amp;</em> Cole</span><span class="muted">St. Francis of Assisi Catholic wedding with a Cottonwood Lodge reception</span></span>
+        <span class="index-row__cta btn btn--ghost btn--sm">Read the story</span>
+      </a></li>
+      <li class="story" data-cat="guide"><a class="index-row" href="https://www.thethingsthatisee.com/stories/wedding-photography-timeline-guide/" target="_blank" rel="noopener" data-preview="assets/img/story-timeline-960.webp" data-cursor="Read">
+        <span class="index-row__num">02</span>
+        <span class="index-row__thumb"><img class="img" src="assets/img/story-timeline-960.webp" srcset="assets/img/story-timeline-480.webp 480w, assets/img/story-timeline-960.webp 960w, assets/img/story-timeline-1500.webp 1500w" sizes="64px" width="1500" height="844" alt="Black and white photo of newlyweds crossing a street" loading="lazy" decoding="async" style="--tone:#8d8d8d;--ratio:1500/844"></span>
+        <span class="index-row__body"><span class="index-row__meta"><b>Guide</b><span>Mar 14, 2026</span></span><span class="index-row__name index-row__name--sm">The perfect <em>timeline</em></span><span class="muted">A wedding photography duration guide</span></span>
+        <span class="index-row__cta btn btn--ghost btn--sm">Read the story</span>
+      </a></li>
+      <li class="story" data-cat="guide"><a class="index-row" href="https://www.thethingsthatisee.com/stories/wedding-getting-ready-tips/" target="_blank" rel="noopener" data-preview="assets/img/story-getting-ready-960.webp" data-cursor="Read">
+        <span class="index-row__num">03</span>
+        <span class="index-row__thumb"><img class="img" src="assets/img/story-getting-ready-960.webp" srcset="assets/img/story-getting-ready-480.webp 480w, assets/img/story-getting-ready-960.webp 960w, assets/img/story-getting-ready-1500.webp 1500w" sizes="64px" width="1500" height="1000" alt="A father helps his daughter with her necklace on the wedding morning" loading="lazy" decoding="async" style="--tone:#c6c6c7;--ratio:1500/1000"></span>
+        <span class="index-row__body"><span class="index-row__meta"><b>Guide</b><span>Mar 14, 2026</span></span><span class="index-row__name index-row__name--sm">The <em>morning</em> of</span><span class="muted">How to prep for perfect getting-ready photos</span></span>
+        <span class="index-row__cta btn btn--ghost btn--sm">Read the story</span>
+      </a></li>
+      <li class="story" data-cat="guide"><a class="index-row" href="https://www.thethingsthatisee.com/stories/bridal-show-survival-guide/" target="_blank" rel="noopener" data-preview="assets/img/story-bridal-show-960.webp" data-cursor="Read">
+        <span class="index-row__num">04</span>
+        <span class="index-row__thumb"><img class="img" src="assets/img/story-bridal-show-960.webp" srcset="assets/img/story-bridal-show-480.webp 480w, assets/img/story-bridal-show-960.webp 960w, assets/img/story-bridal-show-1500.webp 1500w" sizes="64px" width="1500" height="1000" alt="A bride and groom standing apart in front of a green hedge" loading="lazy" decoding="async" style="--tone:#4d534e;--ratio:1500/1000"></span>
+        <span class="index-row__body"><span class="index-row__meta"><b>Guide</b><span>Mar 13, 2026</span></span><span class="index-row__name index-row__name--sm">After the <em>wedding show</em></span><span class="muted">Just got home from the wedding show? Read this first.</span></span>
+        <span class="index-row__cta btn btn--ghost btn--sm">Read the story</span>
+      </a></li>
+      <li class="story" data-cat="engagement"><a class="index-row" href="https://www.thethingsthatisee.com/stories/red-rocks-amphitheatre-engagement-photos/" target="_blank" rel="noopener" data-preview="assets/img/story-red-rocks-960.webp" data-cursor="Read">
+        <span class="index-row__num">05</span>
+        <span class="index-row__thumb"><img class="img" src="assets/img/story-red-rocks-960.webp" srcset="assets/img/story-red-rocks-480.webp 480w, assets/img/story-red-rocks-960.webp 960w, assets/img/story-red-rocks-1500.webp 1500w" sizes="64px" width="1500" height="1000" alt="A couple walking through a red rock tunnel at Red Rocks" loading="lazy" decoding="async" style="--tone:#6d5346;--ratio:1500/1000"></span>
+        <span class="index-row__body"><span class="index-row__meta"><b>Engagement</b><span>Feb 27, 2026</span></span><span class="index-row__name index-row__name--sm">Makayla <em>&amp;</em> Michael</span><span class="muted">Red Rocks Amphitheatre engagement photos</span></span>
+        <span class="index-row__cta btn btn--ghost btn--sm">Read the story</span>
+      </a></li>
+      <li class="story" data-cat="guide"><a class="index-row" href="https://www.thethingsthatisee.com/stories/what-to-expect-when-you-book-a-photography-session/" target="_blank" rel="noopener" data-preview="assets/img/story-what-to-expect-960.webp" data-cursor="Read">
+        <span class="index-row__num">06</span>
+        <span class="index-row__thumb"><img class="img" src="assets/img/story-what-to-expect-960.webp" srcset="assets/img/story-what-to-expect-480.webp 480w, assets/img/story-what-to-expect-960.webp 960w, assets/img/story-what-to-expect-1500.webp 1500w" sizes="64px" width="1500" height="1000" alt="A couple seated in a pew beneath stained glass" loading="lazy" decoding="async" style="--tone:#817b78;--ratio:1500/1000"></span>
+        <span class="index-row__body"><span class="index-row__meta"><b>Guide</b><span>Dec 10, 2025</span></span><span class="index-row__name index-row__name--sm">What to <em>expect</em></span><span class="muted">What to expect when you book a photography session</span></span>
+        <span class="index-row__cta btn btn--ghost btn--sm">Read the story</span>
+      </a></li>
+      <li class="story" data-cat="wedding"><a class="index-row" href="https://www.thethingsthatisee.com/stories/kelly-jason-st-marys-catholic-church-littleton-winter-wedding/" target="_blank" rel="noopener" data-preview="assets/img/story-kelly-jason-960.webp" data-cursor="Read">
+        <span class="index-row__num">07</span>
+        <span class="index-row__thumb"><img class="img" src="assets/img/story-kelly-jason-960.webp" srcset="assets/img/story-kelly-jason-480.webp 480w, assets/img/story-kelly-jason-960.webp 960w, assets/img/story-kelly-jason-1500.webp 1500w" sizes="64px" width="1500" height="1000" alt="A winter wedding party outside St. Mary&#x27;s in Littleton" loading="lazy" decoding="async" style="--tone:#908884;--ratio:1500/1000"></span>
+        <span class="index-row__body"><span class="index-row__meta"><b>Wedding</b><span>Dec 6, 2025</span></span><span class="index-row__name index-row__name--sm">Kelly <em>&amp;</em> Jason</span><span class="muted">St. Mary&rsquo;s Catholic Church, Littleton winter wedding</span></span>
+        <span class="index-row__cta btn btn--ghost btn--sm">Read the story</span>
+      </a></li>
+      <li class="story" data-cat="wedding"><a class="index-row" href="https://www.thethingsthatisee.com/stories/st-marys-littleton-wedding-with-cheesman-park-photos-and-knights-of-columbus-hall-reception/" target="_blank" rel="noopener" data-preview="assets/img/story-cheesman-960.webp" data-cursor="Read">
+        <span class="index-row__num">08</span>
+        <span class="index-row__thumb"><img class="img" src="assets/img/story-cheesman-960.webp" srcset="assets/img/story-cheesman-480.webp 480w, assets/img/story-cheesman-960.webp 960w, assets/img/story-cheesman-1500.webp 1500w" sizes="64px" width="1500" height="1000" alt="A couple embracing in the Cheesman Park pavilion" loading="lazy" decoding="async" style="--tone:#c4ac9b;--ratio:1500/1000"></span>
+        <span class="index-row__body"><span class="index-row__meta"><b>Wedding</b><span>Nov 28, 2025</span></span><span class="index-row__name index-row__name--sm">Cheesman <em>Park</em></span><span class="muted">St. Mary&rsquo;s Littleton wedding with Cheesman Park photos and a Knights of Columbus Hall reception</span></span>
+        <span class="index-row__cta btn btn--ghost btn--sm">Read the story</span>
+      </a></li>
+      <li class="story" data-cat="engagement"><a class="index-row" href="https://www.thethingsthatisee.com/stories/christina-tanners-highlands-ranch-mansion-engagement-session/" target="_blank" rel="noopener" data-preview="assets/img/story-highlands-ranch-960.webp" data-cursor="Read">
+        <span class="index-row__num">09</span>
+        <span class="index-row__thumb"><img class="img" src="assets/img/story-highlands-ranch-960.webp" srcset="assets/img/story-highlands-ranch-480.webp 480w, assets/img/story-highlands-ranch-960.webp 960w, assets/img/story-highlands-ranch-1500.webp 1500w" sizes="64px" width="1500" height="1000" alt="An engaged couple sitting on the lawn at Highlands Ranch Mansion" loading="lazy" decoding="async" style="--tone:#8d857a;--ratio:1500/1000"></span>
+        <span class="index-row__body"><span class="index-row__meta"><b>Engagement</b><span>Nov 17, 2025</span></span><span class="index-row__name index-row__name--sm">Christina <em>&amp;</em> Tanner</span><span class="muted">Highlands Ranch Mansion engagement session</span></span>
+        <span class="index-row__cta btn btn--ghost btn--sm">Read the story</span>
+      </a></li>
+      <li class="story" data-cat="wedding"><a class="index-row" href="https://www.thethingsthatisee.com/stories/maddie-and-pietro/" target="_blank" rel="noopener" data-preview="assets/img/story-holy-ghost-960.webp" data-cursor="Read">
+        <span class="index-row__num">10</span>
+        <span class="index-row__thumb"><img class="img" src="assets/img/story-holy-ghost-960.webp" srcset="assets/img/story-holy-ghost-480.webp 480w, assets/img/story-holy-ghost-960.webp 960w, assets/img/story-holy-ghost-1500.webp 1500w" sizes="64px" width="1500" height="1000" alt="Newlyweds on the steps of Holy Ghost Catholic Church, Denver" loading="lazy" decoding="async" style="--tone:#b1a88f;--ratio:1500/1000"></span>
+        <span class="index-row__body"><span class="index-row__meta"><b>Wedding</b><span>Jul 4, 2025</span></span><span class="index-row__name index-row__name--sm">Maddie <em>&amp;</em> Pietro</span><span class="muted">Holy Ghost Catholic Church, Denver wedding with an Inverness reception</span></span>
+        <span class="index-row__cta btn btn--ghost btn--sm">Read the story</span>
+      </a></li>
+      <li class="story" data-cat="wedding"><a class="index-row" href="https://www.thethingsthatisee.com/stories/sarah-elijahs-nativity-of-our-lord-catholic-church-wedding-portraits-and-reception/" target="_blank" rel="noopener" data-preview="assets/img/story-nativity-960.webp" data-cursor="Read">
+        <span class="index-row__num">11</span>
+        <span class="index-row__thumb"><img class="img" src="assets/img/story-nativity-960.webp" srcset="assets/img/story-nativity-480.webp 480w, assets/img/story-nativity-960.webp 960w, assets/img/story-nativity-1500.webp 1500w" sizes="64px" width="1500" height="844" alt="A wedding party on the lawn at Nativity of Our Lord" loading="lazy" decoding="async" style="--tone:#979785;--ratio:1500/844"></span>
+        <span class="index-row__body"><span class="index-row__meta"><b>Wedding</b><span>Dec 2, 2024</span></span><span class="index-row__name index-row__name--sm">Sarah <em>&amp;</em> Elijah</span><span class="muted">Reception at Nativity of Our Lord Catholic Church</span></span>
+        <span class="index-row__cta btn btn--ghost btn--sm">Read the story</span>
+      </a></li>
+      <li class="story" data-cat="wedding"><a class="index-row" href="https://www.thethingsthatisee.com/stories/josephine-and-dennis-find-love-across-the-pacific/" target="_blank" rel="noopener" data-preview="assets/img/story-pacific-960.webp" data-cursor="Read">
+        <span class="index-row__num">12</span>
+        <span class="index-row__thumb"><img class="img" src="assets/img/story-pacific-960.webp" srcset="assets/img/story-pacific-480.webp 480w, assets/img/story-pacific-960.webp 960w, assets/img/story-pacific-1500.webp 1500w" sizes="64px" width="1500" height="1500" alt="A father walks his daughter down a garden path on her wedding day" loading="lazy" decoding="async" style="--tone:#5b5c51;--ratio:1500/1500"></span>
+        <span class="index-row__body"><span class="index-row__meta"><b>Wedding</b><span>Nov 25, 2024</span></span><span class="index-row__name index-row__name--sm">Josephine <em>&amp;</em> Dennis</span><span class="muted">Love across the Pacific</span></span>
+        <span class="index-row__cta btn btn--ghost btn--sm">Read the story</span>
+      </a></li>
+    </ul>
+  </div>
+</section>
+
+<section class="feature" aria-label="Free guide">
+  <div class="feature__frame">
+    <div class="media feature__media"><img class="img" src="assets/img/orthodox-ceremony-960.webp" srcset="assets/img/orthodox-ceremony-480.webp 480w, assets/img/orthodox-ceremony-960.webp 960w, assets/img/orthodox-ceremony-1600.webp 1600w" sizes="100vw" width="2500" height="1667" alt="A wedding ceremony beneath painted icons in an Orthodox church" loading="lazy" decoding="async" style="--tone:#80766e;--ratio:2500/1667;object-position:50% 45%"></div>
+    <div class="feature__top"><span class="label">(02) &mdash; Free guide</span><span class="label">Catholic weddings</span></div>
+    <div class="feature__body">
+      <div class="stack" style="--stack:24px">
+        <h2 class="h-xl" data-lines>Planning a<br><em>Catholic</em> wedding?</h2>
+        <p class="lede reveal" style="color:rgba(239,231,218,.82)">Working with your parish, the moments of the Mass worth planning around, and how to build a calm timeline. Everything Jason shares with his own couples.</p>
+      </div>
+      <div class="glass reveal" data-delay="1"><ul class="checklist"><li>Start with your parish</li><li>The moments of the nuptial Mass</li><li>Why a second photographer helps</li><li>Family photos without the stress</li></ul><a class="btn btn--gold btn--block mt-m" href="guide.html">Read the guide</a></div>
     </div>
   </div>
 </section>
@@ -237,80 +228,74 @@
 
 </main>
 <footer class="site-footer">
-  <div class="container">
-    <div class="footer-lead">
-      <p class="footer-line">Every photo tells a <em>story</em></p>
-      <a class="btn btn-light" href="enquire.html">Start your enquiry</a>
+  <div class="footer-card">
+    <div class="footer-cta">
+      <div>
+        <span class="label label--dot label--live">Now booking weddings &amp; sessions</span>
+        <p class="h-xl mt-m" data-lines>Let&rsquo;s tell<br>your <em>story.</em></p>
+        <p class="lede mt-m">Four quick steps. You&rsquo;ll see the right collection and price before you send anything, and Jason replies to you personally.</p>
+        <form class="inline-form" action="enquire.html" method="get" data-date-check>
+          <input type="hidden" name="type" value="wedding">
+          <label class="label" for="cta-date">Is your wedding date open?</label>
+          <div class="inline-form__row">
+            <input class="input" type="date" id="cta-date" name="date" required>
+            <button class="btn btn--gold btn--sm" type="submit">Check</button>
+          </div>
+          <p class="date-check-result" data-date-result aria-live="polite"></p>
+        </form>
+      </div>
+      <a class="footer-cta__btn" href="enquire.html" data-magnetic-strong><span>Check<br>your date<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg>
+</span></a>
     </div>
     <div class="footer-grid">
-      <div class="footer-studio">
-        <p class="wordmark-name">The Things That <em>I</em> See</p>
-        <p>Catholic and Christian wedding, family and senior photography and film. Based in Centennial, Colorado, and happy to travel.</p>
+      <div class="footer-col footer-col--intro">
+        <a class="brand" href="index.html"><svg class="brand__mark" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M3 20C8 12 13.5 8.5 20 8.5S32 12 37 20C32 28 26.5 31.5 20 31.5S8 28 3 20z"/><path d="M20 13.5a6.5 6.5 0 1 0 0 13a6.5 6.5 0 1 0 0-13z"/><path d="M20 16.6v6.8M17.4 18.9h5.2"/></svg>
+<span class="brand__name">The Things That I See<em>photo + film</em></span></a>
+        <p class="mt-m">Catholic and Christian wedding, engagement, family and senior photography and film by Jason Smith. Based in Centennial, Colorado, and happy to travel.</p>
+        <p class="mt-s"><a class="link" href="mailto:jason@thethingsthatisee.com">jason@thethingsthatisee.com</a></p>
+        <p class="mt-s"><a class="link" href="tel:+17142904333">714-290-4333</a></p>
       </div>
-      <div>
-        <p class="footer-h">Explore</p>
-        <ul>
-          <li><a href="weddings.html">Weddings</a></li>
-          <li><a href="portfolio.html">Portfolio</a></li>
-          <li><a href="investment.html">Investment</a></li>
-          <li><a href="stories.html">Stories</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="guide.html">Catholic wedding guide</a></li>
-        </ul>
-      </div>
-      <div>
-        <p class="footer-h">Sessions</p>
-        <ul>
-          <li><a href="engagements.html">Engagements</a></li>
-          <li><a href="family.html">Family</a></li>
-          <li><a href="seniors.html">Seniors</a></li>
-          <li><a href="investment.html#film">Wedding film</a></li>
-        </ul>
-      </div>
-      <div class="footer-contact">
-        <p class="footer-h">Contact</p>
-        <ul>
-          <li><a href="mailto:jason@thethingsthatisee.com">jason@thethingsthatisee.com</a></li>
-          <li><a href="tel:+17142904333">714-290-4333</a></li>
-          <li>Centennial, Colorado</li>
-        </ul>
-      </div>
-      <div>
-        <p class="footer-h">Follow</p>
-        <ul>
-          <li><a href="https://www.instagram.com/thethingsthatisee.photo" target="_blank" rel="noopener">Instagram</a></li>
-          <li><a href="https://www.youtube.com/channel/UCDJKnjQf7ZuTIfrowadnzkQ" target="_blank" rel="noopener">YouTube</a></li>
-          <li><a href="https://www.pinterest.com/0a2e779fd81d88fd181f47718a53c8" target="_blank" rel="noopener">Pinterest</a></li>
-        </ul>
-      </div>
+      <div class="footer-col"><h3>Explore</h3><ul>
+        <li><a href="weddings.html">Weddings</a></li><li><a href="portfolio.html">Portfolio</a></li><li><a href="investment.html">Investment</a></li><li><a href="stories.html">Stories</a></li><li><a href="about.html">About Jason</a></li><li><a href="guide.html">Catholic wedding guide</a></li>
+      </ul></div>
+      <div class="footer-col"><h3>Sessions</h3><ul>
+        <li><a href="engagements.html">Engagements</a></li><li><a href="family.html">Family</a></li><li><a href="seniors.html">Seniors</a></li><li><a href="investment.html#film">Wedding film</a></li><li><a href="enquire.html">Enquire</a></li>
+      </ul></div>
+      <div class="footer-col"><h3>Follow</h3><ul>
+        <li><a href="https://www.instagram.com/thethingsthatisee.photo" target="_blank" rel="noopener">Instagram</a></li>
+        <li><a href="https://www.youtube.com/channel/UCDJKnjQf7ZuTIfrowadnzkQ" target="_blank" rel="noopener">YouTube</a></li>
+        <li><a href="https://www.pinterest.com/0a2e779fd81d88fd181f47718a53c8" target="_blank" rel="noopener">Pinterest</a></li>
+      </ul></div>
     </div>
-    <div class="footer-base">
-      <p>&copy; 2026 The Things That I See Photography. All rights reserved.</p>
-      <p>Site by Code Bunny</p>
+    <p class="footer-wordmark" aria-hidden="true"><span class="fw-line">The Things</span><span class="fw-line">That I See</span></p>
+    <div class="footer-bottom">
+      <span>&copy; <span data-year>2026</span> The Things That I See Photography</span>
+      <span>Centennial, Colorado</span>
+      <span>Site by Code Bunny</span>
+      <a href="#main">Back to top &uarr;</a>
     </div>
   </div>
-  <p class="footer-giant" aria-hidden="true">the things I see</p>
 </footer>
 
-<div class="mobile-cta" data-mobile-cta>
-  <a class="btn btn-solid" href="enquire.html">Check your date</a>
-  <a class="btn btn-ghost" href="investment.html">Pricing</a>
+<div class="sticky-cta" aria-label="Quick actions">
+  <a class="btn btn--ghost" href="investment.html">Pricing</a>
+  <a class="btn btn--gold" href="enquire.html">Check your date</a>
 </div>
-
 <dialog class="lightbox" data-lightbox aria-label="Photo viewer">
-  <div class="lightbox-stage" data-lightbox-stage></div>
-  <p class="lightbox-caption"><span data-lightbox-caption></span> <span class="lightbox-count" data-lightbox-count></span></p>
-  <button class="lightbox-btn lightbox-close" type="button" data-lightbox-close aria-label="Close">
-    <svg width="20" height="20" viewBox="0 0 20 20" aria-hidden="true"><path d="M4 4l12 12M16 4L4 16" stroke="currentColor" stroke-width="1.4"/></svg>
-  </button>
-  <button class="lightbox-btn lightbox-prev" type="button" data-lightbox-prev aria-label="Previous photo">
-    <svg width="22" height="22" viewBox="0 0 22 22" aria-hidden="true"><path d="M14 4l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="1.4"/></svg>
-  </button>
-  <button class="lightbox-btn lightbox-next" type="button" data-lightbox-next aria-label="Next photo">
-    <svg width="22" height="22" viewBox="0 0 22 22" aria-hidden="true"><path d="M8 4l7 7-7 7" fill="none" stroke="currentColor" stroke-width="1.4"/></svg>
-  </button>
+  <div class="lightbox__bar">
+    <span class="lightbox__count" data-lightbox-count></span>
+    <span class="lightbox__caption" data-lightbox-caption></span>
+    <button class="icon-btn" type="button" data-lightbox-close aria-label="Close"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+  </div>
+  <div class="lightbox__stage" data-lightbox-stage></div>
+  <div class="lightbox__nav">
+    <button class="icon-btn" type="button" data-lightbox-prev aria-label="Previous photo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6"/></svg></button>
+    <button class="icon-btn" type="button" data-lightbox-next aria-label="Next photo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+  </div>
 </dialog>
 
+<script src="assets/vendor/gsap.min.js" defer></script>
+<script src="assets/vendor/ScrollTrigger.min.js" defer></script>
 <script src="assets/js/config.js" defer></script>
 <script src="assets/js/site.js" defer></script>
 <script src="assets/js/motion.js" defer></script>

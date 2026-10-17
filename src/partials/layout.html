@@ -6,7 +6,7 @@
 <title>{{title}}</title>
 <meta name="description" content="{{description}}">
 <link rel="canonical" href="{{canonical}}">
-<meta name="theme-color" content="#f5ede3">
+<meta name="theme-color" content="#080706">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="The Things That I See Photography">
 <meta property="og:title" content="{{title}}">
@@ -17,11 +17,9 @@
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Jost:wght@300;400;500&family=Pinyon+Script&display=swap">
-<script>
-(function(d){var r=d.documentElement;r.classList.add('js');if(!window.matchMedia||matchMedia('(prefers-reduced-motion: reduce)').matches)return;r.classList.add('motion');setTimeout(function(){if(!window.__motion){r.classList.remove('motion')}},3000)})(document);
-</script>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&family=Inter+Tight:wght@300;400;500;600&display=swap">
 <link rel="stylesheet" href="assets/css/site.css">
+<script>try{var d=document.documentElement;d.classList.add("js");if(sessionStorage.getItem("ttis-nav")){d.classList.add("is-entering");sessionStorage.removeItem("ttis-nav")}else if(!sessionStorage.getItem("ttis-seen")&&!matchMedia("(prefers-reduced-motion: reduce)").matches){d.classList.add("is-loading")}setTimeout(function(){d.classList.remove("is-loading","is-entering")},5000)}catch(e){}</script>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -45,14 +43,32 @@
 {{jsonld}}
 </head>
 <body class="{{body_class}}">
+<div class="preloader" aria-hidden="true">
+  <div class="preloader__inner">
+    <svg class="preloader__mark" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.2"><path pathLength="1" d="M3 20C8 12 13.5 8.5 20 8.5S32 12 37 20C32 28 26.5 31.5 20 31.5S8 28 3 20z"/><path pathLength="1" d="M20 13.5a6.5 6.5 0 1 0 0 13a6.5 6.5 0 1 0 0-13z"/><path pathLength="1" d="M20 16.6v6.8M17.4 18.9h5.2"/></svg>
+    <p class="preloader__name"><span>The Things That I See</span></p>
+    <p class="preloader__tag"><span>Every photo tells a story</span></p>
+  </div>
+  <div class="preloader__foot"><span>Photo + Film<br>Colorado</span><span class="preloader__count" data-count-loader>000</span></div>
+  <div class="preloader__bar"><span></span></div>
+</div>
+<div class="curtain" aria-hidden="true"><svg class="curtain__mark" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M3 20C8 12 13.5 8.5 20 8.5S32 12 37 20C32 28 26.5 31.5 20 31.5S8 28 3 20z"/><path d="M20 13.5a6.5 6.5 0 1 0 0 13a6.5 6.5 0 1 0 0-13z"/><path d="M20 16.6v6.8M17.4 18.9h5.2"/></svg></div>
+<div class="scroll-progress" aria-hidden="true"><span></span></div>
+<div class="cursor" aria-hidden="true"><span class="cursor__ring"><span class="cursor__label"></span></span><span class="cursor__dot"></span></div>
+<div class="hover-preview" aria-hidden="true"><div class="hover-preview__inner"></div></div>
 <a class="skip-link" href="#main">Skip to content</a>
 {{> header}}
 <main id="main">
 {{content}}
 </main>
 {{> footer}}
-{{> mobilecta}}
+<div class="sticky-cta" aria-label="Quick actions">
+  <a class="btn btn--ghost" href="investment.html">Pricing</a>
+  <a class="btn btn--gold" href="enquire.html">Check your date</a>
+</div>
 {{> lightbox}}
+<script src="assets/vendor/gsap.min.js" defer></script>
+<script src="assets/vendor/ScrollTrigger.min.js" defer></script>
 <script src="assets/js/config.js" defer></script>
 <script src="assets/js/site.js" defer></script>
 <script src="assets/js/motion.js" defer></script>

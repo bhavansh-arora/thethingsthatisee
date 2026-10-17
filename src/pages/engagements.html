@@ -4,111 +4,104 @@
   "nav": "engagements",
   "og_image": "flatirons-sunset"
 } -->
-<section class="print-hero">
-  <div class="leak leak--rose" aria-hidden="true"></div>
-  <div class="leak leak--amber" aria-hidden="true"></div>
-  <div class="container print-hero-grid">
-    <div class="print-hero-copy">
-      <p class="kicker">Engagements</p>
-      <h1 class="h1">The <em>beginning</em> of a journey.</h1>
-      <p class="lede">An engagement shoot isn&rsquo;t about posing and smiling for the camera. It&rsquo;s about the unique, inspiring moments you share as a couple, and the reality of your love.</p>
-      <div class="btn-row"><a class="btn btn-solid" href="enquire.html?type=engagement">Book a session</a><a class="btn btn-ghost" href="#intro">See the gallery</a></div>
-    </div>
-    <div class="collage" aria-hidden="true">
-      <div class="collage-item" style="--x:18%;--y:2%;--w:54%;--z:2" data-speed=".05"><figure class="print drop tape" style="--r:-3deg;--ar:4/5" data-delay="0"><div class="frame"><x-img name="flatirons-sunset" sizes="(min-width: 960px) 26vw, 50vw" eager></x-img></div><figcaption>golden hour</figcaption></figure></div>
-      <div class="collage-item" style="--x:0%;--y:46%;--w:40%;--z:3" data-speed=".12"><figure class="print drop tape" style="--r:-9deg;--ar:1/1" data-delay="160"><div class="frame"><x-img name="rain-kiss" sizes="(min-width: 960px) 26vw, 50vw" eager></x-img></div><figcaption>rain on brick</figcaption></figure></div>
-      <div class="collage-item" style="--x:60%;--y:40%;--w:40%;--z:4" data-speed=".16"><figure class="print drop tape" style="--r:7deg;--ar:4/5" data-delay="320"><div class="frame"><x-img name="town-hall" sizes="(min-width: 960px) 26vw, 50vw" eager></x-img></div><figcaption>town hall</figcaption></figure></div>
+<section class="page-hero">
+  <div class="container">
+    <div class="page-hero__meta reveal"><span class="label">(01) &mdash; Engagements</span><span class="label">$750 &middot; Denver &amp; the Front Range</span></div>
+    <div class="page-hero__grid">
+      <h1 class="h-xl page-hero__title" data-lines>The beginning<br>of a <em>journey.</em></h1>
+      <div class="page-hero__lede reveal" data-delay="2">
+        <p class="lede">An engagement shoot isn&rsquo;t about posing and smiling for the camera. It&rsquo;s about the unique, inspiring moments you share as a couple, and the reality of your love.</p>
+        <div class="row"><a class="btn btn--gold" href="enquire.html?type=engagement">Book a session <span class="btn__icon">{{> arrow}}</span></a><a class="btn btn--ghost" href="#gallery">See the gallery</a></div>
+      </div>
     </div>
   </div>
 </section>
+<section class="frame"><div class="media about-hero-media reveal-img"><x-img name="flatirons-laugh" sizes="100vw" eager pos="50% 40%"></x-img></div></section>
 
-<section class="section" id="intro">
+<section class="section">
   <div class="container split">
-    <div class="stack stack-lg">
-      <p class="eyebrow">The session</p>
-      <h2 class="h2">Your love story, <em>raw and real.</em></h2>
-      <div class="prose">
-        <p>Whether it&rsquo;s an intimate moment in a coffee shop or a playful afternoon in the park, I aim to capture the raw emotions and genuine connection between you two. Through my lens, your love story comes alive in a way that&rsquo;s truly authentic.</p>
-        <p>It&rsquo;s also the best rehearsal for your wedding day. You&rsquo;ll get comfortable in front of the camera, we&rsquo;ll get to know each other, and you&rsquo;ll walk away with photos made for save-the-dates.</p>
-      </div>
-      <div class="btn-row">
-        <a class="btn btn-solid" href="enquire.html?type=engagement">Book a session</a>
-        <span class="price-amount num" style="font-size:1.8rem">$750</span>
-      </div>
+    <div class="stack" style="--stack:28px">
+      <div class="head__top reveal"><span class="label">(02) &mdash; The session</span><span class="label">Raw &amp; real</span></div>
+      <h2 class="h-xl" data-lines>Your love story,<br><em>raw and real.</em></h2>
+      <div class="body reveal"><p>Whether it&rsquo;s an intimate moment in a coffee shop or a playful afternoon in the park, Jason aims to capture the raw emotion and genuine connection between you two.</p><p>It&rsquo;s also the best rehearsal for your wedding day. You&rsquo;ll get comfortable in front of the camera, get to know each other, and walk away with photos made for save-the-dates.</p></div>
+      <div class="row reveal"><a class="btn btn--gold" href="enquire.html?type=engagement">Book a session <span class="btn__icon">{{> arrow}}</span></a><p class="price"><strong>$750</strong><small>per session</small></p></div>
     </div>
-    <div class="split-media">
-      <div class="frame r-portrait"><x-img name="denim-embrace" sizes="(min-width: 900px) 46vw, 100vw"></x-img></div>
-    </div>
+    <div class="split__media reveal"><div class="media"><x-img name="denim-embrace" sizes="(min-width: 960px) 46vw, 100vw"></x-img></div></div>
   </div>
 </section>
 
-<section class="section" data-gallery>
+<section class="section section--flush-top" id="gallery" data-gallery>
   <div class="container">
-    <div class="section-head"><p class="eyebrow">Gallery</p><h2 class="h2">Coffee shops, canyons, <em>and rain.</em></h2></div>
-    <div class="masonry">
-      <x-img name="flatirons-laugh" link cat="engagement" sizes="(min-width: 900px) 33vw, 50vw"></x-img>
-      <x-img name="embrace-bw" link cat="engagement" sizes="(min-width: 900px) 33vw, 50vw"></x-img>
-      <x-img name="rain-kiss" link cat="engagement" sizes="(min-width: 900px) 33vw, 50vw"></x-img>
-      <x-img name="town-hall" link cat="engagement" sizes="(min-width: 900px) 33vw, 50vw"></x-img>
-      <x-img name="stairs" link cat="engagement" sizes="(min-width: 900px) 33vw, 50vw"></x-img>
-      <x-img name="golden-hour" link cat="engagement" sizes="(min-width: 900px) 33vw, 50vw"></x-img>
-      <x-img name="mural" link cat="engagement" sizes="(min-width: 900px) 33vw, 50vw"></x-img>
-      <x-img name="path-dance" link cat="engagement" sizes="(min-width: 900px) 33vw, 50vw"></x-img>
-      <x-img name="flower-window" link cat="engagement" sizes="(min-width: 900px) 33vw, 50vw"></x-img>
-      <x-img name="red-couch" link cat="engagement" sizes="(min-width: 900px) 33vw, 50vw"></x-img>
-      <x-img name="alley" link cat="engagement" sizes="(min-width: 900px) 33vw, 50vw"></x-img>
-      <x-img name="picket-fence" link cat="engagement" sizes="(min-width: 900px) 33vw, 50vw"></x-img>
-      <x-img name="flatirons-dance" link cat="engagement" sizes="(min-width: 900px) 33vw, 50vw"></x-img>
+    <div class="head head--split">
+      <div class="head__top"><span class="label">(03) &mdash; Gallery</span><span class="label">Tap any photo</span></div>
+      <h2 class="h-xl" data-lines>Coffee shops,<br>canyons <em>&amp; rain.</em></h2>
+      <p class="lede reveal">Mountains at sunset, brick streets in the rain, and everything in between.</p>
+    </div>
+    <div class="masonry masonry--3">
+      <x-img name="flatirons-laugh" link cat="engagement" sizes="(min-width: 760px) 33vw, 50vw"></x-img>
+      <x-img name="embrace-bw" link cat="engagement" sizes="(min-width: 760px) 33vw, 50vw"></x-img>
+      <x-img name="rain-kiss" link cat="engagement" sizes="(min-width: 760px) 33vw, 50vw"></x-img>
+      <x-img name="town-hall" link cat="engagement" sizes="(min-width: 760px) 33vw, 50vw"></x-img>
+      <x-img name="stairs" link cat="engagement" sizes="(min-width: 760px) 33vw, 50vw"></x-img>
+      <x-img name="golden-hour" link cat="engagement" sizes="(min-width: 760px) 33vw, 50vw"></x-img>
+      <x-img name="mural" link cat="engagement" sizes="(min-width: 760px) 33vw, 50vw"></x-img>
+      <x-img name="path-dance" link cat="engagement" sizes="(min-width: 760px) 33vw, 50vw"></x-img>
+      <x-img name="flower-window" link cat="engagement" sizes="(min-width: 760px) 33vw, 50vw"></x-img>
+      <x-img name="red-couch" link cat="engagement" sizes="(min-width: 760px) 33vw, 50vw"></x-img>
+      <x-img name="alley" link cat="engagement" sizes="(min-width: 760px) 33vw, 50vw"></x-img>
+      <x-img name="picket-fence" link cat="engagement" sizes="(min-width: 760px) 33vw, 50vw"></x-img>
+      <x-img name="flatirons-dance" link cat="engagement" sizes="(min-width: 760px) 33vw, 50vw"></x-img>
     </div>
   </div>
 </section>
 
-<section class="band-nave">
-  <div class="leak leak--rose" aria-hidden="true"></div>
-  <div class="leak leak--amber" aria-hidden="true"></div>
+<section class="section section--flush-top">
   <div class="container">
-    <div class="section-head"><p class="eyebrow">Where we could go</p><h2 class="h2">A few Colorado <em>favorites</em></h2></div>
-    <div class="tri">
-      <div class="pillar"><h3>Red Rocks</h3><p>Sandstone, tunnels and big sky. See Makayla and Michael&rsquo;s session for the feel.</p></div>
-      <div class="pillar"><h3>The Flatirons</h3><p>Meadows below the mountains, best at sunset when the light turns gold.</p></div>
-      <div class="pillar"><h3>Highlands Ranch Mansion</h3><p>Stone, lawns and old-world character, a short drive from Centennial.</p></div>
+    <div class="head head--split">
+      <div class="head__top"><span class="label">(04) &mdash; Where we could go</span><span class="label">Colorado favorites</span></div>
+      <h2 class="h-xl" data-lines>A few <em>favorites.</em></h2>
+      <p class="lede reveal">Bring your own idea, or start with one of these.</p>
     </div>
-  </div>
-</section>
-
-<section class="section section--stone">
-  <div class="container container--narrow">
-    <figure class="quote">
-      <blockquote>Jason made our engagement photoshoot an absolute delight! His creativity and easygoing nature turned the experience into a fun and memorable event. He captured our love perfectly and made us feel comfortable throughout. We highly recommend him for anyone seeking beautiful and unique photography!</blockquote>
-      <cite>Katie &amp; Mike</cite>
-    </figure>
+    <div class="bento">
+      <div class="tile c-4 reveal" data-delay="0"><div class="tile__top"><span class="label">01</span><span class="label">&#10022;</span></div><div><p class="h-md">Red Rocks</p><p class="mt-s">Sandstone, tunnels and big sky. Makayla and Michael&rsquo;s session shows the feel.</p></div></div>
+      <div class="tile c-4 reveal" data-delay="1"><div class="tile__top"><span class="label">02</span><span class="label">&#10022;</span></div><div><p class="h-md">The Flatirons</p><p class="mt-s">Meadows below the mountains, best at sunset when the light turns gold.</p></div></div>
+      <div class="tile c-4 reveal" data-delay="2"><div class="tile__top"><span class="label">03</span><span class="label">&#10022;</span></div><div><p class="h-md">Highlands Ranch Mansion</p><p class="mt-s">Stone, lawns and old-world character, a short drive from Centennial.</p></div></div>
+    </div>
   </div>
 </section>
 
 <section class="section">
-  <div class="container">
-    <div class="section-head section-head--row">
-      <div class="stack"><p class="eyebrow">Engagement stories</p><h2 class="h2">Recent <em>sessions</em></h2></div>
-      <a class="link-arrow" href="stories.html">All stories</a>
-    </div>
-    <div class="stories">
-      <a class="story" href="https://www.thethingsthatisee.com/stories/red-rocks-amphitheatre-engagement-photos/">
-        <div class="frame"><x-img name="story-red-rocks" sizes="(min-width: 1000px) 32vw, (min-width: 700px) 50vw, 100vw"></x-img></div>
-        <p class="story-meta"><b>Engagement</b><span>Feb 27, 2026</span></p>
-        <p class="story-title">Red Rocks Amphitheatre Engagement Photos with Makayla and Michael</p>
-      </a>
-      <a class="story" href="https://www.thethingsthatisee.com/stories/christina-tanners-highlands-ranch-mansion-engagement-session/">
-        <div class="frame"><x-img name="story-highlands-ranch" sizes="(min-width: 1000px) 32vw, (min-width: 700px) 50vw, 100vw"></x-img></div>
-        <p class="story-meta"><b>Engagement</b><span>Nov 17, 2025</span></p>
-        <p class="story-title">Christina &amp; Tanner&rsquo;s Highlands Ranch Mansion Engagement Session</p>
-      </a>
-      <a class="story" href="https://www.thethingsthatisee.com/stories/what-to-expect-when-you-book-a-photography-session/">
-        <div class="frame"><x-img name="story-what-to-expect" sizes="(min-width: 1000px) 32vw, (min-width: 700px) 50vw, 100vw"></x-img></div>
-        <p class="story-meta"><b>Guide</b><span>Dec 10, 2025</span></p>
-        <p class="story-title">What to Expect When You Book a Photography Session</p>
-      </a>
+  <div class="container container--narrow center">
+    <div class="reveal" style="display:grid;justify-items:center;gap:28px"><svg class="qmark" viewBox="0 0 40 28" fill="currentColor" aria-hidden="true"><path d="M0 28V17.2C0 7.6 4.6 1.9 13.8 0l1.6 3.3C10.3 5 7.8 8.3 7.5 13.2H15V28H0zm22.6 0V17.2C22.6 7.6 27.2 1.9 36.4 0L38 3.3c-5.1 1.7-7.6 5-7.9 9.9h7.5V28h-15z"/></svg>
+      <p class="statement" style="font-size:clamp(1.6rem,0.9rem + 2.6vw,3.4rem)" data-scrub-words>&ldquo;Jason made our engagement photoshoot an absolute delight! His creativity and easygoing nature turned the experience into a fun and memorable event. He captured our love perfectly and made us feel comfortable throughout. We highly recommend him for anyone seeking beautiful and unique photography!&rdquo;</p>
+      <p class="row"><strong>Katie &amp; Mike</strong><span class="label">Engagement session</span></p>
     </div>
   </div>
 </section>
 
-{{> cta-session}}
+<section class="section section--flush-top">
+  <div class="container">
+    <div class="head__top reveal"><span class="label">(05) &mdash; Engagement stories</span><a class="link" href="stories.html">All stories {{> arrow}}</a></div>
+    <h2 class="h-xl mt-m" data-lines style="margin-bottom:clamp(32px,4vw,56px)">Recent<br><em>sessions.</em></h2>
+    <ul class="index-list">
+      <li class="story" data-cat="engagement"><a class="index-row" href="https://www.thethingsthatisee.com/stories/red-rocks-amphitheatre-engagement-photos/" target="_blank" rel="noopener" data-preview="{{src story-red-rocks 960}}" data-cursor="Read">
+        <span class="index-row__num">01</span>
+        <span class="index-row__thumb"><x-img name="story-red-rocks" sizes="64px"></x-img></span>
+        <span class="index-row__body"><span class="index-row__meta"><b>Engagement</b><span>Feb 27, 2026</span></span><span class="index-row__name index-row__name--sm">Makayla <em>&amp;</em> Michael</span><span class="muted">Red Rocks Amphitheatre engagement photos</span></span>
+        <span class="index-row__cta btn btn--ghost btn--sm">Read the story</span>
+      </a></li>
+      <li class="story" data-cat="engagement"><a class="index-row" href="https://www.thethingsthatisee.com/stories/christina-tanners-highlands-ranch-mansion-engagement-session/" target="_blank" rel="noopener" data-preview="{{src story-highlands-ranch 960}}" data-cursor="Read">
+        <span class="index-row__num">02</span>
+        <span class="index-row__thumb"><x-img name="story-highlands-ranch" sizes="64px"></x-img></span>
+        <span class="index-row__body"><span class="index-row__meta"><b>Engagement</b><span>Nov 17, 2025</span></span><span class="index-row__name index-row__name--sm">Christina <em>&amp;</em> Tanner</span><span class="muted">Highlands Ranch Mansion engagement session</span></span>
+        <span class="index-row__cta btn btn--ghost btn--sm">Read the story</span>
+      </a></li>
+      <li class="story" data-cat="guide"><a class="index-row" href="https://www.thethingsthatisee.com/stories/what-to-expect-when-you-book-a-photography-session/" target="_blank" rel="noopener" data-preview="{{src story-what-to-expect 960}}" data-cursor="Read">
+        <span class="index-row__num">03</span>
+        <span class="index-row__thumb"><x-img name="story-what-to-expect" sizes="64px"></x-img></span>
+        <span class="index-row__body"><span class="index-row__meta"><b>Guide</b><span>Dec 10, 2025</span></span><span class="index-row__name index-row__name--sm">What to <em>expect</em></span><span class="muted">What to expect when you book a photography session</span></span>
+        <span class="index-row__cta btn btn--ghost btn--sm">Read the story</span>
+      </a></li>
+    </ul>
+  </div>
+</section>

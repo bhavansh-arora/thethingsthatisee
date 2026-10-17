@@ -203,13 +203,13 @@
   function esc(s) { return String(s).replace(/[&<>"]/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]; }); }
   function renderMatch() {
     var m = buildMatch();
-    var html = '<p class="eyebrow">Recommended for you</p>' +
+    var html = '<span class="label label--dot">Recommended for you</span>' +
       '<p class="match-name">' + esc(m.name) + "</p>" +
       m.why.map(function (w) { return '<p class="match-why">' + esc(w) + "</p>"; }).join("") +
       '<ul class="match-lines">' + m.lines.map(function (l) {
         return '<li class="' + (l.suggest ? "is-suggest" : "") + '"><span>' + esc(l.label) + "</span><span>" + (l.suggest ? "+" : "") + T.money(l.price) + "</span></li>";
       }).join("") + "</ul>" +
-      '<div class="match-total"><span class="label" style="margin:0">Starting estimate</span><strong>' + T.money(m.total) + "</strong></div>";
+      '<div class="match-total"><span class="label">Starting estimate</span><strong>' + T.money(m.total) + "</strong></div>";
     document.getElementById("match").innerHTML = html;
   }
 
@@ -232,18 +232,18 @@
     var summary = [["Occasion", { wedding: "Wedding", engagement: "Engagement session", family: "Family session", senior: "Senior portraits" }[type]],
       ["Recommended", m.name], ["Starting estimate", T.money(m.total)], ["Reply to", get("email")]];
     reply.innerHTML =
-      '<p class="eyebrow">Enquiry received</p>' +
-      '<h2 class="h2" tabindex="-1">' + headline + "</h2>" +
+      '<span class="label label--dot label--live">Enquiry received</span>' +
+      '<h2 class="h-lg" tabindex="-1">' + headline + "</h2>" +
       "<p>" + sub + "</p>" +
       '<div class="reply-summary">' + summary.map(function (r) { return "<div><b>" + r[0] + ":</b> " + esc(r[1] || "") + "</div>"; }).join("") + "</div>" +
       '<ol class="steps">' +
-      '<li class="step"><span class="step-num">I</span><h3 class="h3">I read it myself</h3><p>Every enquiry comes straight to me, and I reply ' + esc(cfg.replyWindow) + ".</p></li>" +
-      '<li class="step"><span class="step-num">II</span><h3 class="h3">We talk it through</h3><p>A call or a coffee to hear your story, answer your questions, and shape the coverage around your day.</p></li>' +
-      '<li class="step"><span class="step-num">III</span><h3 class="h3">Your date is held</h3><p>Once you&rsquo;re happy with the plan, I reserve your date and we start preparing together.</p></li>' +
+      '<li class="step"><span class="step-num">I</span><h3 class="h-sm">I read it myself</h3><p>Every enquiry comes straight to me, and I reply ' + esc(cfg.replyWindow) + ".</p></li>" +
+      '<li class="step"><span class="step-num">II</span><h3 class="h-sm">We talk it through</h3><p>A call or a coffee to hear your story, answer your questions, and shape the coverage around your day.</p></li>' +
+      '<li class="step"><span class="step-num">III</span><h3 class="h-sm">Your date is held</h3><p>Once you&rsquo;re happy with the plan, I reserve your date and we start preparing together.</p></li>' +
       "</ol>" +
-      '<div class="btn-row">' +
-      (type === "wedding" ? '<a class="btn btn-light" href="guide.html">Read the Catholic wedding guide</a>' : '<a class="btn btn-light" href="portfolio.html">Browse the portfolio</a>') +
-      '<a class="btn btn-ghost-light btn" href="stories.html">Real stories</a></div>';
+      '<div class="row">' +
+      (type === "wedding" ? '<a class="btn btn--gold" href="guide.html">Read the Catholic wedding guide</a>' : '<a class="btn btn--gold" href="portfolio.html">Browse the portfolio</a>') +
+      '<a class="btn btn--ghost" href="stories.html">Real stories</a></div>';
   }
 
   form.addEventListener("click", function (e) {

@@ -8,7 +8,7 @@ Plain static HTML, CSS and JavaScript. No framework and no runtime dependencies,
 
 | Page | What it does |
 | --- | --- |
-| `index.html` | Home: hero with a live date check, intro, services, the faith section with the guide signup, gallery, testimonials, process, stories |
+| `index.html` | Home: hero slideshow, introduction, services bento with a live date check, recent stories, the sanctuary feature with the guide signup, process, testimonials, Instagram strip |
 | `weddings.html` | Approach, gallery, Catholic and Christian ceremonies, timeline, collections, FAQ |
 | `engagements.html`, `family.html`, `seniors.html` | Session pages with gallery, locations and packages |
 | `portfolio.html` | Filterable gallery with a full-screen lightbox (keyboard and swipe) |
@@ -27,32 +27,22 @@ python3 tools/build.py
 ```
 
 - `src/pages/*.html` holds the content of each page
-- `src/partials/` holds the shared head, header, footer and calls to action
+- `src/partials/` holds the shared head, header, footer, lightbox and icons
 - `src/images.json` lists every photo slot on the site
 - `assets/css/site.css` is the design system
 - `assets/js/config.js` holds **prices, booked dates and the form endpoint** in one place
 
-### Adding photos
+### Photos
 
-Every photo slot currently shows a labelled placeholder naming the intended shot. To fill a slot, add its URLs to `src/images.json` and rebuild:
-
-```json
-"hero-mass": { ..., "src": { "1000": "https://.../photo-1000.jpg", "1500": "https://.../photo-1500.jpg" } }
-```
-
-The build writes responsive `srcset`, width and height (no layout shift), lazy loading, and the lightbox's full-size link automatically.
+Every photo slot is listed in `src/images.json` with responsive WebP files in `assets/img/`. Use one in a page with `<x-img name="slot" sizes="..."></x-img>` (add `pos="50% 30%"` to set the crop, `eager` for above-the-fold images, `link cat="wedding"` to open it in the lightbox). `{{src slot 480}}` gives a single image URL for backgrounds. The build writes `srcset`, width and height (no layout shift) and lazy loading.
 
 ### Design and motion
 
-The look is "warm romantic film": cream and blush paper, espresso bands, film grain and drifting light leaks, Cormorant Garamond with Pinyon Script accents. Photographs appear as physical prints with white borders, tape and handwritten captions.
+The look is a modern dark studio: espresso black, ivory and champagne gold, Inter Tight with Instrument Serif italic accents and Geist Mono labels. The design system is in `assets/css/site.css`.
 
-Signature pieces: the home hero collage of prints that drop onto the page, the moving film strip, the arched church-window photo, a flickable stack of prints (drag, swipe, tap, buttons or arrow keys), testimonials as taped notes, the "how it works" thread that draws itself as you scroll, the "Save the date" invitation with a wax seal, and the estimate builder's receipt.
+Signature pieces: a counting preloader with the eye-and-cross mark (first visit only), a curtain wipe between pages, the full-frame hero slideshow with a rotating word, a statement whose words light up as you scroll with photos set inline, a bento grid with count-up numbers and a live date checker, a pinned horizontal scroll of real stories (desktop), the "In the sanctuary" feature frame, process cards that stack and dim, a scroll-speed marquee, a custom cursor with labels, hover photo previews on the story list and Sessions menu, magnetic buttons, and a giant footer wordmark whose letters rise in.
 
-Motion details: photographs develop from washed-out sepia into colour as they appear, script lines write themselves, accent words get a hand-drawn brush underline, hero prints float, follow the mouse in depth and can be picked up and dragged (desktop), prints tilt in 3D on hover, notes swing on their tape, the film strip speeds up with scrolling, a pen travels down the thread, and the invitation tips up as its wax seal stamps down.
-
-The Darkroom (`assets/js/darkroom.js`, home and portfolio) is a custom WebGL scene: photographs emerge from darkness and develop in a tray of liquid under a red safelight, the cursor or a finger sends ripples through the developer, and prints change with a liquid dissolve. It only renders while on screen, and visitors without WebGL or with reduced motion see a still photograph. The arched sanctuary window has light beams and drifting dust, page changes burn out to amber like the end of a film reel, and a warm glow follows the cursor on desktop.
-
-Scrolling is native, with no smooth-scroll library and no pinned sections. `assets/js/motion.js` (no dependencies) handles the reveals, word-by-word headlines, dropping prints, light parallax and counters with IntersectionObserver and CSS transitions. `assets/js/site.js` runs the flick stack, header, forms, filters and lightbox. Motion is progressive: content is only hidden for animation once `<html class="motion">` is set in the head, and reduced-motion visitors or failed script loads get the full static site.
+`assets/js/motion.js` drives the scroll choreography with GSAP and ScrollTrigger (`assets/vendor/`). Scrolling stays native. `assets/js/site.js` handles the header, menu, headline splitting, reveals, FAQ, forms, filters and lightbox. Visitors with reduced motion, or if a script fails to load, get the full static site.
 
 ### Forms
 
@@ -68,9 +58,9 @@ GitHub Pages: Settings, Pages, deploy from the `main` branch root. A `.nojekyll`
 
 ## To confirm with Jason before launch
 
-- **Photos:** use of his photography on the site (see above).
 - **Senior prices:** his Pricing page lists $400 / $700 / $1,000; his Senior page lists $250 / $400 / $750. This site uses the Pricing page figures.
 - **Engagement sessions:** his FAQ says they're included in every wedding collection, while his Pricing page lists them as a $750 add-on. This site treats them as an add-on and the FAQ wording was adjusted to match.
 - **Deluxe family session:** his site reads "Up to  hours" (the number is missing). This site says "Extended session".
-- **Drafted copy:** the About page's "Four trades" lines, the Catholic wedding guide, and the location blurbs were written for this site from his own FAQ and bio. They need his review.
+- **Drafted copy:** the headlines, the About page's chapters and "Four trades" lines, the Catholic wedding guide, and the location blurbs were written for this site from his own FAQ and bio. They need his review.
 - **About photos:** the family photo and the portrait are assumed to be Jason and his family.
+- **Stat captions:** "20 years behind the lens" and "six children at home" come from his bio; confirm he's happy with how they're phrased.

@@ -2,103 +2,75 @@
   "title": "Portfolio | The Things That I See Photography",
   "description": "Weddings, engagements, families and seniors across Denver and Colorado, photographed by Jason Smith.",
   "nav": "portfolio",
-  "scripts": ["assets/js/darkroom.js"],
   "og_image": "columns-kiss"
 } -->
-<section class="print-hero print-hero--compact">
-  <div class="leak leak--rose" aria-hidden="true"></div>
-  <div class="leak leak--amber" aria-hidden="true"></div>
-  <div class="container print-hero-grid">
-    <div class="print-hero-copy">
-      <p class="kicker">Portfolio</p>
-      <h1 class="h1">Every photo tells a <em>story.</em></h1>
-      <p class="lede">A selection from weddings, engagements, families and seniors. Tap any photo to see it full size.</p>
-    </div>
-    <div class="collage" aria-hidden="true">
-      <div class="collage-item" style="--x:18%;--y:2%;--w:54%;--z:2" data-speed=".05"><figure class="print drop tape" style="--r:-3deg;--ar:4/5" data-delay="0"><div class="frame"><x-img name="columns-kiss" sizes="(min-width: 960px) 26vw, 50vw" eager></x-img></div><figcaption>weddings</figcaption></figure></div>
-      <div class="collage-item" style="--x:0%;--y:46%;--w:40%;--z:3" data-speed=".12"><figure class="print drop tape" style="--r:-9deg;--ar:1/1" data-delay="160"><div class="frame"><x-img name="flatirons-laugh" sizes="(min-width: 960px) 26vw, 50vw" eager></x-img></div><figcaption>engagements</figcaption></figure></div>
-      <div class="collage-item" style="--x:60%;--y:40%;--w:40%;--z:4" data-speed=".16"><figure class="print drop tape" style="--r:7deg;--ar:4/5" data-delay="320"><div class="frame"><x-img name="meadow-dress" sizes="(min-width: 960px) 26vw, 50vw" eager></x-img></div><figcaption>seniors</figcaption></figure></div>
-    </div>
-  </div>
-</section>
-
-<section class="darkroom" data-darkroom aria-label="The darkroom: photographs developing in a tray">
-  <canvas class="darkroom-canvas" aria-hidden="true"></canvas>
-  <div class="darkroom-fallback"><x-img name="father-of-bride" sizes="100vw"></x-img></div>
-  <ul hidden><li data-darkroom-src="assets/img/father-of-bride-1600.webp" data-darkroom-src-sm="assets/img/father-of-bride-960.webp" data-caption="down the aisle"></li><li data-darkroom-src="assets/img/rain-kiss-1600.webp" data-darkroom-src-sm="assets/img/rain-kiss-960.webp" data-caption="rain on brick"></li><li data-darkroom-src="assets/img/autumn-family-1500.webp" data-darkroom-src-sm="assets/img/autumn-family-960.webp" data-caption="autumn family"></li><li data-darkroom-src="assets/img/leaves-portrait-1600.webp" data-darkroom-src-sm="assets/img/leaves-portrait-960.webp" data-caption="senior year"></li><li data-darkroom-src="assets/img/cowboy-couple-1600.webp" data-darkroom-src-sm="assets/img/cowboy-couple-960.webp" data-caption="the hillside"></li><li data-darkroom-src="assets/img/orthodox-ceremony-1600.webp" data-darkroom-src-sm="assets/img/orthodox-ceremony-960.webp" data-caption="beneath the icons"></li><li data-darkroom-src="assets/img/meadow-dress-1600.webp" data-darkroom-src-sm="assets/img/meadow-dress-960.webp" data-caption="the meadow"></li><li data-darkroom-src="assets/img/embrace-bw-1600.webp" data-darkroom-src-sm="assets/img/embrace-bw-960.webp" data-caption="close"></li></ul>
-  <div class="darkroom-ui">
-    <div class="container darkroom-top">
-      <div class="stack">
-        <p class="eyebrow">Developing now</p>
-        <h2 class="h2">Step into the <em>darkroom.</em></h2>
-      </div>
-      <p class="safelight"><i></i>Safelight on</p>
-    </div>
-    <div class="container darkroom-bottom">
-      <p class="darkroom-hint">Move through the developer. Tap for the next print.</p>
-      <div class="darkroom-meta">
-        <p class="darkroom-caption" data-darkroom-caption aria-live="polite"></p>
-        <p class="darkroom-count" data-darkroom-count></p>
-        <button class="darkroom-next" type="button" data-darkroom-next aria-label="Develop the next print"><svg width="18" height="18" viewBox="0 0 18 18" aria-hidden="true"><path d="M7 3l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.4"/></svg></button>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="section" data-gallery>
+<section class="page-hero">
   <div class="container">
-    <div class="filters" data-filters="portfolio-grid" role="toolbar" aria-label="Filter photos">
-      <button class="filter-btn" type="button" data-filter="all" aria-pressed="true">All</button>
-      <button class="filter-btn" type="button" data-filter="wedding" aria-pressed="false">Weddings</button>
-      <button class="filter-btn" type="button" data-filter="engagement" aria-pressed="false">Engagements</button>
-      <button class="filter-btn" type="button" data-filter="family" aria-pressed="false">Family</button>
-      <button class="filter-btn" type="button" data-filter="senior" aria-pressed="false">Seniors</button>
+    <div class="page-hero__meta reveal"><span class="label">(01) &mdash; Portfolio</span><span class="label">42 frames &middot; tap to open</span></div>
+    <div class="page-hero__grid">
+      <h1 class="h-xl page-hero__title" data-lines>Every photo<br>tells a <em>story.</em></h1>
+      <div class="page-hero__lede reveal" data-delay="2">
+        <p class="lede">A selection from weddings, engagements, families and seniors across Colorado. Filter by occasion, then open any photo full size.</p>
+        <div class="row"><a class="btn btn--gold" href="enquire.html">Check your date <span class="btn__icon">{{> arrow}}</span></a><a class="btn btn--ghost" href="stories.html">Real stories</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="section section--flush-top" data-gallery>
+  <div class="container">
+    <div class="filters-bar">
+      <div class="filters" data-filters="portfolio-grid" role="toolbar" aria-label="Filter photos">
+        <button class="chip filter-btn" type="button" data-filter="all" aria-pressed="true">All</button>
+        <button class="chip filter-btn" type="button" data-filter="wedding" aria-pressed="false">Weddings</button>
+        <button class="chip filter-btn" type="button" data-filter="engagement" aria-pressed="false">Engagements</button>
+        <button class="chip filter-btn" type="button" data-filter="family" aria-pressed="false">Family</button>
+        <button class="chip filter-btn" type="button" data-filter="senior" aria-pressed="false">Seniors</button>
+      </div>
     </div>
     <div class="masonry" id="portfolio-grid">
-      <x-img name="hero-mass" link cat="wedding" sizes="(min-width: 900px) 33vw, 50vw"></x-img>
-      <x-img name="flatirons-sunset" link cat="engagement" sizes="(min-width: 900px) 33vw, 50vw"></x-img>
-      <x-img name="autumn-family" link cat="family" sizes="(min-width: 900px) 33vw, 50vw"></x-img>
-      <x-img name="columns-kiss" link cat="wedding" sizes="(min-width: 900px) 33vw, 50vw"></x-img>
-      <x-img name="leaves-portrait" link cat="senior" sizes="(min-width: 900px) 33vw, 50vw"></x-img>
-      <x-img name="byzantine-dome" link cat="wedding" sizes="(min-width: 900px) 33vw, 50vw"></x-img>
-      <x-img name="embrace-bw" link cat="engagement" sizes="(min-width: 900px) 33vw, 50vw"></x-img>
-      <x-img name="father-of-bride" link cat="wedding" sizes="(min-width: 900px) 33vw, 50vw"></x-img>
-      <x-img name="snow-family" link cat="family" sizes="(min-width: 900px) 33vw, 50vw"></x-img>
-      <x-img name="pond-reflection" link cat="senior" sizes="(min-width: 900px) 33vw, 50vw"></x-img>
-      <x-img name="cowboy-couple" link cat="wedding" sizes="(min-width: 900px) 33vw, 50vw"></x-img>
-      <x-img name="rain-kiss" link cat="engagement" sizes="(min-width: 900px) 33vw, 50vw"></x-img>
-      <x-img name="orthodox-ceremony" link cat="wedding" sizes="(min-width: 900px) 33vw, 50vw"></x-img>
-      <x-img name="golden-sisters" link cat="family" sizes="(min-width: 900px) 33vw, 50vw"></x-img>
-      <x-img name="bagpiper" link cat="senior" sizes="(min-width: 900px) 33vw, 50vw"></x-img>
-      <x-img name="parlor-portrait" link cat="wedding" sizes="(min-width: 900px) 33vw, 50vw"></x-img>
-      <x-img name="flatirons-laugh" link cat="engagement" sizes="(min-width: 900px) 33vw, 50vw"></x-img>
-      <x-img name="sparkler-exit" link cat="wedding" sizes="(min-width: 900px) 33vw, 50vw"></x-img>
-      <x-img name="piano-family" link cat="family" sizes="(min-width: 900px) 33vw, 50vw"></x-img>
-      <x-img name="meadow-dress" link cat="senior" sizes="(min-width: 900px) 33vw, 50vw"></x-img>
-      <x-img name="organ-ceremony" link cat="wedding" sizes="(min-width: 900px) 33vw, 50vw"></x-img>
-      <x-img name="town-hall" link cat="engagement" sizes="(min-width: 900px) 33vw, 50vw"></x-img>
-      <x-img name="mansion-lawn" link cat="family" sizes="(min-width: 900px) 33vw, 50vw"></x-img>
-      <x-img name="conservatory" link cat="senior" sizes="(min-width: 900px) 33vw, 50vw"></x-img>
-      <x-img name="barn-doors" link cat="wedding" sizes="(min-width: 900px) 33vw, 50vw"></x-img>
-      <x-img name="stairs" link cat="engagement" sizes="(min-width: 900px) 33vw, 50vw"></x-img>
-      <x-img name="flower-siblings" link cat="family" sizes="(min-width: 900px) 33vw, 50vw"></x-img>
-      <x-img name="chesterton-grad" link cat="senior" sizes="(min-width: 900px) 33vw, 50vw"></x-img>
-      <x-img name="street-bw" link cat="wedding" sizes="(min-width: 900px) 33vw, 50vw"></x-img>
-      <x-img name="mural" link cat="engagement" sizes="(min-width: 900px) 33vw, 50vw"></x-img>
-      <x-img name="bw-family" link cat="family" sizes="(min-width: 900px) 33vw, 50vw"></x-img>
-      <x-img name="rock-portrait" link cat="senior" sizes="(min-width: 900px) 33vw, 50vw"></x-img>
-      <x-img name="hedge-portrait" link cat="wedding" sizes="(min-width: 900px) 33vw, 50vw"></x-img>
-      <x-img name="golden-hour" link cat="engagement" sizes="(min-width: 900px) 33vw, 50vw"></x-img>
-      <x-img name="bridge-family" link cat="family" sizes="(min-width: 900px) 33vw, 50vw"></x-img>
-      <x-img name="best-friends" link cat="senior" sizes="(min-width: 900px) 33vw, 50vw"></x-img>
-      <x-img name="streamer-exit" link cat="wedding" sizes="(min-width: 900px) 33vw, 50vw"></x-img>
-      <x-img name="path-dance" link cat="engagement" sizes="(min-width: 900px) 33vw, 50vw"></x-img>
-      <x-img name="grass-family" link cat="family" sizes="(min-width: 900px) 33vw, 50vw"></x-img>
-      <x-img name="sunflowers" link cat="senior" sizes="(min-width: 900px) 33vw, 50vw"></x-img>
-      <x-img name="wedding-party" link cat="wedding" sizes="(min-width: 900px) 33vw, 50vw"></x-img>
-      <x-img name="red-couch" link cat="engagement" sizes="(min-width: 900px) 33vw, 50vw"></x-img>
+      <x-img name="hero-mass" link cat="wedding" sizes="(min-width: 1300px) 25vw, (min-width: 760px) 33vw, 50vw"></x-img>
+      <x-img name="flatirons-sunset" link cat="engagement" sizes="(min-width: 1300px) 25vw, (min-width: 760px) 33vw, 50vw"></x-img>
+      <x-img name="autumn-family" link cat="family" sizes="(min-width: 1300px) 25vw, (min-width: 760px) 33vw, 50vw"></x-img>
+      <x-img name="columns-kiss" link cat="wedding" sizes="(min-width: 1300px) 25vw, (min-width: 760px) 33vw, 50vw"></x-img>
+      <x-img name="leaves-portrait" link cat="senior" sizes="(min-width: 1300px) 25vw, (min-width: 760px) 33vw, 50vw"></x-img>
+      <x-img name="byzantine-dome" link cat="wedding" sizes="(min-width: 1300px) 25vw, (min-width: 760px) 33vw, 50vw"></x-img>
+      <x-img name="embrace-bw" link cat="engagement" sizes="(min-width: 1300px) 25vw, (min-width: 760px) 33vw, 50vw"></x-img>
+      <x-img name="father-of-bride" link cat="wedding" sizes="(min-width: 1300px) 25vw, (min-width: 760px) 33vw, 50vw"></x-img>
+      <x-img name="snow-family" link cat="family" sizes="(min-width: 1300px) 25vw, (min-width: 760px) 33vw, 50vw"></x-img>
+      <x-img name="pond-reflection" link cat="senior" sizes="(min-width: 1300px) 25vw, (min-width: 760px) 33vw, 50vw"></x-img>
+      <x-img name="cowboy-couple" link cat="wedding" sizes="(min-width: 1300px) 25vw, (min-width: 760px) 33vw, 50vw"></x-img>
+      <x-img name="rain-kiss" link cat="engagement" sizes="(min-width: 1300px) 25vw, (min-width: 760px) 33vw, 50vw"></x-img>
+      <x-img name="orthodox-ceremony" link cat="wedding" sizes="(min-width: 1300px) 25vw, (min-width: 760px) 33vw, 50vw"></x-img>
+      <x-img name="golden-sisters" link cat="family" sizes="(min-width: 1300px) 25vw, (min-width: 760px) 33vw, 50vw"></x-img>
+      <x-img name="bagpiper" link cat="senior" sizes="(min-width: 1300px) 25vw, (min-width: 760px) 33vw, 50vw"></x-img>
+      <x-img name="parlor-portrait" link cat="wedding" sizes="(min-width: 1300px) 25vw, (min-width: 760px) 33vw, 50vw"></x-img>
+      <x-img name="flatirons-laugh" link cat="engagement" sizes="(min-width: 1300px) 25vw, (min-width: 760px) 33vw, 50vw"></x-img>
+      <x-img name="sparkler-exit" link cat="wedding" sizes="(min-width: 1300px) 25vw, (min-width: 760px) 33vw, 50vw"></x-img>
+      <x-img name="piano-family" link cat="family" sizes="(min-width: 1300px) 25vw, (min-width: 760px) 33vw, 50vw"></x-img>
+      <x-img name="meadow-dress" link cat="senior" sizes="(min-width: 1300px) 25vw, (min-width: 760px) 33vw, 50vw"></x-img>
+      <x-img name="organ-ceremony" link cat="wedding" sizes="(min-width: 1300px) 25vw, (min-width: 760px) 33vw, 50vw"></x-img>
+      <x-img name="town-hall" link cat="engagement" sizes="(min-width: 1300px) 25vw, (min-width: 760px) 33vw, 50vw"></x-img>
+      <x-img name="mansion-lawn" link cat="family" sizes="(min-width: 1300px) 25vw, (min-width: 760px) 33vw, 50vw"></x-img>
+      <x-img name="conservatory" link cat="senior" sizes="(min-width: 1300px) 25vw, (min-width: 760px) 33vw, 50vw"></x-img>
+      <x-img name="barn-doors" link cat="wedding" sizes="(min-width: 1300px) 25vw, (min-width: 760px) 33vw, 50vw"></x-img>
+      <x-img name="stairs" link cat="engagement" sizes="(min-width: 1300px) 25vw, (min-width: 760px) 33vw, 50vw"></x-img>
+      <x-img name="flower-siblings" link cat="family" sizes="(min-width: 1300px) 25vw, (min-width: 760px) 33vw, 50vw"></x-img>
+      <x-img name="chesterton-grad" link cat="senior" sizes="(min-width: 1300px) 25vw, (min-width: 760px) 33vw, 50vw"></x-img>
+      <x-img name="street-bw" link cat="wedding" sizes="(min-width: 1300px) 25vw, (min-width: 760px) 33vw, 50vw"></x-img>
+      <x-img name="mural" link cat="engagement" sizes="(min-width: 1300px) 25vw, (min-width: 760px) 33vw, 50vw"></x-img>
+      <x-img name="bw-family" link cat="family" sizes="(min-width: 1300px) 25vw, (min-width: 760px) 33vw, 50vw"></x-img>
+      <x-img name="rock-portrait" link cat="senior" sizes="(min-width: 1300px) 25vw, (min-width: 760px) 33vw, 50vw"></x-img>
+      <x-img name="hedge-portrait" link cat="wedding" sizes="(min-width: 1300px) 25vw, (min-width: 760px) 33vw, 50vw"></x-img>
+      <x-img name="golden-hour" link cat="engagement" sizes="(min-width: 1300px) 25vw, (min-width: 760px) 33vw, 50vw"></x-img>
+      <x-img name="bridge-family" link cat="family" sizes="(min-width: 1300px) 25vw, (min-width: 760px) 33vw, 50vw"></x-img>
+      <x-img name="best-friends" link cat="senior" sizes="(min-width: 1300px) 25vw, (min-width: 760px) 33vw, 50vw"></x-img>
+      <x-img name="streamer-exit" link cat="wedding" sizes="(min-width: 1300px) 25vw, (min-width: 760px) 33vw, 50vw"></x-img>
+      <x-img name="path-dance" link cat="engagement" sizes="(min-width: 1300px) 25vw, (min-width: 760px) 33vw, 50vw"></x-img>
+      <x-img name="grass-family" link cat="family" sizes="(min-width: 1300px) 25vw, (min-width: 760px) 33vw, 50vw"></x-img>
+      <x-img name="sunflowers" link cat="senior" sizes="(min-width: 1300px) 25vw, (min-width: 760px) 33vw, 50vw"></x-img>
+      <x-img name="wedding-party" link cat="wedding" sizes="(min-width: 1300px) 25vw, (min-width: 760px) 33vw, 50vw"></x-img>
+      <x-img name="red-couch" link cat="engagement" sizes="(min-width: 1300px) 25vw, (min-width: 760px) 33vw, 50vw"></x-img>
     </div>
   </div>
 </section>
-
-{{> cta}}
+<div class="marquee marquee--words" aria-hidden="true"><div class="marquee__track"><span>Weddings</span><span>Engagements</span><span>Families</span><span>Seniors</span><span>Film</span><span>Faith</span><span>Weddings</span><span>Engagements</span><span>Families</span><span>Seniors</span><span>Film</span><span>Faith</span></div></div>

@@ -34,34 +34,49 @@
   }
   window.TTIS = { formatDate: formatDate, isPast: isPast, isBooked: isBooked, money: money, validEmail: validEmail, submitForm: submitForm, $: $, $$: $$ };
 
-  // ---------- header ----------
-  var header = $("[data-header]");
-  var mobileCta = $("[data-mobile-cta]");
-  var lastY = 0;
+  var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  // ---------- header: scrolled / hide on scroll down, sticky mobile CTA ----------
+  var header = $(".site-header");
+  var sticky = $(".sticky-cta");
+  var lastY = window.scrollY, ticking = false;
   function onScroll() {
-    var y = window.scrollY || 0;
+    var y = window.scrollY;
     if (header) {
-      header.classList.toggle("is-scrolled", y > 8);
-      var menuOpen = document.body.classList.contains("menu-open");
-      if (Math.abs(y - lastY) > 6) header.classList.toggle("is-hidden", y > lastY && y > 320 && !menuOpen);
+      header.classList.toggle("is-scrolled", y > 24);
+      var hide = y > 480 && y > lastY + 4 && !document.body.classList.contains("menu-open");
+      if (hide) header.classList.add("is-hidden");
+      else if (y < lastY - 4 || y < 480) header.classList.remove("is-hidden");
+    }
+    if (sticky) {
+      var nearBottom = window.innerHeight + y > document.body.scrollHeight - 520;
+      sticky.classList.toggle("is-visible", y > window.innerHeight * 0.7 && !nearBottom);
     }
     lastY = y;
-    if (mobileCta) mobileCta.classList.toggle("is-visible", y > Math.min(480, window.innerHeight * 0.6));
+    ticking = false;
   }
-  window.addEventListener("scroll", onScroll, { passive: true });
+  window.addEventListener("scroll", function () {
+    if (!ticking) { window.requestAnimationFrame(onScroll); ticking = true; }
+  }, { passive: true });
   onScroll();
 
+  // ---------- mobile menu ----------
   var toggle = $(".menu-toggle"), menu = $("#mobile-menu");
   function setMenu(open) {
     if (!toggle || !menu) return;
+    document.body.classList.toggle("menu-open", open);
     toggle.setAttribute("aria-expanded", String(open));
     toggle.setAttribute("aria-label", open ? "Close menu" : "Open menu");
-    menu.hidden = !open;
-    document.body.classList.toggle("menu-open", open);
+    menu.setAttribute("aria-hidden", String(!open));
+    if (open) { header.classList.remove("is-hidden"); var first = $("a", menu); if (first) setTimeout(function () { first.focus(); }, 300); }
   }
-  if (toggle) toggle.addEventListener("click", function () { setMenu(toggle.getAttribute("aria-expanded") !== "true"); });
-  if (menu) $$("a", menu).forEach(function (a) { a.addEventListener("click", function () { setMenu(false); }); });
+  if (toggle && menu) {
+    toggle.addEventListener("click", function () { setMenu(!document.body.classList.contains("menu-open")); });
+    menu.addEventListener("click", function (e) { if (e.target.closest("a")) setMenu(false); });
+    window.addEventListener("resize", function () { if (window.innerWidth >= 1140) setMenu(false); });
+  }
 
+  // ---------- sessions dropdown ----------
   var subBtn = $(".nav-menu-btn");
   if (subBtn) {
     var li = subBtn.parentElement;
@@ -76,9 +91,88 @@
   }
   document.addEventListener("keydown", function (e) {
     if (e.key !== "Escape") return;
-    setMenu(false);
+    if (document.body.classList.contains("menu-open")) { setMenu(false); toggle.focus(); }
     if (subBtn) { subBtn.parentElement.classList.remove("is-open"); subBtn.setAttribute("aria-expanded", "false"); }
   });
+
+  // ---------- split headlines into masked words ----------
+  // Each <br>-separated line becomes a row; every word rises in on reveal.
+  var wordIndex = 0;
+  function splitWords(node) {
+    Array.prototype.slice.call(node.childNodes).forEach(function (child) {
+      if (child.nodeType === 3) {
+        var frag = document.createDocumentFragment();
+        child.textContent.split(/(\s+)/).forEach(function (part) {
+          if (!part) return;
+          if (/^\s+$/.test(part)) { frag.appendChild(document.createTextNode(" ")); return; }
+          var w = document.createElement("span");
+          w.className = "word";
+          var inner = document.createElement("span");
+          inner.textContent = part;
+          inner.style.setProperty("--i", wordIndex++);
+          w.appendChild(inner);
+          frag.appendChild(w);
+        });
+        child.parentNode.replaceChild(frag, child);
+      } else if (child.nodeType === 1 && !child.hasAttribute("data-nosplit")) {
+        splitWords(child);
+      } else if (child.nodeType === 1) {
+        child.classList.add("word-block");
+        child.style.setProperty("--i", wordIndex++);
+      }
+    });
+  }
+  $$("[data-lines]").forEach(function (el) {
+    wordIndex = 0;
+    var hide = el.hasAttribute("aria-label") ? ' aria-hidden="true"' : "";
+    var parts = el.innerHTML.split(/<br\s*\/?>/i);
+    el.innerHTML = parts.map(function (p) { return '<span class="line"' + hide + ">" + p.trim() + "</span>"; }).join("");
+    $$(".line", el).forEach(splitWords);
+    el.classList.add("lines");
+  });
+
+  // ---------- reveal on scroll ----------
+  var revealEls = $$(".reveal, .reveal-img, .lines");
+  if ("IntersectionObserver" in window && !reduceMotion) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) {
+        if (en.isIntersecting) { en.target.classList.add("is-in"); io.unobserve(en.target); }
+      });
+    }, { rootMargin: "0px 0px -8% 0px", threshold: 0.08 });
+    revealEls.forEach(function (el) { io.observe(el); });
+  } else {
+    revealEls.forEach(function (el) { el.classList.add("is-in"); });
+  }
+
+  // ---------- FAQ: smooth open/close ----------
+  $$(".faq details").forEach(function (d) {
+    var summary = $("summary", d), body = $(".faq__body", d);
+    if (!summary || !body) return;
+    summary.addEventListener("click", function (e) {
+      if (reduceMotion) return;
+      e.preventDefault();
+      if (d.open) {
+        body.style.height = body.scrollHeight + "px";
+        requestAnimationFrame(function () {
+          body.style.transition = "height .45s cubic-bezier(.16,1,.3,1)";
+          body.style.height = "0px";
+        });
+        body.addEventListener("transitionend", function te() { d.open = false; body.style.cssText = ""; body.removeEventListener("transitionend", te); });
+      } else {
+        d.open = true;
+        var h = body.scrollHeight;
+        body.style.height = "0px";
+        requestAnimationFrame(function () {
+          body.style.transition = "height .55s cubic-bezier(.16,1,.3,1)";
+          body.style.height = h + "px";
+        });
+        body.addEventListener("transitionend", function te() { body.style.cssText = ""; body.removeEventListener("transitionend", te); });
+      }
+    });
+  });
+
+  // ---------- year ----------
+  $$("[data-year]").forEach(function (el) { el.textContent = new Date().getFullYear(); });
 
   // ---------- date checks ----------
   $$("[data-date-check]").forEach(function (form) {
@@ -148,6 +242,7 @@
       b.addEventListener("click", function () {
         buttons.forEach(function (x) { x.setAttribute("aria-pressed", String(x === b)); });
         items.forEach(function (i) { i.hidden = !(cat === "all" || i.getAttribute("data-cat") === cat); });
+        document.dispatchEvent(new CustomEvent("ttis:filter", { detail: { target: target } }));
       });
     });
   });
@@ -164,82 +259,6 @@
     });
   });
 
-
-  // ---------- flick stack (drag, swipe, buttons, arrow keys) ----------
-  $$("[data-flick]").forEach(function (flick) {
-    var deck = $(".flick-deck", flick);
-    var cards = $$(".flick-card", deck);
-    var countEl = $("[data-flick-count]", flick);
-    var n = cards.length, order = cards.slice(), shown = 1, busy = false;
-    var tilt = [-4, 3, -2, 5, -5, 2, -3, 4, -1, 3, -4, 2];
-    function layout() {
-      order.forEach(function (c, depth) {
-        c.style.zIndex = String(n - depth);
-        var r = depth === 0 ? -1.5 : tilt[cards.indexOf(c) % tilt.length];
-        var off = Math.min(depth, 4);
-        c.style.transform = "translate(" + (off * 3) + "px," + (off * -4) + "px) rotate(" + r + "deg)";
-        c.style.opacity = depth > 5 ? "0" : "1";
-        c.setAttribute("aria-hidden", depth === 0 ? "false" : "true");
-      });
-      if (countEl) countEl.innerHTML = String(shown).padStart(2, "0") + " <span>/ " + String(n).padStart(2, "0") + "</span>";
-    }
-    function next(dir) {
-      if (busy) return;
-      busy = true;
-      var top = order[0];
-      top.style.transform = "translate(" + (dir * 120) + "%, -6%) rotate(" + (dir * 24) + "deg)";
-      top.style.opacity = "0";
-      setTimeout(function () {
-        order.push(order.shift());
-        shown = shown % n + 1;
-        top.style.transition = "none";
-        layout();
-        top.style.opacity = "0";
-        void top.offsetWidth;
-        top.style.transition = "";
-        top.style.opacity = order.indexOf(top) > 5 ? "0" : "1";
-        busy = false;
-      }, 380);
-    }
-    function prev() {
-      if (busy) return;
-      order.unshift(order.pop());
-      shown = (shown - 2 + n) % n + 1;
-      layout();
-    }
-    var startX = 0, startY = 0, dx = 0, dragging = false, pid = null;
-    deck.addEventListener("pointerdown", function (e) {
-      var top = order[0];
-      if (!top.contains(e.target) || busy) return;
-      dragging = true; pid = e.pointerId; startX = e.clientX; startY = e.clientY; dx = 0;
-      top.classList.add("is-dragging");
-      deck.setPointerCapture(pid);
-    });
-    deck.addEventListener("pointermove", function (e) {
-      if (!dragging || e.pointerId !== pid) return;
-      dx = e.clientX - startX;
-      var dy = (e.clientY - startY) * 0.3;
-      order[0].style.transform = "translate(" + dx + "px," + dy + "px) rotate(" + (-1.5 + dx / 14) + "deg)";
-    });
-    function end() {
-      if (!dragging) return;
-      dragging = false;
-      var top = order[0];
-      top.classList.remove("is-dragging");
-      if (Math.abs(dx) > 90) next(dx > 0 ? 1 : -1);
-      else { layout(); if (Math.abs(dx) < 6) next(1); }
-    }
-    deck.addEventListener("pointerup", end);
-    deck.addEventListener("pointercancel", function () { dragging = false; order[0].classList.remove("is-dragging"); layout(); });
-    var nb = $("[data-flick-next]", flick), pb = $("[data-flick-prev]", flick);
-    if (nb) nb.addEventListener("click", function () { next(1); });
-    if (pb) pb.addEventListener("click", prev);
-    flick.addEventListener("keydown", function (e) {
-      if (e.key === "ArrowRight") { e.preventDefault(); next(1); }
-      if (e.key === "ArrowLeft") { e.preventDefault(); prev(); }
-    });
-    layout();
-  });
 
   // ---------- lightbox ----------
   var dlg = $("[data-lightbox]");
@@ -272,9 +291,9 @@
       idx = Math.max(0, list.indexOf(a));
       render();
       dlg.showModal();
-      document.body.classList.add("menu-open");
+      document.body.classList.add("lb-open");
     });
-    dlg.addEventListener("close", function () { document.body.classList.remove("menu-open"); stage.innerHTML = ""; });
+    dlg.addEventListener("close", function () { document.body.classList.remove("lb-open"); stage.innerHTML = ""; });
     $("[data-lightbox-close]", dlg).addEventListener("click", function () { dlg.close(); });
     $("[data-lightbox-prev]", dlg).addEventListener("click", function () { go(-1); });
     $("[data-lightbox-next]", dlg).addEventListener("click", function () { go(1); });

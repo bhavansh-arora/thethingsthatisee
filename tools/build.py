@@ -21,6 +21,7 @@ META_RE = re.compile(r"\A<!--meta\s*(\{.*?\})\s*-->\s*", re.S)
 XIMG_RE = re.compile(r"<x-img\b([^>]*)>(?:</x-img>)?")
 ATTR_RE = re.compile(r'([\w-]+)(?:="([^"]*)")?')
 PARTIAL_RE = re.compile(r"\{\{>\s*([\w-]+)\s*\}\}")
+SRC_RE = re.compile(r"\{\{src\s+([\w-]+)(?:\s+(\d+))?\s*\}\}")
 
 
 def esc(s):
@@ -37,6 +38,9 @@ def render_img(attrs):
     sizes = attrs.get("sizes", "100vw")
     eager = "eager" in attrs
     style = f'--tone:{img["tone"]};--ratio:{img["w"]}/{img["h"]}'
+    pos = attrs.get("pos") or img.get("pos")
+    if pos:
+        style += f";object-position:{pos}"
     src = img.get("src") or {}
     if src:
         widths = sorted(int(w) for w in src)
@@ -56,6 +60,18 @@ def render_img(attrs):
         tag = (f'<a class="g-link" href="{esc(full) if full else "#"}" data-full="{esc(full)}" '
                f'data-caption="{esc(caption)}" data-cat="{esc(cat)}" data-name="{esc(name)}">{tag}</a>')
     return tag
+
+
+def image_url(name, width=960):
+    src = IMAGES[name].get("src") or {}
+    if not src:
+        return ""
+    w = min((int(k) for k in src), key=lambda k: abs(k - width))
+    return src[str(w)]
+
+
+def expand_srcs(text):
+    return SRC_RE.sub(lambda m: image_url(m.group(1), int(m.group(2) or 960)), text)
 
 
 def expand_images(text):
@@ -105,7 +121,8 @@ def build_page(path):
     nav = meta.get("nav")
     if nav:
         page = page.replace(f'data-nav="{nav}"', f'data-nav="{nav}" aria-current="page"')
-    page = expand_images(page)
+    page = page.replace("{{nav}}", nav or "")
+    page = expand_images(expand_srcs(page))
     (ROOT / out_name).write_text(page)
     return out_name, canonical, meta.get("sitemap", True)
 
