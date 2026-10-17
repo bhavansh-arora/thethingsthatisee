@@ -1,76 +1,879 @@
 {
   "_readme": "Each slot is one photo on the site. Fill `src` with {\"<width>\": \"<url>\"} pairs (e.g. Pixieset's 500/1000/1500/2500 variants) and run `python3 tools/build.py`. Slots with an empty src render a labelled placeholder describing the intended shot.",
-  "hero-mass":          {"w": 1500, "h": 2250, "tone": "#b8955e", "alt": "A bride's veil trailing down the aisle toward the altar during a nuptial Mass", "shot": "Veil leading to the altar during Mass", "src": {}},
-  "elevation":          {"w": 2500, "h": 2500, "tone": "#c4a26c", "alt": "The priest elevates the chalice as the couple kneels at the altar", "shot": "Elevation at the altar, couple kneeling", "src": {}},
-  "cathedral-aisle":    {"w": 2500, "h": 1668, "tone": "#8a5a2e", "alt": "A wide view down the aisle of a gilded cathedral during a wedding", "shot": "Wide cathedral aisle, gold light", "src": {}},
-  "byzantine-dome":     {"w": 2500, "h": 1667, "tone": "#3f5274", "alt": "Painted Byzantine dome of a church above a wedding ceremony", "shot": "Painted church dome, looking up", "src": {}},
-  "columns-kiss":       {"w": 2500, "h": 2500, "tone": "#ddd2bf", "alt": "A couple kissing between tall white columns", "shot": "Kiss between white columns", "src": {}},
-  "father-of-bride":    {"w": 2500, "h": 1668, "tone": "#9c6a3c", "alt": "A father walks his daughter down a warm-lit church aisle", "shot": "Father walking the bride down the aisle", "src": {}},
-  "orthodox-ceremony":  {"w": 2500, "h": 1667, "tone": "#7e5a44", "alt": "A wedding ceremony beneath painted icons in an Orthodox church", "shot": "Ceremony beneath painted icons", "src": {}},
-  "organ-ceremony":     {"w": 2500, "h": 1667, "tone": "#7a4a26", "alt": "A ceremony seen past the pipes of a church organ", "shot": "Ceremony framed by organ pipes", "src": {}},
-  "wedding-party":      {"w": 2500, "h": 1406, "tone": "#6f7d58", "alt": "A wedding party in deep red dresses on a green lawn", "shot": "Wedding party on the lawn", "src": {}},
-  "street-bw":          {"w": 2500, "h": 1406, "tone": "#8d8b87", "alt": "Black and white photo of a couple crossing a city street", "shot": "Couple crossing a city street, B&W", "src": {}},
-  "cowboy-couple":      {"w": 2500, "h": 2500, "tone": "#7d8a6e", "alt": "A groom in a cowboy hat embraces his bride on a green hillside", "shot": "Cowboy hat couple on a hillside", "src": {}},
-  "streamer-exit":      {"w": 2500, "h": 1406, "tone": "#8a5b4a", "alt": "Guests throw streamers as the newlyweds make their exit", "shot": "Streamer exit", "src": {}},
-  "capitol-columns":    {"w": 2500, "h": 1667, "tone": "#cfc7ba", "alt": "A small couple on the steps of a grand columned building", "shot": "Couple small against grand columns", "src": {}},
-  "pavilion":           {"w": 2500, "h": 1667, "tone": "#8c8170", "alt": "An outdoor pavilion ceremony with mountains beyond", "shot": "Outdoor pavilion ceremony", "src": {}},
-  "barn-doors":         {"w": 2500, "h": 1671, "tone": "#6b5743", "alt": "A couple kissing framed by an old timber barn", "shot": "Kiss framed by a timber barn", "src": {}},
-  "parlor-portrait":    {"w": 2500, "h": 3750, "tone": "#a99a80", "alt": "A bride standing beside her seated groom in a vintage parlour", "shot": "Vintage parlour portrait", "src": {}},
-  "hedge-portrait":     {"w": 2500, "h": 1667, "tone": "#3c4a37", "alt": "A bride and groom facing each other in front of a dark green hedge", "shot": "Bride and groom against a green hedge", "src": {}},
-  "sparkler-exit":      {"w": 2500, "h": 1670, "tone": "#5a3f2c", "alt": "Newlyweds walk through a tunnel of sparklers at night", "shot": "Sparkler exit at night", "src": {}},
-  "reception-dance":    {"w": 2500, "h": 1667, "tone": "#7b6650", "alt": "Guests dancing at a wedding reception", "shot": "Reception dance floor", "src": {}},
-  "ring-box":           {"w": 1500, "h": 1000, "tone": "#5d4636", "alt": "Wedding rings in a wooden box beside a white rose", "shot": "Rings, wooden box, white rose", "src": {}},
-  "church-family":      {"w": 1500, "h": 844,  "tone": "#b98f72", "alt": "Bride and groom with their families inside a church", "shot": "Families gathered in the church", "src": {}},
-  "mountain-family":    {"w": 1500, "h": 1014, "tone": "#8ea0a8", "alt": "A wedding family portrait beside a mountain lake", "shot": "Family portrait by a mountain lake", "src": {}},
-  "flatirons-sunset":   {"w": 1500, "h": 1001, "tone": "#b08868", "alt": "An engaged couple touching foreheads at sunset in front of the Flatirons", "shot": "Foreheads together, Flatirons sunset", "src": {}},
-  "flatirons-laugh":    {"w": 2500, "h": 1669, "tone": "#a99278", "alt": "An engaged couple laughing in a meadow below the Flatirons", "shot": "Laughing in a meadow, Flatirons", "src": {}},
-  "golden-hour":        {"w": 1000, "h": 668,  "tone": "#8b8a52", "alt": "A woman cups her fiancé's face in golden evening light", "shot": "Golden hour, hands on his face", "src": {}},
-  "flatirons-dance":    {"w": 1500, "h": 1001, "tone": "#a07e60", "alt": "A couple dancing at sunset with mountains behind them", "shot": "Sunset dance, mountains behind", "src": {}},
-  "embrace-bw":         {"w": 2500, "h": 3750, "tone": "#7f7d79", "alt": "Black and white close-up of an engaged couple embracing", "shot": "Close embrace, B&W", "src": {}},
-  "denim-embrace":      {"w": 2500, "h": 3750, "tone": "#6f7f84", "alt": "An engaged couple in denim holding each other close", "shot": "Denim embrace, ring visible", "src": {}},
-  "town-hall":          {"w": 2500, "h": 1692, "tone": "#c3bbb0", "alt": "A couple walking beneath the arches of a historic town hall", "shot": "Town hall arches", "src": {}},
-  "rain-kiss":          {"w": 2500, "h": 2500, "tone": "#5f5a55", "alt": "A couple kissing on a rainy brick street", "shot": "Kiss on a rainy brick street", "src": {}},
-  "mural":              {"w": 1000, "h": 1000, "tone": "#7a5a3a", "alt": "A couple standing in front of a glowing illustrated mural", "shot": "Illustrated mural backdrop", "src": {}},
-  "red-couch":          {"w": 1000, "h": 668,  "tone": "#6c5a3e", "alt": "An engaged couple on a red velvet couch outdoors", "shot": "Red velvet couch in the trees", "src": {}},
-  "stairs":             {"w": 2500, "h": 3750, "tone": "#706c64", "alt": "A couple sitting together on an iron staircase", "shot": "Iron staircase", "src": {}},
-  "flower-window":      {"w": 2500, "h": 1667, "tone": "#a4a29a", "alt": "A couple framed in a flower-lined window", "shot": "Flower-lined window", "src": {}},
-  "picket-fence":       {"w": 2500, "h": 1667, "tone": "#b3ae9f", "alt": "A couple by a white picket fence and pink flowers", "shot": "White picket fence", "src": {}},
-  "path-dance":         {"w": 2500, "h": 3750, "tone": "#6f7c5c", "alt": "A couple dancing on a garden path", "shot": "Dancing on a garden path", "src": {}},
-  "alley":              {"w": 1000, "h": 1500, "tone": "#77746f", "alt": "A couple walking down a wet city alley", "shot": "Wet city alley", "src": {}},
-  "snow-family":        {"w": 2500, "h": 1669, "tone": "#5c4a3f", "alt": "A large family in a snowy forest", "shot": "Family in the snow", "src": {}},
-  "autumn-family":      {"w": 1500, "h": 1000, "tone": "#b3803a", "alt": "A family under bright autumn trees", "shot": "Autumn family portrait", "src": {}},
-  "golden-sisters":     {"w": 1500, "h": 1500, "tone": "#b07a3c", "alt": "A mother and two daughters hugging in golden light", "shot": "Mother and daughters, golden light", "src": {}},
-  "grass-family":       {"w": 1500, "h": 1000, "tone": "#8c8f68", "alt": "A family relaxing together in tall grass", "shot": "Family in tall grass", "src": {}},
-  "flower-siblings":    {"w": 1500, "h": 1000, "tone": "#6a7a3c", "alt": "Siblings laughing among yellow flowers", "shot": "Siblings in yellow flowers", "src": {}},
-  "mansion-lawn":       {"w": 1500, "h": 1000, "tone": "#5f7a45", "alt": "A family walking across a mansion lawn with their dog", "shot": "Family on a mansion lawn", "src": {}},
-  "piano-family":       {"w": 1500, "h": 960,  "tone": "#7c6b54", "alt": "A family gathered around a piano at home", "shot": "Family around the piano", "src": {}},
-  "bridge-family":      {"w": 2500, "h": 1667, "tone": "#9a7a4a", "alt": "A family on a wooden bridge in autumn", "shot": "Family on an autumn bridge", "src": {}},
-  "bw-family":          {"w": 2500, "h": 1667, "tone": "#8a8884", "alt": "Black and white family portrait in a park", "shot": "Family portrait, B&W", "src": {}},
-  "leaves-portrait":    {"w": 2500, "h": 1667, "tone": "#3d4d35", "alt": "A senior portrait framed by dark green leaves", "shot": "Senior framed by leaves", "src": {}},
-  "pond-reflection":    {"w": 2500, "h": 3750, "tone": "#4a5244", "alt": "A senior in a white dress reflected in a garden pond", "shot": "Pond reflection, white dress", "src": {}},
-  "meadow-dress":       {"w": 2500, "h": 3750, "tone": "#9a9a74", "alt": "A senior in a white dress in a flowering meadow", "shot": "White dress in a meadow", "src": {}},
-  "garden-path":        {"w": 1500, "h": 1000, "tone": "#6e7a5a", "alt": "A senior walking a brick path at the Denver Botanic Gardens", "shot": "Botanic Gardens path", "src": {}},
-  "leaf-wave":          {"w": 1500, "h": 1500, "tone": "#8a9a74", "alt": "A senior smiling beneath a leafy branch", "shot": "Smile beneath a branch", "src": {}},
-  "conservatory":       {"w": 1500, "h": 1500, "tone": "#3e4a3a", "alt": "A senior among tropical plants in a conservatory", "shot": "Tropical conservatory", "src": {}},
-  "rock-portrait":      {"w": 2500, "h": 3750, "tone": "#8a6a4e", "alt": "A senior portrait against warm stone", "shot": "Portrait against warm stone", "src": {}},
-  "bagpiper":           {"w": 2500, "h": 1667, "tone": "#8f8a80", "alt": "A senior playing the bagpipes outside a stone building", "shot": "Bagpiper outside a stone hall", "src": {}},
-  "chesterton-grad":    {"w": 2500, "h": 1667, "tone": "#b39a6a", "alt": "A graduate receiving her diploma in a chapel", "shot": "Chesterton Academy graduation", "src": {}},
-  "best-friends":       {"w": 2500, "h": 1667, "tone": "#5b6a4c", "alt": "Two seniors laughing with their arms around each other", "shot": "Best friends laughing", "src": {}},
-  "sunflowers":         {"w": 1500, "h": 1500, "tone": "#5d6a3a", "alt": "A senior in a white dress beside sunflowers", "shot": "Sunflower garden", "src": {}},
-  "garden-bench":       {"w": 2500, "h": 1667, "tone": "#4c5a40", "alt": "A senior seated on a stone garden bench", "shot": "Stone garden bench", "src": {}},
-  "jason-portrait":     {"w": 1500, "h": 1000, "tone": "#8a8884", "alt": "Jason Smith, photographer", "shot": "Portrait of Jason", "src": {}},
-  "cafe-family":        {"w": 1500, "h": 1001, "tone": "#5a4a3c", "alt": "A family of eight gathered at a café", "shot": "Jason's family (confirm with Jason)", "src": {}},
-  "behind-the-camera":  {"w": 2500, "h": 1667, "tone": "#c9c2b6", "alt": "Two filmmakers with cameras in a bright hotel lobby", "shot": "Film team behind the camera", "src": {}},
-  "story-timeline":        {"w": 1500, "h": 844,  "tone": "#8d8b87", "alt": "Black and white photo of newlyweds crossing a street", "shot": "Story cover: timeline guide", "src": {}},
-  "story-getting-ready":   {"w": 1500, "h": 1000, "tone": "#d9d4cc", "alt": "A father helps his daughter with her necklace on the wedding morning", "shot": "Story cover: getting ready", "src": {}},
-  "story-bridal-show":     {"w": 1500, "h": 1000, "tone": "#3a4535", "alt": "A bride and groom standing apart in front of a green hedge", "shot": "Story cover: bridal show guide", "src": {}},
-  "story-red-rocks":       {"w": 1500, "h": 1000, "tone": "#a4583a", "alt": "A couple walking through a red rock tunnel at Red Rocks", "shot": "Story cover: Red Rocks", "src": {}},
-  "story-st-francis":      {"w": 1500, "h": 1000, "tone": "#b8a690", "alt": "Newlyweds recessing down the aisle of St. Francis of Assisi", "shot": "Story cover: St. Francis of Assisi", "src": {}},
-  "story-what-to-expect":  {"w": 1500, "h": 1000, "tone": "#7d6c64", "alt": "A couple seated in a pew beneath stained glass", "shot": "Story cover: what to expect", "src": {}},
-  "story-kelly-jason":     {"w": 1500, "h": 1000, "tone": "#8a8274", "alt": "A winter wedding party outside St. Mary's in Littleton", "shot": "Story cover: Kelly & Jason", "src": {}},
-  "story-cheesman":        {"w": 1500, "h": 1000, "tone": "#d6c7ae", "alt": "A couple embracing in the Cheesman Park pavilion", "shot": "Story cover: Cheesman Park", "src": {}},
-  "story-highlands-ranch": {"w": 1500, "h": 1000, "tone": "#9c8a72", "alt": "An engaged couple sitting on the lawn at Highlands Ranch Mansion", "shot": "Story cover: Highlands Ranch Mansion", "src": {}},
-  "story-holy-ghost":      {"w": 1500, "h": 1000, "tone": "#d8d2c4", "alt": "Newlyweds on the steps of Holy Ghost Catholic Church, Denver", "shot": "Story cover: Holy Ghost Church", "src": {}},
-  "story-nativity":        {"w": 1500, "h": 844,  "tone": "#7d8a62", "alt": "A wedding party on the lawn at Nativity of Our Lord", "shot": "Story cover: Nativity of Our Lord", "src": {}},
-  "story-pacific":         {"w": 1500, "h": 1500, "tone": "#4e5a44", "alt": "A father walks his daughter down a garden path on her wedding day", "shot": "Story cover: across the Pacific", "src": {}}
+  "hero-mass": {
+    "w": 1500,
+    "h": 2250,
+    "tone": "#b8a590",
+    "alt": "A bride's veil trailing down the aisle toward the altar during a nuptial Mass",
+    "shot": "Veil leading to the altar during Mass",
+    "src": {
+      "480": "assets/img/hero-mass-480.webp",
+      "960": "assets/img/hero-mass-960.webp",
+      "1500": "assets/img/hero-mass-1500.webp"
+    }
+  },
+  "elevation": {
+    "w": 2500,
+    "h": 2500,
+    "tone": "#baa285",
+    "alt": "The priest elevates the chalice as the couple kneels at the altar",
+    "shot": "Elevation at the altar, couple kneeling",
+    "src": {
+      "480": "assets/img/elevation-480.webp",
+      "960": "assets/img/elevation-960.webp",
+      "1600": "assets/img/elevation-1600.webp"
+    }
+  },
+  "cathedral-aisle": {
+    "w": 2500,
+    "h": 1668,
+    "tone": "#6d4625",
+    "alt": "A wide view down the aisle of a gilded cathedral during a wedding",
+    "shot": "Wide cathedral aisle, gold light",
+    "src": {
+      "480": "assets/img/cathedral-aisle-480.webp",
+      "960": "assets/img/cathedral-aisle-960.webp",
+      "1600": "assets/img/cathedral-aisle-1600.webp"
+    }
+  },
+  "byzantine-dome": {
+    "w": 2500,
+    "h": 1667,
+    "tone": "#84796b",
+    "alt": "Painted Byzantine dome of a church above a wedding ceremony",
+    "shot": "Painted church dome, looking up",
+    "src": {
+      "480": "assets/img/byzantine-dome-480.webp",
+      "960": "assets/img/byzantine-dome-960.webp",
+      "1600": "assets/img/byzantine-dome-1600.webp"
+    }
+  },
+  "columns-kiss": {
+    "w": 2500,
+    "h": 2500,
+    "tone": "#c0b49e",
+    "alt": "A couple kissing between tall white columns",
+    "shot": "Kiss between white columns",
+    "src": {
+      "480": "assets/img/columns-kiss-480.webp",
+      "960": "assets/img/columns-kiss-960.webp",
+      "1600": "assets/img/columns-kiss-1600.webp"
+    }
+  },
+  "father-of-bride": {
+    "w": 2500,
+    "h": 1668,
+    "tone": "#986e49",
+    "alt": "A father walks his daughter down a warm-lit church aisle",
+    "shot": "Father walking the bride down the aisle",
+    "src": {
+      "480": "assets/img/father-of-bride-480.webp",
+      "960": "assets/img/father-of-bride-960.webp",
+      "1600": "assets/img/father-of-bride-1600.webp"
+    }
+  },
+  "orthodox-ceremony": {
+    "w": 2500,
+    "h": 1667,
+    "tone": "#80766e",
+    "alt": "A wedding ceremony beneath painted icons in an Orthodox church",
+    "shot": "Ceremony beneath painted icons",
+    "src": {
+      "480": "assets/img/orthodox-ceremony-480.webp",
+      "960": "assets/img/orthodox-ceremony-960.webp",
+      "1600": "assets/img/orthodox-ceremony-1600.webp"
+    }
+  },
+  "organ-ceremony": {
+    "w": 2500,
+    "h": 1667,
+    "tone": "#7b4426",
+    "alt": "A ceremony seen past the pipes of a church organ",
+    "shot": "Ceremony framed by organ pipes",
+    "src": {
+      "480": "assets/img/organ-ceremony-480.webp",
+      "960": "assets/img/organ-ceremony-960.webp",
+      "1600": "assets/img/organ-ceremony-1600.webp"
+    }
+  },
+  "wedding-party": {
+    "w": 2500,
+    "h": 1406,
+    "tone": "#979785",
+    "alt": "A wedding party in deep red dresses on a green lawn",
+    "shot": "Wedding party on the lawn",
+    "src": {
+      "480": "assets/img/wedding-party-480.webp",
+      "960": "assets/img/wedding-party-960.webp",
+      "1600": "assets/img/wedding-party-1600.webp"
+    }
+  },
+  "street-bw": {
+    "w": 2500,
+    "h": 1406,
+    "tone": "#8d8d8d",
+    "alt": "Black and white photo of a couple crossing a city street",
+    "shot": "Couple crossing a city street, B&W",
+    "src": {
+      "480": "assets/img/street-bw-480.webp",
+      "960": "assets/img/street-bw-960.webp",
+      "1600": "assets/img/street-bw-1600.webp"
+    }
+  },
+  "cowboy-couple": {
+    "w": 2500,
+    "h": 2500,
+    "tone": "#878778",
+    "alt": "A groom in a cowboy hat embraces his bride on a green hillside",
+    "shot": "Cowboy hat couple on a hillside",
+    "src": {
+      "480": "assets/img/cowboy-couple-480.webp",
+      "960": "assets/img/cowboy-couple-960.webp",
+      "1600": "assets/img/cowboy-couple-1600.webp"
+    }
+  },
+  "streamer-exit": {
+    "w": 2500,
+    "h": 1406,
+    "tone": "#684f42",
+    "alt": "Guests throw streamers as the newlyweds make their exit",
+    "shot": "Streamer exit",
+    "src": {
+      "480": "assets/img/streamer-exit-480.webp",
+      "960": "assets/img/streamer-exit-960.webp",
+      "1600": "assets/img/streamer-exit-1600.webp"
+    }
+  },
+  "capitol-columns": {
+    "w": 2500,
+    "h": 1667,
+    "tone": "#a3a496",
+    "alt": "A small couple on the steps of a grand columned building",
+    "shot": "Couple small against grand columns",
+    "src": {
+      "480": "assets/img/capitol-columns-480.webp",
+      "960": "assets/img/capitol-columns-960.webp",
+      "1600": "assets/img/capitol-columns-1600.webp"
+    }
+  },
+  "pavilion": {
+    "w": 2500,
+    "h": 1667,
+    "tone": "#706d6c",
+    "alt": "An outdoor pavilion ceremony with mountains beyond",
+    "shot": "Outdoor pavilion ceremony",
+    "src": {
+      "480": "assets/img/pavilion-480.webp",
+      "960": "assets/img/pavilion-960.webp",
+      "1600": "assets/img/pavilion-1600.webp"
+    }
+  },
+  "barn-doors": {
+    "w": 2500,
+    "h": 1671,
+    "tone": "#5d554b",
+    "alt": "A couple kissing framed by an old timber barn",
+    "shot": "Kiss framed by a timber barn",
+    "src": {
+      "480": "assets/img/barn-doors-480.webp",
+      "960": "assets/img/barn-doors-960.webp",
+      "1600": "assets/img/barn-doors-1600.webp"
+    }
+  },
+  "parlor-portrait": {
+    "w": 2500,
+    "h": 3750,
+    "tone": "#9f927d",
+    "alt": "A bride standing beside her seated groom in a vintage parlour",
+    "shot": "Vintage parlour portrait",
+    "src": {
+      "480": "assets/img/parlor-portrait-480.webp",
+      "960": "assets/img/parlor-portrait-960.webp",
+      "1600": "assets/img/parlor-portrait-1600.webp"
+    }
+  },
+  "hedge-portrait": {
+    "w": 2500,
+    "h": 1667,
+    "tone": "#4d534e",
+    "alt": "A bride and groom facing each other in front of a dark green hedge",
+    "shot": "Bride and groom against a green hedge",
+    "src": {
+      "480": "assets/img/hedge-portrait-480.webp",
+      "960": "assets/img/hedge-portrait-960.webp",
+      "1600": "assets/img/hedge-portrait-1600.webp"
+    }
+  },
+  "sparkler-exit": {
+    "w": 2500,
+    "h": 1670,
+    "tone": "#80654d",
+    "alt": "Newlyweds walk through a tunnel of sparklers at night",
+    "shot": "Sparkler exit at night",
+    "src": {
+      "480": "assets/img/sparkler-exit-480.webp",
+      "960": "assets/img/sparkler-exit-960.webp",
+      "1600": "assets/img/sparkler-exit-1600.webp"
+    }
+  },
+  "reception-dance": {
+    "w": 2500,
+    "h": 1667,
+    "tone": "#5e4f47",
+    "alt": "Guests dancing at a wedding reception",
+    "shot": "Reception dance floor",
+    "src": {
+      "480": "assets/img/reception-dance-480.webp",
+      "960": "assets/img/reception-dance-960.webp",
+      "1600": "assets/img/reception-dance-1600.webp"
+    }
+  },
+  "ring-box": {
+    "w": 1500,
+    "h": 1000,
+    "tone": "#685f59",
+    "alt": "Wedding rings in a wooden box beside a white rose",
+    "shot": "Rings, wooden box, white rose",
+    "src": {
+      "480": "assets/img/ring-box-480.webp",
+      "960": "assets/img/ring-box-960.webp",
+      "1500": "assets/img/ring-box-1500.webp"
+    }
+  },
+  "church-family": {
+    "w": 1500,
+    "h": 844,
+    "tone": "#786f67",
+    "alt": "Bride and groom with their families inside a church",
+    "shot": "Families gathered in the church",
+    "src": {
+      "480": "assets/img/church-family-480.webp",
+      "960": "assets/img/church-family-960.webp",
+      "1500": "assets/img/church-family-1500.webp"
+    }
+  },
+  "mountain-family": {
+    "w": 1500,
+    "h": 1014,
+    "tone": "#acaba9",
+    "alt": "A wedding family portrait beside a mountain lake",
+    "shot": "Family portrait by a mountain lake",
+    "src": {
+      "480": "assets/img/mountain-family-480.webp",
+      "960": "assets/img/mountain-family-960.webp",
+      "1500": "assets/img/mountain-family-1500.webp"
+    }
+  },
+  "flatirons-sunset": {
+    "w": 1500,
+    "h": 1001,
+    "tone": "#87766b",
+    "alt": "An engaged couple touching foreheads at sunset in front of the Flatirons",
+    "shot": "Foreheads together, Flatirons sunset",
+    "src": {
+      "480": "assets/img/flatirons-sunset-480.webp",
+      "960": "assets/img/flatirons-sunset-960.webp",
+      "1500": "assets/img/flatirons-sunset-1500.webp"
+    }
+  },
+  "flatirons-laugh": {
+    "w": 2500,
+    "h": 1669,
+    "tone": "#a69c8d",
+    "alt": "An engaged couple laughing in a meadow below the Flatirons",
+    "shot": "Laughing in a meadow, Flatirons",
+    "src": {
+      "480": "assets/img/flatirons-laugh-480.webp",
+      "960": "assets/img/flatirons-laugh-960.webp",
+      "1600": "assets/img/flatirons-laugh-1600.webp"
+    }
+  },
+  "golden-hour": {
+    "w": 1000,
+    "h": 668,
+    "tone": "#8e8c78",
+    "alt": "A woman cups her fiancé's face in golden evening light",
+    "shot": "Golden hour, hands on his face",
+    "src": {
+      "480": "assets/img/golden-hour-480.webp",
+      "960": "assets/img/golden-hour-960.webp",
+      "1000": "assets/img/golden-hour-1000.webp"
+    }
+  },
+  "flatirons-dance": {
+    "w": 1500,
+    "h": 1001,
+    "tone": "#9a8a81",
+    "alt": "A couple dancing at sunset with mountains behind them",
+    "shot": "Sunset dance, mountains behind",
+    "src": {
+      "480": "assets/img/flatirons-dance-480.webp",
+      "960": "assets/img/flatirons-dance-960.webp",
+      "1500": "assets/img/flatirons-dance-1500.webp"
+    }
+  },
+  "embrace-bw": {
+    "w": 2500,
+    "h": 3750,
+    "tone": "#7f7f7f",
+    "alt": "Black and white close-up of an engaged couple embracing",
+    "shot": "Close embrace, B&W",
+    "src": {
+      "480": "assets/img/embrace-bw-480.webp",
+      "960": "assets/img/embrace-bw-960.webp",
+      "1600": "assets/img/embrace-bw-1600.webp"
+    }
+  },
+  "denim-embrace": {
+    "w": 2500,
+    "h": 3750,
+    "tone": "#62625c",
+    "alt": "An engaged couple in denim holding each other close",
+    "shot": "Denim embrace, ring visible",
+    "src": {
+      "480": "assets/img/denim-embrace-480.webp",
+      "960": "assets/img/denim-embrace-960.webp",
+      "1600": "assets/img/denim-embrace-1600.webp"
+    }
+  },
+  "town-hall": {
+    "w": 2500,
+    "h": 1692,
+    "tone": "#848688",
+    "alt": "A couple walking beneath the arches of a historic town hall",
+    "shot": "Town hall arches",
+    "src": {
+      "480": "assets/img/town-hall-480.webp",
+      "960": "assets/img/town-hall-960.webp",
+      "1600": "assets/img/town-hall-1600.webp"
+    }
+  },
+  "rain-kiss": {
+    "w": 2500,
+    "h": 2500,
+    "tone": "#5e5c5a",
+    "alt": "A couple kissing on a rainy brick street",
+    "shot": "Kiss on a rainy brick street",
+    "src": {
+      "480": "assets/img/rain-kiss-480.webp",
+      "960": "assets/img/rain-kiss-960.webp",
+      "1600": "assets/img/rain-kiss-1600.webp"
+    }
+  },
+  "mural": {
+    "w": 1000,
+    "h": 1000,
+    "tone": "#7d624e",
+    "alt": "A couple standing in front of a glowing illustrated mural",
+    "shot": "Illustrated mural backdrop",
+    "src": {
+      "480": "assets/img/mural-480.webp",
+      "960": "assets/img/mural-960.webp",
+      "1000": "assets/img/mural-1000.webp"
+    }
+  },
+  "red-couch": {
+    "w": 1000,
+    "h": 668,
+    "tone": "#696160",
+    "alt": "An engaged couple on a red velvet couch outdoors",
+    "shot": "Red velvet couch in the trees",
+    "src": {
+      "480": "assets/img/red-couch-480.webp",
+      "960": "assets/img/red-couch-960.webp",
+      "1000": "assets/img/red-couch-1000.webp"
+    }
+  },
+  "stairs": {
+    "w": 2500,
+    "h": 3750,
+    "tone": "#505355",
+    "alt": "A couple sitting together on an iron staircase",
+    "shot": "Iron staircase",
+    "src": {
+      "480": "assets/img/stairs-480.webp",
+      "960": "assets/img/stairs-960.webp",
+      "1600": "assets/img/stairs-1600.webp"
+    }
+  },
+  "flower-window": {
+    "w": 2500,
+    "h": 1667,
+    "tone": "#7f8481",
+    "alt": "A couple framed in a flower-lined window",
+    "shot": "Flower-lined window",
+    "src": {
+      "480": "assets/img/flower-window-480.webp",
+      "960": "assets/img/flower-window-960.webp",
+      "1600": "assets/img/flower-window-1600.webp"
+    }
+  },
+  "picket-fence": {
+    "w": 2500,
+    "h": 1667,
+    "tone": "#767a76",
+    "alt": "A couple by a white picket fence and pink flowers",
+    "shot": "White picket fence",
+    "src": {
+      "480": "assets/img/picket-fence-480.webp",
+      "960": "assets/img/picket-fence-960.webp",
+      "1600": "assets/img/picket-fence-1600.webp"
+    }
+  },
+  "path-dance": {
+    "w": 2500,
+    "h": 3750,
+    "tone": "#73796d",
+    "alt": "A couple dancing on a garden path",
+    "shot": "Dancing on a garden path",
+    "src": {
+      "480": "assets/img/path-dance-480.webp",
+      "960": "assets/img/path-dance-960.webp",
+      "1600": "assets/img/path-dance-1600.webp"
+    }
+  },
+  "alley": {
+    "w": 1000,
+    "h": 1500,
+    "tone": "#8e9091",
+    "alt": "A couple walking down a wet city alley",
+    "shot": "Wet city alley",
+    "src": {
+      "480": "assets/img/alley-480.webp",
+      "960": "assets/img/alley-960.webp",
+      "1000": "assets/img/alley-1000.webp"
+    }
+  },
+  "snow-family": {
+    "w": 2500,
+    "h": 1669,
+    "tone": "#59504a",
+    "alt": "A large family in a snowy forest",
+    "shot": "Family in the snow",
+    "src": {
+      "480": "assets/img/snow-family-480.webp",
+      "960": "assets/img/snow-family-960.webp",
+      "1600": "assets/img/snow-family-1600.webp"
+    }
+  },
+  "autumn-family": {
+    "w": 1500,
+    "h": 1000,
+    "tone": "#704d22",
+    "alt": "A family under bright autumn trees",
+    "shot": "Autumn family portrait",
+    "src": {
+      "480": "assets/img/autumn-family-480.webp",
+      "960": "assets/img/autumn-family-960.webp",
+      "1500": "assets/img/autumn-family-1500.webp"
+    }
+  },
+  "golden-sisters": {
+    "w": 1500,
+    "h": 1500,
+    "tone": "#9c6837",
+    "alt": "A mother and two daughters hugging in golden light",
+    "shot": "Mother and daughters, golden light",
+    "src": {
+      "480": "assets/img/golden-sisters-480.webp",
+      "960": "assets/img/golden-sisters-960.webp",
+      "1500": "assets/img/golden-sisters-1500.webp"
+    }
+  },
+  "grass-family": {
+    "w": 1500,
+    "h": 1000,
+    "tone": "#968c81",
+    "alt": "A family relaxing together in tall grass",
+    "shot": "Family in tall grass",
+    "src": {
+      "480": "assets/img/grass-family-480.webp",
+      "960": "assets/img/grass-family-960.webp",
+      "1500": "assets/img/grass-family-1500.webp"
+    }
+  },
+  "flower-siblings": {
+    "w": 1500,
+    "h": 1000,
+    "tone": "#686156",
+    "alt": "Siblings laughing among yellow flowers",
+    "shot": "Siblings in yellow flowers",
+    "src": {
+      "480": "assets/img/flower-siblings-480.webp",
+      "960": "assets/img/flower-siblings-960.webp",
+      "1500": "assets/img/flower-siblings-1500.webp"
+    }
+  },
+  "mansion-lawn": {
+    "w": 1500,
+    "h": 1000,
+    "tone": "#5c6640",
+    "alt": "A family walking across a mansion lawn with their dog",
+    "shot": "Family on a mansion lawn",
+    "src": {
+      "480": "assets/img/mansion-lawn-480.webp",
+      "960": "assets/img/mansion-lawn-960.webp",
+      "1500": "assets/img/mansion-lawn-1500.webp"
+    }
+  },
+  "piano-family": {
+    "w": 1500,
+    "h": 960,
+    "tone": "#7b6b5c",
+    "alt": "A family gathered around a piano at home",
+    "shot": "Family around the piano",
+    "src": {
+      "480": "assets/img/piano-family-480.webp",
+      "960": "assets/img/piano-family-960.webp",
+      "1500": "assets/img/piano-family-1500.webp"
+    }
+  },
+  "bridge-family": {
+    "w": 2500,
+    "h": 1667,
+    "tone": "#806e5e",
+    "alt": "A family on a wooden bridge in autumn",
+    "shot": "Family on an autumn bridge",
+    "src": {
+      "480": "assets/img/bridge-family-480.webp",
+      "960": "assets/img/bridge-family-960.webp",
+      "1600": "assets/img/bridge-family-1600.webp"
+    }
+  },
+  "bw-family": {
+    "w": 2500,
+    "h": 1667,
+    "tone": "#6b6b6a",
+    "alt": "Black and white family portrait in a park",
+    "shot": "Family portrait, B&W",
+    "src": {
+      "480": "assets/img/bw-family-480.webp",
+      "960": "assets/img/bw-family-960.webp",
+      "1600": "assets/img/bw-family-1600.webp"
+    }
+  },
+  "leaves-portrait": {
+    "w": 2500,
+    "h": 1667,
+    "tone": "#404538",
+    "alt": "A senior portrait framed by dark green leaves",
+    "shot": "Senior framed by leaves",
+    "src": {
+      "480": "assets/img/leaves-portrait-480.webp",
+      "960": "assets/img/leaves-portrait-960.webp",
+      "1600": "assets/img/leaves-portrait-1600.webp"
+    }
+  },
+  "pond-reflection": {
+    "w": 2500,
+    "h": 3750,
+    "tone": "#4c5250",
+    "alt": "A senior in a white dress reflected in a garden pond",
+    "shot": "Pond reflection, white dress",
+    "src": {
+      "480": "assets/img/pond-reflection-480.webp",
+      "960": "assets/img/pond-reflection-960.webp",
+      "1600": "assets/img/pond-reflection-1600.webp"
+    }
+  },
+  "meadow-dress": {
+    "w": 2500,
+    "h": 3750,
+    "tone": "#a3a17d",
+    "alt": "A senior in a white dress in a flowering meadow",
+    "shot": "White dress in a meadow",
+    "src": {
+      "480": "assets/img/meadow-dress-480.webp",
+      "960": "assets/img/meadow-dress-960.webp",
+      "1600": "assets/img/meadow-dress-1600.webp"
+    }
+  },
+  "garden-path": {
+    "w": 1500,
+    "h": 1000,
+    "tone": "#828781",
+    "alt": "A senior walking a brick path at the Denver Botanic Gardens",
+    "shot": "Botanic Gardens path",
+    "src": {
+      "480": "assets/img/garden-path-480.webp",
+      "960": "assets/img/garden-path-960.webp",
+      "1500": "assets/img/garden-path-1500.webp"
+    }
+  },
+  "leaf-wave": {
+    "w": 1500,
+    "h": 1500,
+    "tone": "#979f93",
+    "alt": "A senior smiling beneath a leafy branch",
+    "shot": "Smile beneath a branch",
+    "src": {
+      "480": "assets/img/leaf-wave-480.webp",
+      "960": "assets/img/leaf-wave-960.webp",
+      "1500": "assets/img/leaf-wave-1500.webp"
+    }
+  },
+  "conservatory": {
+    "w": 1500,
+    "h": 1500,
+    "tone": "#343933",
+    "alt": "A senior among tropical plants in a conservatory",
+    "shot": "Tropical conservatory",
+    "src": {
+      "480": "assets/img/conservatory-480.webp",
+      "960": "assets/img/conservatory-960.webp",
+      "1500": "assets/img/conservatory-1500.webp"
+    }
+  },
+  "rock-portrait": {
+    "w": 2500,
+    "h": 3750,
+    "tone": "#674f45",
+    "alt": "A senior portrait against warm stone",
+    "shot": "Portrait against warm stone",
+    "src": {
+      "480": "assets/img/rock-portrait-480.webp",
+      "960": "assets/img/rock-portrait-960.webp",
+      "1600": "assets/img/rock-portrait-1600.webp"
+    }
+  },
+  "bagpiper": {
+    "w": 2500,
+    "h": 1667,
+    "tone": "#8f8a87",
+    "alt": "A senior playing the bagpipes outside a stone building",
+    "shot": "Bagpiper outside a stone hall",
+    "src": {
+      "480": "assets/img/bagpiper-480.webp",
+      "960": "assets/img/bagpiper-960.webp",
+      "1600": "assets/img/bagpiper-1600.webp"
+    }
+  },
+  "chesterton-grad": {
+    "w": 2500,
+    "h": 1667,
+    "tone": "#858586",
+    "alt": "A graduate receiving her diploma in a chapel",
+    "shot": "Chesterton Academy graduation",
+    "src": {
+      "480": "assets/img/chesterton-grad-480.webp",
+      "960": "assets/img/chesterton-grad-960.webp",
+      "1600": "assets/img/chesterton-grad-1600.webp"
+    }
+  },
+  "best-friends": {
+    "w": 2500,
+    "h": 1667,
+    "tone": "#665f57",
+    "alt": "Two seniors laughing with their arms around each other",
+    "shot": "Best friends laughing",
+    "src": {
+      "480": "assets/img/best-friends-480.webp",
+      "960": "assets/img/best-friends-960.webp",
+      "1600": "assets/img/best-friends-1600.webp"
+    }
+  },
+  "sunflowers": {
+    "w": 1500,
+    "h": 1500,
+    "tone": "#3a3e39",
+    "alt": "A senior in a white dress beside sunflowers",
+    "shot": "Sunflower garden",
+    "src": {
+      "480": "assets/img/sunflowers-480.webp",
+      "960": "assets/img/sunflowers-960.webp",
+      "1500": "assets/img/sunflowers-1500.webp"
+    }
+  },
+  "garden-bench": {
+    "w": 2500,
+    "h": 1667,
+    "tone": "#54544f",
+    "alt": "A senior seated on a stone garden bench",
+    "shot": "Stone garden bench",
+    "src": {
+      "480": "assets/img/garden-bench-480.webp",
+      "960": "assets/img/garden-bench-960.webp",
+      "1600": "assets/img/garden-bench-1600.webp"
+    }
+  },
+  "jason-portrait": {
+    "w": 1500,
+    "h": 1000,
+    "tone": "#9c9c9c",
+    "alt": "Jason Smith, photographer",
+    "shot": "Portrait of Jason",
+    "src": {
+      "480": "assets/img/jason-portrait-480.webp",
+      "960": "assets/img/jason-portrait-960.webp",
+      "1500": "assets/img/jason-portrait-1500.webp"
+    }
+  },
+  "cafe-family": {
+    "w": 1500,
+    "h": 1001,
+    "tone": "#6a6a6e",
+    "alt": "A family of eight gathered at a café",
+    "shot": "Jason's family (confirm with Jason)",
+    "src": {
+      "480": "assets/img/cafe-family-480.webp",
+      "960": "assets/img/cafe-family-960.webp",
+      "1500": "assets/img/cafe-family-1500.webp"
+    }
+  },
+  "behind-the-camera": {
+    "w": 2500,
+    "h": 1667,
+    "tone": "#9e9793",
+    "alt": "Two filmmakers with cameras in a bright hotel lobby",
+    "shot": "Film team behind the camera",
+    "src": {
+      "480": "assets/img/behind-the-camera-480.webp",
+      "960": "assets/img/behind-the-camera-960.webp",
+      "1600": "assets/img/behind-the-camera-1600.webp"
+    }
+  },
+  "story-timeline": {
+    "w": 1500,
+    "h": 844,
+    "tone": "#8d8d8d",
+    "alt": "Black and white photo of newlyweds crossing a street",
+    "shot": "Story cover: timeline guide",
+    "src": {
+      "480": "assets/img/story-timeline-480.webp",
+      "960": "assets/img/story-timeline-960.webp",
+      "1500": "assets/img/story-timeline-1500.webp"
+    }
+  },
+  "story-getting-ready": {
+    "w": 1500,
+    "h": 1000,
+    "tone": "#c6c6c7",
+    "alt": "A father helps his daughter with her necklace on the wedding morning",
+    "shot": "Story cover: getting ready",
+    "src": {
+      "480": "assets/img/story-getting-ready-480.webp",
+      "960": "assets/img/story-getting-ready-960.webp",
+      "1500": "assets/img/story-getting-ready-1500.webp"
+    }
+  },
+  "story-bridal-show": {
+    "w": 1500,
+    "h": 1000,
+    "tone": "#4d534e",
+    "alt": "A bride and groom standing apart in front of a green hedge",
+    "shot": "Story cover: bridal show guide",
+    "src": {
+      "480": "assets/img/story-bridal-show-480.webp",
+      "960": "assets/img/story-bridal-show-960.webp",
+      "1500": "assets/img/story-bridal-show-1500.webp"
+    }
+  },
+  "story-red-rocks": {
+    "w": 1500,
+    "h": 1000,
+    "tone": "#6d5346",
+    "alt": "A couple walking through a red rock tunnel at Red Rocks",
+    "shot": "Story cover: Red Rocks",
+    "src": {
+      "480": "assets/img/story-red-rocks-480.webp",
+      "960": "assets/img/story-red-rocks-960.webp",
+      "1500": "assets/img/story-red-rocks-1500.webp"
+    }
+  },
+  "story-st-francis": {
+    "w": 1500,
+    "h": 1000,
+    "tone": "#948176",
+    "alt": "Newlyweds recessing down the aisle of St. Francis of Assisi",
+    "shot": "Story cover: St. Francis of Assisi",
+    "src": {
+      "480": "assets/img/story-st-francis-480.webp",
+      "960": "assets/img/story-st-francis-960.webp",
+      "1500": "assets/img/story-st-francis-1500.webp"
+    }
+  },
+  "story-what-to-expect": {
+    "w": 1500,
+    "h": 1000,
+    "tone": "#817b78",
+    "alt": "A couple seated in a pew beneath stained glass",
+    "shot": "Story cover: what to expect",
+    "src": {
+      "480": "assets/img/story-what-to-expect-480.webp",
+      "960": "assets/img/story-what-to-expect-960.webp",
+      "1500": "assets/img/story-what-to-expect-1500.webp"
+    }
+  },
+  "story-kelly-jason": {
+    "w": 1500,
+    "h": 1000,
+    "tone": "#908884",
+    "alt": "A winter wedding party outside St. Mary's in Littleton",
+    "shot": "Story cover: Kelly & Jason",
+    "src": {
+      "480": "assets/img/story-kelly-jason-480.webp",
+      "960": "assets/img/story-kelly-jason-960.webp",
+      "1500": "assets/img/story-kelly-jason-1500.webp"
+    }
+  },
+  "story-cheesman": {
+    "w": 1500,
+    "h": 1000,
+    "tone": "#c4ac9b",
+    "alt": "A couple embracing in the Cheesman Park pavilion",
+    "shot": "Story cover: Cheesman Park",
+    "src": {
+      "480": "assets/img/story-cheesman-480.webp",
+      "960": "assets/img/story-cheesman-960.webp",
+      "1500": "assets/img/story-cheesman-1500.webp"
+    }
+  },
+  "story-highlands-ranch": {
+    "w": 1500,
+    "h": 1000,
+    "tone": "#8d857a",
+    "alt": "An engaged couple sitting on the lawn at Highlands Ranch Mansion",
+    "shot": "Story cover: Highlands Ranch Mansion",
+    "src": {
+      "480": "assets/img/story-highlands-ranch-480.webp",
+      "960": "assets/img/story-highlands-ranch-960.webp",
+      "1500": "assets/img/story-highlands-ranch-1500.webp"
+    }
+  },
+  "story-holy-ghost": {
+    "w": 1500,
+    "h": 1000,
+    "tone": "#b1a88f",
+    "alt": "Newlyweds on the steps of Holy Ghost Catholic Church, Denver",
+    "shot": "Story cover: Holy Ghost Church",
+    "src": {
+      "480": "assets/img/story-holy-ghost-480.webp",
+      "960": "assets/img/story-holy-ghost-960.webp",
+      "1500": "assets/img/story-holy-ghost-1500.webp"
+    }
+  },
+  "story-nativity": {
+    "w": 1500,
+    "h": 844,
+    "tone": "#979785",
+    "alt": "A wedding party on the lawn at Nativity of Our Lord",
+    "shot": "Story cover: Nativity of Our Lord",
+    "src": {
+      "480": "assets/img/story-nativity-480.webp",
+      "960": "assets/img/story-nativity-960.webp",
+      "1500": "assets/img/story-nativity-1500.webp"
+    }
+  },
+  "story-pacific": {
+    "w": 1500,
+    "h": 1500,
+    "tone": "#5b5c51",
+    "alt": "A father walks his daughter down a garden path on her wedding day",
+    "shot": "Story cover: across the Pacific",
+    "src": {
+      "480": "assets/img/story-pacific-480.webp",
+      "960": "assets/img/story-pacific-960.webp",
+      "1500": "assets/img/story-pacific-1500.webp"
+    }
+  }
 }
