@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>{{title}}</title>
+<meta name="description" content="{{description}}">
+<link rel="canonical" href="{{canonical}}">
+<meta name="theme-color" content="#f5f2ec">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="The Things That I See Photography">
+<meta property="og:title" content="{{title}}">
+<meta property="og:description" content="{{description}}">
+<meta property="og:url" content="{{canonical}}">
+<meta name="twitter:card" content="summary_large_image">
+{{og_image}}
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..600;1,6..96,400..500&family=Jost:wght@300;400;500;600&display=swap">
+<link rel="stylesheet" href="assets/css/site.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "The Things That I See Photography",
+  "description": "Catholic and Christian wedding, engagement, family and senior photography and film in Centennial, Colorado.",
+  "url": "https://www.thethingsthatisee.com/",
+  "email": "jason@thethingsthatisee.com",
+  "telephone": "+1-714-290-4333",
+  "priceRange": "$250 - $4,500",
+  "address": {"@type": "PostalAddress", "addressLocality": "Centennial", "addressRegion": "CO", "addressCountry": "US"},
+  "areaServed": ["Denver", "Littleton", "Highlands Ranch", "Centennial", "Front Range", "Colorado"],
+  "founder": {"@type": "Person", "name": "Jason Smith", "jobTitle": "Photographer and filmmaker"},
+  "sameAs": [
+    "https://www.instagram.com/thethingsthatisee.photo",
+    "https://www.youtube.com/channel/UCDJKnjQf7ZuTIfrowadnzkQ",
+    "https://www.pinterest.com/0a2e779fd81d88fd181f47718a53c8"
+  ]
+}
+</script>
+{{jsonld}}
+</head>
+<body class="{{body_class}}">
+<a class="skip-link" href="#main">Skip to content</a>
+{{> header}}
+<main id="main">
+{{content}}
+</main>
+{{> footer}}
+{{> mobilecta}}
+{{> lightbox}}
+<script src="assets/js/config.js" defer></script>
+<script src="assets/js/site.js" defer></script>
+{{scripts}}
+</body>
+</html>

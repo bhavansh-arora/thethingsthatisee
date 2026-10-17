@@ -1,0 +1,241 @@
+<!--meta {
+  "title": "Enquire & Check Your Date | The Things That I See Photography",
+  "description": "Check your wedding date, see which collection fits in about a minute, and send Jason your enquiry.",
+  "nav": "enquire",
+  "body_class": "no-mobile-cta",
+  "scripts": ["assets/js/enquire.js"],
+  "og_image": "elevation"
+} -->
+<section class="page-hero" style="padding-bottom:0">
+  <div class="container">
+    <div class="page-hero-head" style="margin-bottom:0">
+      <div class="stack">
+        <p class="eyebrow">Enquire</p>
+        <h1 class="h1">Your story <em>begins</em> here.</h1>
+      </div>
+      <p class="lede">Four short steps, about a minute. You&rsquo;ll see which collection fits your day before you send anything, and I&rsquo;ll reply to you personally.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container enquire-grid">
+    <div>
+      <form id="enquiry" novalidate>
+        <div class="progress">
+          <div class="progress-bar" aria-hidden="true"><span id="progress-fill"></span></div>
+          <ol class="progress-steps" id="progress-steps">
+            <li aria-current="step">I. Occasion</li>
+            <li>II. Details</li>
+            <li>III. Your match</li>
+            <li>IV. Contact</li>
+          </ol>
+        </div>
+
+        <section class="step-panel" data-step="1" aria-labelledby="s1-h">
+          <h2 id="s1-h" tabindex="-1">What are we <em>celebrating?</em></h2>
+          <div class="choice-grid choice-grid--4" role="radiogroup" aria-labelledby="s1-h">
+            <label class="choice"><input type="radio" name="type" value="wedding">
+              <span class="choice-box"><span class="choice-title">A wedding</span><span class="choice-meta">Photography and film</span><span class="choice-price">from $2,500</span></span></label>
+            <label class="choice"><input type="radio" name="type" value="engagement">
+              <span class="choice-box"><span class="choice-title">An engagement</span><span class="choice-meta">The beginning of the journey</span><span class="choice-price">$750</span></span></label>
+            <label class="choice"><input type="radio" name="type" value="family">
+              <span class="choice-box"><span class="choice-title">A family session</span><span class="choice-meta">Candid or classic</span><span class="choice-price">from $250</span></span></label>
+            <label class="choice"><input type="radio" name="type" value="senior">
+              <span class="choice-box"><span class="choice-title">Senior portraits</span><span class="choice-meta">Gallery in one week</span><span class="choice-price">from $400</span></span></label>
+          </div>
+          <p class="field-error" data-error="type" hidden></p>
+          <div class="step-actions"><span></span><button class="btn btn-solid" type="button" data-next>Continue</button></div>
+        </section>
+
+        <section class="step-panel" data-step="2" hidden aria-labelledby="s2-h">
+          <h2 id="s2-h" tabindex="-1">A few <em>details</em></h2>
+
+          <div data-for="wedding">
+            <div class="field-row">
+              <div class="field">
+                <label class="label" for="f-date">Wedding date</label>
+                <input class="input" type="date" id="f-date" name="date">
+                <p class="avail" id="avail" aria-live="polite" hidden></p>
+                <p class="field-error" data-error="date" hidden></p>
+              </div>
+              <div class="field">
+                <label class="label" for="f-venue">Church or venue <span class="muted">(optional)</span></label>
+                <input class="input" type="text" id="f-venue" name="venue" placeholder="e.g. St. Mary&rsquo;s, Littleton">
+              </div>
+            </div>
+            <fieldset class="field" style="border:0;padding:0;margin-inline:0;margin-top:22px">
+              <legend class="label">Guest count</legend>
+              <div class="pills">
+                <label class="pill"><input type="radio" name="guests" value="small"><span>Under 75</span></label>
+                <label class="pill"><input type="radio" name="guests" value="medium"><span>75 to 150</span></label>
+                <label class="pill"><input type="radio" name="guests" value="large"><span>150+</span></label>
+              </div>
+              <p class="field-error" data-error="guests" hidden></p>
+            </fieldset>
+            <fieldset class="field" style="border:0;padding:0;margin-inline:0;margin-top:22px">
+              <legend class="label">Ceremony</legend>
+              <div class="pills">
+                <label class="pill"><input type="radio" name="ceremony" value="mass"><span>Catholic Mass</span></label>
+                <label class="pill"><input type="radio" name="ceremony" value="christian"><span>Other Christian service</span></label>
+                <label class="pill"><input type="radio" name="ceremony" value="other"><span>Another ceremony</span></label>
+              </div>
+              <p class="field-error" data-error="ceremony" hidden></p>
+            </fieldset>
+            <fieldset class="field" style="border:0;padding:0;margin-inline:0;margin-top:22px">
+              <legend class="label">A rehearsal dinner or welcome party to photograph?</legend>
+              <div class="pills">
+                <label class="pill"><input type="radio" name="events" value="yes"><span>Yes</span></label>
+                <label class="pill"><input type="radio" name="events" value="no"><span>No</span></label>
+              </div>
+            </fieldset>
+            <fieldset class="field" style="border:0;padding:0;margin-inline:0;margin-top:22px">
+              <legend class="label">Film as well as photographs?</legend>
+              <div class="pills">
+                <label class="pill"><input type="radio" name="film" value="no"><span>Photos only</span></label>
+                <label class="pill"><input type="radio" name="film" value="yes"><span>Photos and film</span></label>
+                <label class="pill"><input type="radio" name="film" value="unsure"><span>Not sure yet</span></label>
+              </div>
+            </fieldset>
+          </div>
+
+          <div data-for="engagement" hidden>
+            <div class="field-row">
+              <div class="field">
+                <label class="label" for="f-emonth">Preferred month</label>
+                <input class="input" type="month" id="f-emonth" name="emonth">
+                <p class="field-error" data-error="emonth" hidden></p>
+              </div>
+              <div class="field">
+                <label class="label" for="f-eloc">Location idea <span class="muted">(optional)</span></label>
+                <input class="input" type="text" id="f-eloc" name="elocation" placeholder="Red Rocks, the Flatirons&hellip;">
+              </div>
+            </div>
+          </div>
+
+          <div data-for="family" hidden>
+            <div class="field-row">
+              <div class="field">
+                <label class="label" for="f-fmonth">Preferred month</label>
+                <input class="input" type="month" id="f-fmonth" name="fmonth">
+                <p class="field-error" data-error="fmonth" hidden></p>
+              </div>
+              <div class="field">
+                <label class="label" for="f-people">How many people?</label>
+                <input class="input" type="number" inputmode="numeric" min="1" max="60" id="f-people" name="people" placeholder="e.g. 6">
+                <p class="field-error" data-error="people" hidden></p>
+              </div>
+            </div>
+            <div class="field" style="margin-top:22px">
+              <label class="label" for="f-floc">Location idea <span class="muted">(optional)</span></label>
+              <input class="input" type="text" id="f-floc" name="flocation" placeholder="At home, a park, Highlands Ranch Mansion&hellip;">
+            </div>
+          </div>
+
+          <div data-for="senior" hidden>
+            <div class="field-row">
+              <div class="field">
+                <label class="label" for="f-year">Graduating class</label>
+                <select class="select" id="f-year" name="gradYear">
+                  <option value="">Choose a year</option>
+                  <option>2027</option>
+                  <option>2028</option>
+                  <option>2029</option>
+                </select>
+                <p class="field-error" data-error="gradYear" hidden></p>
+              </div>
+              <div class="field">
+                <label class="label" for="f-school">School <span class="muted">(optional)</span></label>
+                <input class="input" type="text" id="f-school" name="school" placeholder="e.g. Chesterton Academy">
+              </div>
+            </div>
+            <fieldset class="field" style="border:0;padding:0;margin-inline:0;margin-top:22px">
+              <legend class="label">Package in mind?</legend>
+              <div class="pills">
+                <label class="pill"><input type="radio" name="senior" value="essentials"><span>Essentials</span></label>
+                <label class="pill"><input type="radio" name="senior" value="signature"><span>Signature</span></label>
+                <label class="pill"><input type="radio" name="senior" value="elite"><span>Elite</span></label>
+                <label class="pill"><input type="radio" name="senior" value="unsure"><span>Not sure</span></label>
+              </div>
+            </fieldset>
+          </div>
+
+          <div class="step-actions">
+            <button class="btn btn-ghost" type="button" data-back>&larr; Back</button>
+            <button class="btn btn-solid" type="button" data-next>See my match</button>
+          </div>
+        </section>
+
+        <section class="step-panel" data-step="3" hidden aria-labelledby="s3-h">
+          <h2 id="s3-h" tabindex="-1">Your <em>match</em></h2>
+          <div class="match" id="match"></div>
+          <p class="small muted">All prices are negotiable. I believe everyone deserves beautiful photography, regardless of budget.</p>
+          <div class="step-actions">
+            <button class="btn btn-ghost" type="button" data-back>&larr; Adjust</button>
+            <button class="btn btn-solid" type="button" data-next>Looks good</button>
+          </div>
+        </section>
+
+        <section class="step-panel" data-step="4" hidden aria-labelledby="s4-h">
+          <h2 id="s4-h" tabindex="-1">Where should I <em>reply?</em></h2>
+          <div class="field-row">
+            <div class="field">
+              <label class="label" for="f-name">Your name(s)</label>
+              <input class="input" type="text" id="f-name" name="name" autocomplete="name" placeholder="e.g. Mary &amp; Nik">
+              <p class="field-error" data-error="name" hidden></p>
+            </div>
+            <div class="field">
+              <label class="label" for="f-email">Email</label>
+              <input class="input" type="email" id="f-email" name="email" autocomplete="email" inputmode="email" placeholder="you@example.com">
+              <p class="field-error" data-error="email" hidden></p>
+            </div>
+          </div>
+          <div class="field-row" style="margin-top:22px">
+            <div class="field">
+              <label class="label" for="f-phone">Phone <span class="muted">(optional)</span></label>
+              <input class="input" type="tel" id="f-phone" name="phone" autocomplete="tel" inputmode="tel">
+            </div>
+            <div class="field">
+              <label class="label" for="f-heard">How did you hear about me?</label>
+              <select class="select" id="f-heard" name="heard">
+                <option value="">Choose one</option>
+                <option>Instagram</option>
+                <option>Google search</option>
+                <option>Facebook</option>
+                <option>From a friend</option>
+                <option>A wedding show</option>
+                <option>My parish</option>
+                <option>Other</option>
+              </select>
+            </div>
+          </div>
+          <div class="field" style="margin-top:22px">
+            <label class="label" for="f-message">Anything else I should know? <span class="muted">(optional)</span></label>
+            <textarea class="textarea" id="f-message" name="message" placeholder="Your story, your venue, what matters most to you&hellip;"></textarea>
+          </div>
+          <div class="hp" aria-hidden="true"><label for="f-company">Company</label><input type="text" id="f-company" name="company" tabindex="-1" autocomplete="off"></div>
+          <p class="field-error" data-error="submit" hidden></p>
+          <div class="step-actions">
+            <button class="btn btn-ghost" type="button" data-back>&larr; Back</button>
+            <button class="btn btn-solid" type="submit">Send to Jason</button>
+          </div>
+        </section>
+      </form>
+
+      <div class="reply" id="reply" hidden></div>
+    </div>
+
+    <aside class="aside-card">
+      <div class="frame viewfinder"><x-img name="jason-portrait" sizes="(min-width: 1000px) 30vw, 100vw"></x-img></div>
+      <figure class="quote">
+        <blockquote style="font-size:1.25rem">Jason made our engagement photoshoot an absolute delight! His creativity and easygoing nature turned the experience into a fun and memorable event.</blockquote>
+        <cite>Katie &amp; Mike</cite>
+      </figure>
+      <dl class="facts">
+        <div><dt>Email</dt><dd><a href="mailto:jason@thethingsthatisee.com">jason@thethingsthatisee.com</a></dd></div>
+        <div><dt>Phone</dt><dd><a href="tel:+17142904333">714-290-4333</a></dd></div>
+        <div><dt>Based in</dt><dd>Centennial, Colorado</dd></div>
+      </dl>
+    </aside>
+  </div>
+</section>
