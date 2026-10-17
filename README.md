@@ -40,7 +40,7 @@ Use a photo in a page with `<x-img name="slot" sizes="..."></x-img>` (`eager` fo
 
 ### Design and motion
 
-The look is a light studio: warm ivory paper, espresso ink and champagne gold, Inter Tight with Instrument Serif italic accents and Geist Mono labels. The design system is in `assets/css/site.css`.
+The look is a light studio: warm ivory paper and espresso ink, with deep burgundy for buttons, accent words and the footer, and champagne gold for small details, Inter Tight with Instrument Serif italic accents and Geist Mono labels. The design system is in `assets/css/site.css`.
 
 Signature pieces: a counting preloader with the eye-and-cross mark (first visit only), a curtain wipe between pages, the full-frame hero slideshow with a rotating word, a statement whose words light up as you scroll with photos set inline, a bento grid with count-up numbers and a live date checker, a pinned horizontal scroll of real stories (desktop), the "In the sanctuary" feature frame, process cards that stack and dim, a scroll-speed marquee, a custom cursor with labels, hover photo previews on the story list and Sessions menu, magnetic buttons, and a giant footer wordmark whose letters rise in.
 
